@@ -1,0 +1,169 @@
+{
+  "review_date": "2026-10-21T11:25:06.112131-04:00",
+  "status": "PASS_DESIGN_AND_LOCAL_MOCKUP_ONLY",
+  "branch": "codex/data-quality-foundation",
+  "base_commit": "5055e9c8fb2a466e62662db004556b7807409085",
+  "scope": "Design documents, local HTML and review evidence only; no Tableau authoring, publishing or application implementation.",
+  "existing_advanced_verifier": {
+    "entry_point": "scripts/data_quality/verify_advanced.py::verify() imported with PYTHONDONTWRITEBYTECODE=1; no CLI report/replay writer invoked",
+    "status": "PASS",
+    "checks": 386,
+    "negative_checks": 5,
+    "protected_baseline_files": 210,
+    "human_review": "PENDING",
+    "gates": "G0–G4 PENDING"
+  },
+  "preservation": {
+    "pre_existing_files_checked": 261,
+    "unchanged": 261,
+    "changed": [],
+    "baseline_digest_sha256": "7e23b2b3f6fc1cdabc2cc05314089befcfc25afa21ee182cee743a4a6270579c",
+    "unrelated_untracked_work_excluded": true
+  },
+  "analytical_checks": {
+    "issues": 14,
+    "metrics": 18,
+    "decision_impacts": 14,
+    "decision_evidence": 14,
+    "lineage_records": 35,
+    "matrix_occupied_cells": 33,
+    "distinct_evidence_sources": 11,
+    "combined_role_cells": [
+      "DQ-DUP-CUSTOMER / Customer_Order.csv",
+      "DQ-DUP-PICKING / Picking_Wave.csv"
+    ],
+    "decision_category_counts": {
+      "EXPERIMENT_DESIGN": 2,
+      "MEASUREMENT_BASELINE": 5,
+      "SLOTTING_HYPOTHESIS": 1,
+      "SOURCE_DEFINITION": 4,
+      "SPATIAL_FEASIBILITY": 2
+    },
+    "unmapped_and_unknown_reference_cell_overlap": 363,
+    "unequal_policy_pairs": 6,
+    "financial_impacts_all_null": true,
+    "physical_stock_and_distance_null": true,
+    "embedded_display_content_matches_existing_extracts": true,
+    "public_extract_hashes_checked": 18
+  },
+  "artifact_checks": {
+    "local_links_checked": 40,
+    "broken_local_links": [],
+    "unique_html_ids": 28,
+    "placeholder_scan": "PASS",
+    "html_network_queries": "NONE"
+  },
+  "local_html_ui_checks": {
+    "checks": [
+      "Issue selector DQ-RECON-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-LOC-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-ABC-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-EXP-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-STOCK-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-LAYOUT-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-DUP-CUSTOMER updates request and lineage; KPIs fixed",
+      "Issue selector DQ-DUP-PICKING updates request and lineage; KPIs fixed",
+      "Issue selector DQ-SIZE-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-SIZE-002 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-QTY-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-LOC-002 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-MASTER-001 updates request and lineage; KPIs fixed",
+      "Issue selector DQ-ID-001 updates request and lineage; KPIs fixed",
+      "Source filter Customer_Order.csv matches registered questions only; other scopes fixed",
+      "Source filter Picking_Wave.csv matches registered questions only; other scopes fixed",
+      "Source filter Product.csv matches registered questions only; other scopes fixed",
+      "Source filter Storage_Location.csv matches registered questions only; other scopes fixed",
+      "Source filter Support_Points_Navigation.csv matches registered questions only; other scopes fixed",
+      "Source filter Random_Storage.csv matches registered questions only; other scopes fixed",
+      "Source filter Class_Based_Storage.csv matches registered questions only; other scopes fixed",
+      "Source filter Dedicated_Storage.csv matches registered questions only; other scopes fixed",
+      "Source filter Hybrid_Storage.csv matches registered questions only; other scopes fixed",
+      "Source filter README.txt matches registered questions only; other scopes fixed",
+      "Source filter Order_Picking_dataset.ipynb matches registered questions only; other scopes fixed",
+      "Matrix row keyboard Enter selects reconciliation",
+      "Stock null metric displays Not measured in evidence drawer",
+      "Reset restores all sources, default issue and collapsed drawer",
+      "Keyboard Tab from Reset reaches source selector"
+    ],
+    "scope": "Local HTML mockup only; no Tableau tests"
+  },
+  "layouts": [
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mapViewport": 356,
+      "mapContent": 777
+    },
+    {
+      "documentWidth": 768,
+      "height": 1024,
+      "mapContent": 777,
+      "mapViewport": 410,
+      "width": 768
+    },
+    {
+      "documentWidth": 1024,
+      "height": 900,
+      "mapContent": 777,
+      "mapViewport": 536,
+      "width": 1024
+    },
+    {
+      "documentWidth": 1440,
+      "height": 1000,
+      "mapContent": 877,
+      "mapViewport": 877,
+      "width": 1440
+    }
+  ],
+  "browser_console_errors_and_warnings": [],
+  "visual_review": {
+    "desktop": "review/desktop.jpg",
+    "narrow": "review/narrow.jpg",
+    "notes": "Rendered screenshots inspected; compact matrix source aliases avoid splitting source names. HTML reflow is not Tableau device-layout validation."
+  },
+  "reference_review": {
+    "date": "2026-10-21",
+    "method": "Read-only browser; exact title/author plus initially visible dashboard composition for all four requested references",
+    "interaction_testing": "NOT_TESTED",
+    "limits": "Some right/lower content outside initial viewport; no hidden calculations, workbook configuration or full interaction claims."
+  },
+  "not_tested": [
+    "M5 Tableau import or rendering",
+    "Current signed-in Public authoring menu capabilities",
+    "Tableau parameters, actions and clear behavior",
+    "Uploaded Tableau extract byte identity",
+    "Independent human/domain review or comprehension",
+    "Operational performance, financial outcomes or policy effects"
+  ],
+  "input_hashes": {
+    "docs/data-quality/advanced/public/reconciliation.csv": "2986c81c5675b0168e1c0a134b712eae9f54fd92406c221ed0394bb4252b37be",
+    "docs/data-quality/advanced/public/reconciliation_summary.csv": "a82b4f1f47e2f8a5db0e43f76101cca379a3ae1ee0cad45cf0e65cbdcc1c5632",
+    "docs/data-quality/advanced/public/exception_pareto.csv": "6e2e9332cd8299c2ea4403559f29250fa9b733235c6f3f9e074fd432f5f09d1f",
+    "docs/data-quality/advanced/public/order_groups.csv": "f9755f070ef48b2ce4fad9471c883207738fbedcec3cd5a97d3135294ed8288f",
+    "docs/data-quality/advanced/public/location_coverage.csv": "696dd7b10b5a939ec98ffb5435b1bd98b27ad91b8d88f037d6804b4676d2cd72",
+    "docs/data-quality/advanced/public/abc_comparison.csv": "933204753efa1ae43e2dc706802fc3c00d6f0b6f0bb333c4c4f567b531b49555",
+    "docs/data-quality/advanced/public/normalization_tokens.csv": "9f1c86067f8b0a1acbc6a44e1bfab43ebe5966e352500567e2aedfc43fa7f450",
+    "docs/data-quality/advanced/public/transformation_rules.csv": "d3f2b10ec33f811fc04fcde7271cc45703db1a64510c8cac600c6e161527b883",
+    "docs/data-quality/advanced/public/policy_pairs.csv": "370db691abfff582e0abe457f65aa4bee6fbe4f466246dc17fddbf6bfa3d8b87",
+    "docs/data-quality/advanced/public/policy_supply.csv": "4e868d41d66b1923079bc341460579a6dca7009856dd19d6593e026af74ce8a1",
+    "docs/data-quality/advanced/public/experiment_controls.csv": "f22ead4c39da4efa643cddc79cc85e4376451620ed0aeca61e5e91782b377ff2",
+    "docs/data-quality/advanced/public/decision_evidence.csv": "7c16f03f982fbf6b6f5346aa22c9326eaf7be23718870523fbe522435bff56af",
+    "docs/data-quality/advanced/public/issue_evidence.csv": "f7787436e266429bc2c29288b39df35ed86f7fe9bb09c485bf0097e00e86679c",
+    "docs/data-quality/advanced/public/profile_checks.csv": "72f2b6cbb905cc4fbb08561b71aae2f8be45a360a6ca773b433d7c2e4a3bc9c6",
+    "docs/data-quality/tableau/public/issues.csv": "abbafdffb6a7af54c87d14b041d5444d1b9f2b6ab95fcef533e3145ccd223d72",
+    "docs/data-quality/tableau/public/issue_metrics.csv": "d6a511513586b435812665d33e24bc6953357b5af806a9d7ca6b43db5e1efb90",
+    "docs/data-quality/tableau/public/decision_impacts.csv": "9c1a6301dab0d72d317c25082694f6eda9ce96d21c78c0d91242632946e146b3",
+    "docs/data-quality/tableau/public/source_counts.csv": "4a59c6fca29c859a1d3d863d3384cb3271a737b2a2527d1c727e95e5f17c348c"
+  },
+  "new_artifact_hashes": {
+    "CONTROL_TOWER_DATA_CONTRACT.md": "6a0fcbcf39614fcb8f05d2907f060fe42f0c8ecb87fb865eaaa67839d8fc51c8",
+    "CONTROL_TOWER_DESIGN_BRIEF.md": "b691c98833f5c5db2090f0126fdea9f56a9743401da6dc3a78d9130e6581c7f5",
+    "CONTROL_TOWER_LEARNING_PLAN.md": "ed6a4259901df293f08ed014abe7f485ce9bba0dc41252409e725a48b5bd855e",
+    "CONTROL_TOWER_TABLEAU_PLAN.md": "bd685159b9607bf2a50293f7def4be20d4aaee87202e16a9fc8f3653ac174f75",
+    "index.html": "0af99b3ced1c81fac0a6b94e01352c30bf32491a7fdd193e05e9858d1ba92b12",
+    "review/desktop.jpg": "758e7cc8ea1dd906d728162c859033153e26d39af35a7acaf6d1bbc3b7cb53b3",
+    "review/narrow.jpg": "d8f26ea5303436a8c461033b06b591053df1a1acee3abb5562d6db5ce962b908"
+  }
+}

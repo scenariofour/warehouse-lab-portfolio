@@ -1,0 +1,18 @@
+
+> warehouse-lab@1.0.0 check:governance
+> python3 scripts/check_governance_docs.py --evidence-dir docs/evidence/2026-10-17-g0-direction
+
+{
+  "reviewDate": "2026-10-17",
+  "recordedAtUTC": "2026-10-17T16:23:39.061006+00:00",
+  "status": "PASS",
+  "scope": "Structural references/metadata/input identity only; not semantic validation or human approval",
+  "requiredCoreDocuments": 7,
+  "additionalReviewDocuments": 4,
+  "checkedLocalLinks": 165,
+  "evaluationContracts": 13,
+  "claimRecords": 15,
+  "gatesPending": 5,
+  "humanDecisionsRecorded": 0,
+  "manifestFilesVerified": 117
+}

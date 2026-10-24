@@ -1,0 +1,15 @@
+{
+  "milestone": "M2",
+  "status": "PASS",
+  "executed_at_utc": "2026-10-18T16:31:08.500720+00:00",
+  "preserved_files": 162,
+  "gates": "G0\u2013G4 PENDING",
+  "simulation_executed": false,
+  "tests": "test_closure_and_correction_evidence (test_dq_contract.ContractTests.test_closure_and_correction_evidence) ... ok\ntest_each_required_field (test_dq_contract.ContractTests.test_each_required_field) ... ok\ntest_malformed_mutations (test_dq_contract.ContractTests.test_malformed_mutations) ... ok\ntest_unique_registry_ids (test_dq_contract.ContractTests.test_unique_registry_ids) ... ok\ntest_valid_and_unknown_metrics (test_dq_contract.ContractTests.test_valid_and_unknown_metrics) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.002s\n\nOK\ntest_abc_and_customer_ambiguities (test_dq_registry.RegistryTests.test_abc_and_customer_ambiguities) ... ok\ntest_complete_reconciliation_lineage (test_dq_registry.RegistryTests.test_complete_reconciliation_lineage) ... ok\ntest_contract_sources_review_and_hashes (test_dq_registry.RegistryTests.test_contract_sources_review_and_hashes) ... ok\ntest_deterministic_replay (test_dq_registry.RegistryTests.test_deterministic_replay) ... ok\ntest_independent_sql_primary_metrics (test_dq_registry.RegistryTests.test_independent_sql_primary_metrics) ... ok\ntest_policy_cells_and_pairs (test_dq_registry.RegistryTests.test_policy_cells_and_pairs) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 10.494s\n\nOK\n",
+  "input_hashes": {
+    "docs/data-quality/issue-record.schema.json": "f39a25f712446b2fe7c5b020f745a41f9ce6ede19cbf1ca052b3e0b9e4981e23",
+    "scripts/data_quality/contract.py": "00aa0d6926ffe1e1f671aa62318d5b750d04fbee7b42db83020bd1c1cde16b01",
+    "tests/test_dq_contract.py": "ce84773cb74e049bd65b09faa673bf099ffbecc7301c6227b8ea961099398792"
+  },
+  "registry_manifest_sha256": "a12eb217ee6b51dfad5bb974d841a7ebbe402339af287604bdafdcdffb618539"
+}

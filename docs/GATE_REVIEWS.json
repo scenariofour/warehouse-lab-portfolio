@@ -1,0 +1,67 @@
+{
+  "documentVersion": "0.1.0",
+  "asOf": "2026-10-17",
+  "status": "DRAFT \u2014 PENDING HUMAN REVIEW",
+  "allowedHumanOutcomes": [
+    "APPROVED",
+    "CONDITIONALLY APPROVED",
+    "BLOCKED"
+  ],
+  "gates": [
+    {
+      "gate": "G0",
+      "reviewState": "PENDING",
+      "decision": null,
+      "humanReviewer": null,
+      "decisionDate": null,
+      "evidenceSnapshot": null,
+      "conditions": [],
+      "aiRecommendation": "CONDITIONALLY APPROVED",
+      "recommendationAuthor": "AI assistant; not an independent human approval"
+    },
+    {
+      "gate": "G1",
+      "reviewState": "PENDING",
+      "decision": null,
+      "humanReviewer": null,
+      "decisionDate": null,
+      "evidenceSnapshot": null,
+      "conditions": [],
+      "aiRecommendation": "CONDITIONALLY APPROVED",
+      "recommendationAuthor": "AI assistant; not an independent human approval"
+    },
+    {
+      "gate": "G2",
+      "reviewState": "PENDING",
+      "decision": null,
+      "humanReviewer": null,
+      "decisionDate": null,
+      "evidenceSnapshot": null,
+      "conditions": [],
+      "aiRecommendation": "BLOCKED",
+      "recommendationAuthor": "AI assistant; not an independent human approval"
+    },
+    {
+      "gate": "G3",
+      "reviewState": "PENDING",
+      "decision": null,
+      "humanReviewer": null,
+      "decisionDate": null,
+      "evidenceSnapshot": null,
+      "conditions": [],
+      "aiRecommendation": "BLOCKED",
+      "recommendationAuthor": "AI assistant; not an independent human approval"
+    },
+    {
+      "gate": "G4",
+      "reviewState": "PENDING",
+      "decision": null,
+      "humanReviewer": null,
+      "decisionDate": null,
+      "evidenceSnapshot": null,
+      "conditions": [],
+      "aiRecommendation": "BLOCKED",
+      "recommendationAuthor": "AI assistant; not an independent human approval"
+    }
+  ]
+}

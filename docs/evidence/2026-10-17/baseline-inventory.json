@@ -1,0 +1,139 @@
+{
+  "reviewDate": "2026-10-17",
+  "purpose": "Read-only pre-correction inventory; not an approval",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "node": "v22.22.3",
+  "npm": "10.9.8",
+  "files": [
+    {
+      "path": "src/pathfinding.ts",
+      "sha256": "d36b5c3d661a05ecdd127c84d6f74e8685c4727456a554698a2d9a9acdc75635",
+      "bytes": 3156
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "a21da6be29e69a450f5e603e3ce92a39080212434f6094d4bc0fb81ef1b52bbd",
+      "bytes": 34019
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "fdaabe9a8c7d3ce1f5425a9af86a1c20a77281726c8e797bf83b27fae30d18c3",
+      "bytes": 1365
+    },
+    {
+      "path": "src/scene.ts",
+      "sha256": "787914137f08876025a04903dea1f18ee71b8da4af754804f38df3de98134186",
+      "bytes": 22563
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "ab48e097ed501036ca954d68c23604af9423ad4a6445b14a480d70a53d2e67ef",
+      "bytes": 32244
+    },
+    {
+      "path": "src/analysis.ts",
+      "sha256": "0384f16ca3ad68fea3581d404a867a8f3013b6c084cb3b54a5f31a49fda44125",
+      "bytes": 2985
+    },
+    {
+      "path": "src/simulation.ts",
+      "sha256": "8f77542269cb447b2df37f1b353fcf1bd405b418c3899dc2b0cf5b1a9393bbde",
+      "bytes": 13540
+    },
+    {
+      "path": "scripts/prepare_data.py",
+      "sha256": "c226edb48fba9e69b27a9b5e6f633f49e9f2110687533e8cfb91f137c3d5d2fc",
+      "bytes": 13982
+    },
+    {
+      "path": "scripts/validate-scenarios.ts",
+      "sha256": "a872615ebbc0f64c5b54663c0efec5d3871efc9220869d17e07024819910b4a3",
+      "bytes": 2104
+    },
+    {
+      "path": "tests/simulation.test.ts",
+      "sha256": "9c9bfa371aa4b619d31735c18e9ec974af1c3608c14a84d2272072d6283f2a48",
+      "bytes": 5491
+    },
+    {
+      "path": "tests/browser/warehouse.spec.ts",
+      "sha256": "0bd029ada84dbf75ea45230817b53c45ba42092db21a82187339934e92efd6bc",
+      "bytes": 3917
+    },
+    {
+      "path": "public/data/warehouse.json",
+      "sha256": "04ac848b05c153f7e320d199e373ba309f1a61556a9f200970cc7e30cf3d4c4a",
+      "bytes": 208027
+    },
+    {
+      "path": "public/data/audit.json",
+      "sha256": "51a98f8479bb3c243b5603e7a7eed5bd2fd5dbe18bf87f3fc2abc98902cc74af",
+      "bytes": 10155
+    },
+    {
+      "path": "public/data/dedicated.json",
+      "sha256": "e1823733ae927609a1890cfac53b4c9b9cb4897ef6fba6a31bbae63d21fd13ea",
+      "bytes": 1316211
+    },
+    {
+      "path": "public/data/orders.json",
+      "sha256": "c49726d9fab6bb5c3e162c177b5406df1722f3b9d97dd9e0f7da9848e9da5749",
+      "bytes": 9874780
+    },
+    {
+      "path": "public/data/random.json",
+      "sha256": "7c5284db12748141a2e43fe99f81f31be1b43dad33055490a83c7f7f3a8d7381",
+      "bytes": 1294335
+    },
+    {
+      "path": "public/data/class_based.json",
+      "sha256": "9b3b4d8f362ede67b8a28dcf79f4a26e618a06fa6cc490e123b542e7a38c6ceb",
+      "bytes": 1331980
+    },
+    {
+      "path": "public/data/hybrid.json",
+      "sha256": "6356e5b9a70ec494a0505a1077052337c64994cf130c7950b57b64ab7ad8df5a",
+      "bytes": 1316101
+    },
+    {
+      "path": "docs/implementation.md",
+      "sha256": "07d24a9d4884de83a5173dba5016b053af2eda937f965c054757e97429cecc28",
+      "bytes": 3951
+    },
+    {
+      "path": "docs/data-audit.md",
+      "sha256": "97e070d000df6656e3524dd449dacdfa71d7565df9acd9612a2fc91f2cde6318",
+      "bytes": 13645
+    },
+    {
+      "path": "docs/browser-validation.json",
+      "sha256": "37a6abed708c5274b3aa098482e956ce2f1f0934bbe76334712a6f98002cdd2c",
+      "bytes": 276
+    },
+    {
+      "path": "docs/validation-results.json",
+      "sha256": "2050c1b7fcfd3cf06c3be3071fa42fcf415b36690581ce0e2c1b75addcfbbd08",
+      "bytes": 1389
+    },
+    {
+      "path": "README.md",
+      "sha256": "f4240183f9ad37363195686414ec122371c0f2a8f59ce70775ffc6432ef2712a",
+      "bytes": 13305
+    },
+    {
+      "path": "package.json",
+      "sha256": "63d2cc1b0af07214dd37657c8e7b754842de3d7c6de0ff5f6e6e7e8b1548aee4",
+      "bytes": 696
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "63a05c40b64bc2ac16573fbbf8513ce05630a4220c8305d36c0d8b6b80033fbd",
+      "bytes": 41525
+    },
+    {
+      "path": "data/manifest.json",
+      "sha256": "2ce285deb791d0ef356523e9feccd220e9ad8d41956965cb1ad35aa9ac5ca99d",
+      "bytes": 18374
+    }
+  ]
+}

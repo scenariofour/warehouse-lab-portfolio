@@ -1,0 +1,420 @@
+--- prior/docs/CLAIM_REGISTER.json
++++ current/docs/CLAIM_REGISTER.json
+@@ -1,6 +1,6 @@
+ {
+-  "version": "0.1.0",
+-  "status": "DRAFT \u2014 PENDING HUMAN REVIEW",
++  "version": "0.2.0",
++  "status": "DRAFT — PENDING HUMAN REVIEW",
+   "reviewDate": "2026-10-17",
+   "claims": [
+     {
+@@ -171,8 +171,21 @@
+         "docs/GATE_REVIEWS.json",
+         "docs/GATE_REVIEWS.md"
+       ],
+-      "limitations": "No approval or independent review is recorded; all gate decisions null.",
++      "limitations": "No formal gate approval or independent review is recorded; all gate decisions remain null. Owner-confirmed intended-use direction in D-01 is distinct from a gate approval.",
+       "reviewer": "Unassigned independent human reviewer; PENDING"
++    },
++    {
++      "id": "CL-15",
++      "claim": "The project owner confirmed A as the primary operations-research objective, C as internal AI PM/TPM governance, and B as the analytics/OR/simulation methodology, for educational and portfolio use only.",
++      "classification": "OWNER_DIRECTION",
++      "evaluationStatus": "PASS",
++      "evidence": [
++        "docs/evidence/2026-10-17-g0-direction/owner-confirmation.md",
++        "docs/RISK_AND_DECISION_LOG.md",
++        "docs/PROJECT_CHARTER.md"
++      ],
++      "limitations": "PASS means the documented direction matches the owner instruction; it is not a formal G0 decision, independent review, completed research, operational validity, or permission for deployment, procurement recommendations, productivity guarantees or ROI claims. Proposed criteria still await formal review.",
++      "reviewer": "AI transcription/alignment check only; independent human review PENDING"
+     }
+   ]
+ }
+--- prior/docs/EVALUATION_PLAN.md
++++ current/docs/EVALUATION_PLAN.md
+@@ -1,7 +1,7 @@
+ # Evaluation protocol and observed results
+ 
+ Owner: independent QA/OR reviewer roles unassigned. Author and executor: AI assistant.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+ Review requirements: a human reviewer ratifies claims, reference data, thresholds and adequacy for intended use. Automated PASS is an execution result, never a gate approval.
+ 
+ ## Contract and execution rules
+@@ -9,6 +9,14 @@
+ Each record below contains a claim, scenario, reference, procedure, metric/proposed threshold, actual result, evidence, limitation, reviewer and disposition. `PASS` means the named technical predicate met the proposed threshold; `FAIL` means it did not; `INCONCLUSIVE` means the claim lacks a valid reference or controls. Human review is PENDING for every record. The AI executor is not independent of implementation. [Requirements](REQUIREMENTS.md), [evidence index](EVIDENCE_INDEX.md).
+ 
+ Before running: freeze input/code/config hashes and workload; state whether the purpose is implementation verification, conditional model exploration or operational validation. Never relabel a passing invariant as evidence of field accuracy. After running: retain command output, timestamp, inputs, all outcomes and deviations; compare corrections with the captured baseline. A truncated event log invalidates an event-oracle evaluation. [Evaluation runner](../scripts/evaluate_governance.ts), [scenario runner](../scripts/validate-scenarios.ts).
++
++## Research purpose and interpretation
++
++The owner-confirmed [charter](PROJECT_CHARTER.md) makes end-to-end operations research primary; AI PM/TPM supplies internal controls, with analytics/OR/simulation as methods. The existing EVAL-01–13 records below retain their original procedures, outcomes and evidence; no simulation or technical evaluation was rerun for this documentation revision. The research may succeed by rejecting a hypothesis, exposing confounding or identifying evidence needed before recommending change. A positive optimization result is not an acceptance condition.
++
++Technical verification (EVAL-01–07/12/13) checks declared implementation rules. Operational-model validation requires external/domain references; descriptive source patterns and simulated performance cannot establish a real inefficiency or causal improvement. EVAL-08/09 remain INCONCLUSIVE for causal/robustness claims. EVAL-11 is a boundary on transfer to real-world decisions, not a prerequisite that this educational project demonstrate operational benefit. Deployment, procurement recommendations, productivity guarantees and ROI claims remain excluded. [D-01](RISK_AND_DECISION_LOG.md#d-01--owner-confirmed-intended-use-direction).
++
++Current documentation checks and the nine G0 document acceptance findings are recorded separately in [G0 readiness](G0_READINESS_ASSESSMENT.md). They do not revise the historical results or approve any gate.
+ 
+ ## Evaluation register
+ 
+@@ -37,6 +45,6 @@
+ - Independent BFS is an algorithmic oracle over the declared grid. Synthetic fixtures in [tests](../tests/simulation.test.ts) exercise scarcity, missing SKU and head-on behavior; they are not production input records.
+ - Independent event/coordinate equations can reveal calculation disagreement. Shared model assumptions remain shared uncertainty and must not be mistaken for external validation.
+ 
+-## Establish missing acceptance thresholds
++## Establish missing operational acceptance thresholds — future authorized study
+ 
+-The owner first specifies a bounded operational decision and the cost of error. A warehouse-domain reviewer must then obtain a reconciled stock snapshot and surveyed layout/floor connectivity, time-stamped observed pick/delivery traces and feasible robot/service constraints. Separate calibration observations from held-out validation windows, pre-register reference definitions and exclusions, quantify measurement uncertainty, and select practical error bounds before comparing outputs. No arbitrary “95% accurate,” improvement percentage or ROI threshold is adopted. [NASA modeling/simulation credibility guidance](https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf) informs this intended-use distinction; no formal conformance assessment is claimed.
++This is an evidence prerequisite for any separately authorized operational study, not work performed or authorized in this revision. The owner first specifies a bounded operational decision and the cost of error. A warehouse-domain reviewer must then obtain a reconciled stock snapshot and surveyed layout/floor connectivity, time-stamped observed pick/delivery traces and feasible robot/service constraints. Separate calibration observations from held-out validation windows, pre-register reference definitions and exclusions, quantify measurement uncertainty, and select practical error bounds before comparing outputs. No arbitrary “95% accurate,” improvement percentage or ROI threshold is adopted. [NASA modeling/simulation credibility guidance](https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf) informs this intended-use distinction; no formal conformance assessment is claimed.
+--- prior/docs/EVIDENCE_INDEX.md
++++ current/docs/EVIDENCE_INDEX.md
+@@ -1,7 +1,7 @@
+ # Evidence index and reproduction
+ 
+ Owner: QA evidence custodian role unassigned. Author: AI assistant.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+ Review requirements: independent reviewer reproduces relevant checks, verifies hashes and judges adequacy; command success is not approval.
+ 
+ | ID | Evidence | What it establishes / does not establish |
+@@ -16,9 +16,22 @@
+ | E-08 | [Browser test](evidence/2026-10-17/browser-tests.log), [specification](../tests/browser/warehouse.spec.ts) | Existing MVP controls, follow/inspection/export/policies, scene structure and responsive workflow; one tested browser environment |
+ | E-09 | [Build log](evidence/2026-10-17/build.log) | Typecheck/production compilation; bundle warning is visible; no operational validation |
+ | E-10 | [Correction impact](evidence/2026-10-17/correction-impact.json), [code diff](evidence/2026-10-17/corrections.diff), [document checks](evidence/2026-10-17/document-checks.json), [final evidence manifest](evidence/2026-10-17/evidence-manifest.json) | Source/data impact and structural traceability; hashes and structural checks cannot replace independent judgment |
+-| E-11 | [Assignment](evidence/2026-10-17/assignment.md) | Current human-authorized work boundaries; no gate review/approval |
++| E-11 | [Assignment](evidence/2026-10-17/assignment.md) | Initial human-authorized work boundaries; no gate review/approval |
++| E-12 | [Owner direction](evidence/2026-10-17-g0-direction/owner-confirmation.md), [G0 readiness](G0_READINESS_ASSESSMENT.md), [change summary](G0_CHANGE_SUMMARY.md), [revision provenance](evidence/2026-10-17-g0-direction/README.md), [new document checks](evidence/2026-10-17-g0-direction/document-checks.json), [preservation checks](evidence/2026-10-17-g0-direction/preservation-checks.json) | Owner-confirmed direction and current documentation checks; no new simulation result, independent review or gate approval |
+ 
+-## Reproduce from the project directory
++## Current documentation revision
++
++The owner confirmed intended-use direction in D-01 after the original review. E-01–11 and FINAL_REVIEW remain historical evidence, preserved byte-for-byte. Their snapshot manifest records the earlier document hashes; it is not a claim that those hashes match the revised charter. E-12 supplies the new revision identity. Do not refresh or overwrite the earlier packet for this documentation task. GATE_REVIEWS.json remains unchanged with five PENDING gates.
++
++Current documentation check (no technical reruns):
++
++```bash
++npm run check:governance -- --evidence-dir docs/evidence/2026-10-17-g0-direction
++```
++
++## Original technical reproduction commands — use an isolated copy
++
++These earlier commands can write dated reports. Run them in a separate copy or preserve new outputs under a new run identity; they were not executed for the current documentation-only revision.
+ 
+ ```bash
+ npm ci
+@@ -36,6 +49,6 @@
+ 
+ Python 3.10+ standard library is used for ingestion/audit/import fixtures; TypeScript runners use the existing tsx dependency. Browser tests use the existing Playwright/Chrome setup documented in [README](../README.md). No new runtime dependency, dashboard or model feature is introduced.
+ 
+-The pending review custodian can explicitly refresh an unsigned packet with `npm run check:governance -- --evidence-dir docs/evidence/2026-10-17 --refresh-pending`; this refuses any recorded gate decision and does not approve a gate. After a human decision, preserve the packet and create a new revision rather than refreshing it.
++The checker supports `--refresh-pending` for a deliberately prepared unsigned packet and refuses recorded gate decisions. Do not use that flag on the retained original packet in this revision; the current owner instruction preserves previous evidence. A future review should use a new revision/run directory and retain its predecessor.
+ 
+ The manifest covers named source/input/evidence files and records current hashes; it excludes itself and final document-check output to avoid circular hashing. A material hash change requires renewed affected evaluations and gate review; the checker can detect drift, not authenticate human identity. [Gate procedure](GATE_REVIEWS.md).
+--- prior/docs/GATE_REVIEWS.md
++++ current/docs/GATE_REVIEWS.md
+@@ -1,8 +1,8 @@
+ # Stage gates and human review register
+ 
+ Owner: project owner. Author: AI assistant.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+-Review requirements: owner ratifies this procedure and appoints human data/QA/OR reviewers. No gate has been reviewed or signed by a human in this evidence package.
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Review requirements: owner ratifies this procedure and appoints human data/QA/OR reviewers. D-01 intended-use direction is owner-confirmed; no formal gate review, signature or outcome is recorded in this evidence package.
+ 
+ ## Outcome semantics and approval procedure
+ 
+@@ -11,6 +11,8 @@
+ - **APPROVED:** all criteria for the expressly named use are met; evidence and residual risks accepted by the responsible human.
+ - **CONDITIONALLY APPROVED:** only a bounded use is permitted; each condition has an owner, closure evidence and a due review date/event. A missing material validity prerequisite cannot be waived while retaining the corresponding operational claim.
+ - **BLOCKED:** unresolved blockers prevent progression for the requested use; record corrective work and resubmission evidence.
++
++**D-01 records owner confirmation of intended use, not formal G0 approval.** The charter follows A (operations improvement research), C (internal AI PM/TPM governance), B (analytics/OR/simulation methods). [Owner confirmation](evidence/2026-10-17-g0-direction/owner-confirmation.md).
+ 
+ **PENDING is a review lifecycle state, not a fourth approval outcome.** Every current decision is null. AI recommendations are separate nonbinding advice and cannot transition a gate. The machine-readable [gate register](GATE_REVIEWS.json) preserves this separation.
+ 
+@@ -25,25 +27,25 @@
+ 
+ | Gate | Review state | Human decision / reviewer / date | AI recommendation | Boundary / unresolved prerequisite |
+ |---|---|---|---|---|
+-| G0 | PENDING | None / unassigned / none | CONDITIONALLY APPROVED, if owner confirms sandbox-only purpose | Business success/decision and roles not ratified |
++| G0 | PENDING | None / unassigned / none | CONDITIONALLY APPROVED recommendation only, subject to formal review | D-01 direction confirmed; charter/criteria ratification, independent review and appointments outstanding |
+ | G1 | PENDING | None / unassigned / none | CONDITIONALLY APPROVED for pinned sandbox inputs only | Stock, units, floors and order semantics unresolved; operational data readiness remains blocked |
+ | G2 | PENDING | None / unassigned / none | BLOCKED for operational model readiness | Software evidence available; independent model validation, physical references and accepted use envelope absent |
+ | G3 | PENDING | None / unassigned / none | BLOCKED for causal policy comparison | SKU supply and geometry coverage controls fail; no approved experimental protocol |
+ | G4 | PENDING | None / unassigned / none | BLOCKED for business/operational decisions | No valid treatment comparison, empirical baseline, cost model or risk acceptance |
+ 
+-A recommendation of conditional approval is **not permission to proceed** and does not satisfy a prerequisite. Existing implementation/evaluation work was authorized by the current assignment, not by these pending gates. [Assignment](evidence/2026-10-17/assignment.md).
++A recommendation of conditional approval is **not permission to proceed** and does not satisfy a prerequisite. Prior implementation/evaluation work was authorized by the [initial assignment](evidence/2026-10-17/assignment.md), not by these pending gates. The [current instruction](evidence/2026-10-17-g0-direction/owner-confirmation.md) authorizes documentation alignment only. G2–G4 operational/causal/business recommendations retain their limits; they do not require a positive effect for educational research to be useful.
+ 
+ ## G0 — problem definition
+ 
+-- **Purpose:** agree what question this model can legitimately answer and who decides.
+-- **Required inputs:** user brief; inspected implementation; evidence of intended users and decision; business baseline if business benefit is claimed.
++- **Purpose:** review the evidence-driven operations research purpose, bounded question, intended user, authority and claim limits in the revised charter; distinguish the research objective from application functionality.
++- **Required inputs:** owner direction/D-01; inspected implementation and source/evaluation evidence; revised charter/requirements; proposed research success and guardrail criteria; reviewer appointments. A real economic problem is not presumed; any future benefit claim would need a business baseline and separate scope authorization.
+ - **Deliverables:** approved PROJECT_CHARTER and REQUIREMENTS; named owners/reviewers; explicit non-goals and claim boundary.
+ - **Evaluation methods:** owner walkthrough, requirement-to-evaluation trace review, gap analysis against supplied business evidence.
+-- **Measurable exit criteria:** one named accountable owner; every requirement has a criterion/evaluation; no unstated operational/ROI target; one explicit intended-use statement and escalation boundary. For a business use, obtain an observed baseline and a decision loss/benefit definition before claiming value.
+-- **Evidence:** E-11 assignment, E-01 inspected baseline, charter, requirements, claim register; no interview or business-value evidence is supplied.
++- **Measurable exit criteria:** the nine [G0 document requirements](G0_READINESS_ASSESSMENT.md#document-acceptance-assessment) have traceable PASS/FAIL/INCONCLUSIVE findings; owner formally ratifies purpose, scope, proposed success/guardrail metrics and acceptance criteria; reviewers are appointed and complete the required independent review; every requirement has an evaluation path; no unsupported operational/ROI claim. A documented null/inconclusive research finding is acceptable. Document completeness alone does not approve G0.
++- **Evidence:** [owner confirmation](evidence/2026-10-17-g0-direction/owner-confirmation.md), D-01, charter, requirements, claim register and [G0 readiness assessment](G0_READINESS_ASSESSMENT.md); E-01/E-11 retain the prior baseline/assignment. No interview or business-value evidence is supplied.
+ - **Responsible reviewer:** project owner; independent product/QA reviewer to be appointed.
+-- **Blocking conditions:** unspecified decision/user or unsupported benefit presented as fact; no accountable reviewer.
+-- **Approval procedure:** follow the common procedure; owner must expressly accept/revise bounded intended use. No G0 decision is recorded.
++- **Blocking conditions:** missing formal charter/criteria ratification, unappointed independent reviewer or incomplete required review; unsupported problem/benefit presented as fact. D-01 resolves intended-use direction, not those review prerequisites.
++- **Approval procedure:** follow the common procedure on a named revision/evidence snapshot. D-01 already confirms direction; the owner still reviews/ratifies the complete charter and proposed criteria, appoints reviewers and records a formal outcome only after requirements are satisfied. No G0 decision is recorded.
+ 
+ ## G1 — data readiness
+ 
+@@ -83,12 +85,12 @@
+ 
+ ## G4 — decision readiness
+ 
+-- **Purpose:** permit a specific consequential conclusion only when evidence and uncertainty support it.
+-- **Required inputs:** applicable G0–G3 decisions; complete results including failures; empirical baseline, costs and effect size relevant to the decision; model/experiment uncertainty and residual-risk review.
++- **Purpose:** judge whether a specific conditional research conclusion follows from evidence and uncertainty. Under D-01, “insufficient evidence” and “do not change” are valid conclusions; real-world deployment/procurement/productivity/ROI recommendations are outside intended use.
++- **Required inputs:** applicable G0–G3 decisions for the exact claim; complete results including failures, alternatives and model/experiment uncertainty. A descriptive or inconclusive research conclusion must show its limits; causal claims require a valid controlled comparison. Empirical baseline, costs and decision-relevant effect size would additionally be required for any separately authorized future operational claim.
+ - **Deliverables:** decision brief with alternatives, claim/evidence map, sensitivity limits, recommendation, human acceptance/rejection and follow-up conditions.
+ - **Evaluation methods:** review decision relevance, external validity, confounding, practical significance, error costs and credible alternatives. Test a conclusion against unresolved risks rather than merely checking that a number exists.
+ - **Measurable exit criteria:**all critical decision claims supported by valid references;zero unresolved Critical findings affecting the decision; every material uncertainty has an accepted treatment/limit; named human decision owner signs for the exact use. No numerical business threshold is defensible until baseline/cost evidence exists.
+ - **Evidence:** final review, risk/decision log, claim register, EVAL-08/09/11 and any later field/business evidence. The latter is absent now.
+-- **Responsible reviewer:** business/operational decision owner with independent technical/domain concurrence.
++- **Responsible reviewer:** project/research decision owner with independent technical/domain concurrence; reviewer appointment remains pending. No real warehouse decision authority is appointed.
+ - **Blocking conditions:**causal ranking from current policies, physical performance or ROI claims without validation, unresolved stock/scale/floor identity, no human residual-risk acceptance.
+ - **Approval procedure:** human records the particular decision, evidence snapshot, alternatives, conditions and residual-risk acceptance. Current G4 remains PENDING with AI recommendation BLOCKED.
+--- prior/docs/INTERNAL_PRODUCT_PRACTICES.md
++++ current/docs/INTERNAL_PRODUCT_PRACTICES.md
+@@ -1,8 +1,10 @@
+ # Internal product, quality and AI-risk practices
+ 
+ Owner: project owner; product/QA reviewers unassigned. Author: AI assistant.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+ Review requirements: human owner ratifies practice adoption and role assignments. These are internal work practices, not new application features.
++
++The confirmed hierarchy is operations improvement research (A), internal AI PM/TPM governance (C), and analytics/OR/simulation methodology (B). These practices govern the evidence and decisions without adding product features. A well-supported negative or inconclusive result may satisfy the research objective. [Charter](PROJECT_CHARTER.md), [D-01](RISK_AND_DECISION_LOG.md#d-01--owner-confirmed-intended-use-direction).
+ 
+ ## Working vocabulary for this project
+ 
+@@ -23,7 +25,7 @@
+ | Sensitivity analysis | E-04 varies existing parameters locally and records outcomes. Chosen +/-20% settings are diagnostics, not measured parameter distributions or a robustness certificate. |
+ | Confounders | Different SKU supply, coverage and fulfilled tasks contaminate policy contrasts. EXPERIMENT_CREDIBILITY blocks causal ranking until controls are approved. |
+ | Risk management | RISK_AND_DECISION_LOG ties severity, impact, confidence, evidence and treatment to a responsible role and gate. Unknown facts are not assigned invented probabilities. |
+-| Decision records | Preserve context, alternatives, consequences and human disposition. Current D-01–05 remain proposals; observed legacy implementation is not retrospective approval. |
++| Decision records | Preserve context, alternatives, consequences and human disposition. D-01 records owner-confirmed intended-use direction; D-02–05 remain proposals. All formal gates remain pending; observed legacy implementation is not retrospective approval. |
+ | Human approval | The AI may prepare evidence/recommend outcomes. Only an identified human can record a gate decision for a specified use and evidence snapshot. |
+ | Stage gates | G0 purpose → G1 data → G2 model → G3 experiment → G4 decision. PENDING is review lifecycle; the three decided outcomes are APPROVED, CONDITIONALLY APPROVED and BLOCKED. |
+ 
+--- prior/docs/MODEL_CARD.md
++++ current/docs/MODEL_CARD.md
+@@ -1,12 +1,12 @@
+ # Warehouse Lab — model card
+ 
+ Owner: simulation maintainer role unassigned; project owner accountable for intended use. Author: AI assistant.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+ Review requirements: independent simulation/OR reviewer assesses implementation and numerical tolerances; warehouse-domain reviewer assesses applicability. This card records an abstract model, not an operationally validated digital twin.
+ 
+ ## Model and intended use
+ 
+-A deterministic, fixed-step discrete-state simulation schedules source-demand units onto AMRs. Three.js renders state and interpolates motion; the query panel calculates deterministic answers. There is no trained ML model, LLM, training dataset or learned predictive accuracy to certify. Proposed use is the bounded research/learning sandbox in [the charter](PROJECT_CHARTER.md). [Simulation](../src/simulation.ts), [renderer](../src/scene.ts), [analysis](../src/analysis.ts).
++A deterministic, fixed-step discrete-state simulation schedules source-demand units onto AMRs. Three.js renders state and interpolates motion; the query panel calculates deterministic answers. There is no trained ML model, LLM, training dataset or learned predictive accuracy to certify. The owner-confirmed use is educational/portfolio warehouse operations research in [the charter](PROJECT_CHARTER.md) and [D-01](RISK_AND_DECISION_LOG.md#d-01--owner-confirmed-intended-use-direction). This model is one research and communication instrument; operating the application is not the end-to-end research objective. D-01 does not approve G0 or validate the operational model. [Simulation](../src/simulation.ts), [renderer](../src/scene.ts), [analysis](../src/analysis.ts).
+ 
+ | Component | Declared behavior | Material assumption / limit |
+ |---|---|---|
+@@ -39,4 +39,4 @@
+ 
+ ## Release/use conditions
+ 
+-Any change to scope, raw-data version, size/stock semantics, grouping, calibrated geometry, default parameters, dispatch/routing, KPI equations or event-clock interpretation requires impact analysis and rerun of affected evaluations. Operational recommendations require G2–G4 human review and evidence appropriate to the actual decision. Current gate decisions are pending, not approved. [Gate reviews](GATE_REVIEWS.md).
++Any change to scope, raw-data version, size/stock semantics, grouping, calibrated geometry, default parameters, dispatch/routing, KPI equations or event-clock interpretation requires impact analysis and rerun of affected evaluations. Conditional educational research recommendations must disclose assumptions, evidence gaps and uncertainty. Real-world deployment, equipment procurement recommendations, productivity guarantees and ROI claims are excluded by D-01; any future operational use would require separately authorized scope as well as G2–G4 human review and decision-appropriate evidence. Current gate decisions are pending, not approved. [Gate reviews](GATE_REVIEWS.md).
+--- prior/docs/PROJECT_CHARTER.md
++++ current/docs/PROJECT_CHARTER.md
+@@ -1,36 +1,83 @@
+ # Warehouse Lab — project charter
+ 
+-Owner: Project owner (requester); technical document maintainer role unassigned.  
++Owner: Project owner (requester), accountable for project direction and gate progression; document maintainer role unassigned.  
+ Author: AI assistant; independent human review not performed.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+-Review requirements: project owner confirms intended use and success criteria at G0; data and simulation specialists review assumptions at G1–G2. No signature is implied.
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Review requirements: intended-use direction is owner-confirmed in D-01; formal G0 review of this charter, proposed criteria and reviewer appointments remains pending. Domain and independent technical reviewers assess G1–G4 evidence for the named use. No signature or gate approval is implied.
+ 
+-## Purpose and evidence
++## Purpose and intended users
+ 
+-The requester wants to observe and inspect an autonomous warehouse and explore operational efficiency, while grounding demand and layout in the published footwear dataset. The current assignment freezes the MVP and asks for governance, evaluation, and supported corrections. These are documented user needs, **not evidence of an economic warehouse problem**. No customer interviews, measured labor baseline, purchasing decision, cost model, or quantified business benefit is present in the inspected evidence inventory. [Assignment](evidence/2026-10-17/assignment.md), [inspection baseline](evidence/2026-10-17/baseline-inventory.json), [original implementation scope](../README.md).
++Warehouse Lab is an educational and portfolio-oriented, evidence-grounded warehouse operations research project. Its primary objective is to demonstrate an end-to-end internal operations improvement process: discover and bound a business question, diagnose available operational evidence, formulate testable hypotheses, assess improvements through controlled experiments where defensible, and produce conditional recommendations with explicit uncertainty. A negative or inconclusive finding can be a useful research outcome. The owner confirmed this direction in [D-01](RISK_AND_DECISION_LOG.md#d-01--owner-confirmed-intended-use-direction); that confirmation is separate from formal G0 approval. [Owner instruction](evidence/2026-10-17-g0-direction/owner-confirmation.md).
+ 
+-Proposed intended use: a local, inspectable research/learning sandbox showing how declared robot and inventory assumptions generate outcomes. This intended-use restriction needs G0 confirmation. It does not authorize layout investment, staffing changes, AMR procurement, safety certification, or a claim that one published storage policy improves a real facility. [Data card](DATA_CARD.md), [experiment assessment](EXPERIMENT_CREDIBILITY.md).
++Intended users are the project owner/researcher and human reviewers or portfolio evaluators examining the evidence, method and decision reasoning. The current application is a local exploratory and communication instrument within that research. Its operation is not evidence that a real warehouse has improved or that a specific business problem has been established. No customer interviews, measured labor/cost baseline or quantified business benefit is supplied in the inspected evidence. [Initial assignment](evidence/2026-10-17/assignment.md), [inspection baseline](evidence/2026-10-17/baseline-inventory.json).
+ 
+-## Frozen scope and boundaries
++## Strategic hierarchy
+ 
+-Preserve the existing Vite/TypeScript/Three.js application, 10-AMR default, published input configurations, routing, picking/delivery lifecycle, inspectors, controls, metrics, exports, and deterministic query panel. This assignment permits documentation, offline evaluation, regression tests, and narrowly supported fixes. No dashboard redesign, additional module, new AI capability, optimization policy, replenishment process, or physical robot subsystem is authorized. [Assignment](evidence/2026-10-17/assignment.md), [requirements](REQUIREMENTS.md).
++| Priority / role | Application to this project |
++|---|---|
++| **A — primary objective: end-to-end operations improvement** | Evidence-driven discovery → diagnosis → hypotheses → controlled experimentation → conditional research recommendations; actual inefficiencies remain questions until supported. |
++| **C — internal management framework: AI Product Management and Technical Program Management** | Requirements, acceptance criteria, evaluation protocols, risk management, evidence traceability, decision records, gates and human authority govern the work. They create no user-facing features. |
++| **B — technical research methodology: data analytics, operations research and simulation** | Published real data, quantitative analysis, optimization methods and simulation investigate the questions. Three.js helps understand processes and communicate findings; visual fidelity does not establish operational validity. |
+ 
+-The operational model has no learned predictor or LLM dependency. Risk-management principles are applied to its data, assumptions, calculations, interpretation, and human decisions; this is not a claim of NIST certification. [Analysis implementation](../src/analysis.ts), [methods reference](INTERNAL_PRODUCT_PRACTICES.md).
++This hierarchy describes purpose, governance and method; it is not a claim that every research phase has been completed. [Owner confirmation](evidence/2026-10-17-g0-direction/owner-confirmation.md), [internal practices](INTERNAL_PRODUCT_PRACTICES.md).
+ 
+-## Proposed success and guardrails
++## Research question and bounds
+ 
+-| Question | Proposed success criterion | Evidence / decision boundary |
++"How can real-world warehouse data be used to identify operational inefficiencies, evaluate potential improvements, and support better business decisions?"
++
++For this project, investigation is bounded to the published footwear warehouse dataset, its documented order/allocation/layout relationships, and the current abstract 10-robot model. Candidate questions include which source patterns merit further investigation and whether the existing storage scenarios allow a defensible comparison. Neither a bottleneck nor a superior policy is presumed. Real-business decision support means transparent research reasoning and evidence requirements; it does not authorize acting on this model in a facility. [Data card](DATA_CARD.md), [experiment credibility](EXPERIMENT_CREDIBILITY.md).
++
++## Research objectives and outputs
++
++1. Define candidate operational questions from traceable source evidence and identify missing stakeholder/field evidence before diagnosing a real problem. Output: a bounded problem statement or a documented inability to establish one.
++2. Distinguish source observations, derived analytical measures, modeling assumptions and simulated results. Output: auditable lineage, exception records, assumption and claim registers.
++3. Formulate falsifiable improvement hypotheses with an estimand, common demand/supply controls and evaluation protocol before interpreting differences as effects. Output: an experiment-readiness assessment; an inconclusive comparison is acceptable when controls fail.
++4. Verify the implemented model separately from validating its adequacy for a stated use. Output: reproducible technical evidence and an explicit account of unresolved physical/operational validity.
++5. Produce conditional educational research recommendations, including “do not conclude,” “do not change” or “obtain more evidence.” Output: decision reasoning, alternatives, uncertainty and evidence needed for any later study; no procurement or deployment advice.
++
++These are research outcomes, not new application requirements. The existing viewport, controls, inspectors, robot lifecycle and metrics support exploration; their functionality is specified separately in [REQUIREMENTS](REQUIREMENTS.md). Existing results do not establish completed discovery, controlled causal experiments or field validation. [Evaluation plan](EVALUATION_PLAN.md).
++
++## Frozen MVP scope and non-goals
++
++Preserve the existing Vite/TypeScript/Three.js warehouse, 10-AMR default, published storage configurations, routing, picking/delivery lifecycle, controls, inspectors, metrics, exports and deterministic query panel. The current assignment authorizes documentation and governance consistency checks only. It authorizes no changes to the simulation, source/normalized data, KPI equations, tests, visual design or previous evaluation evidence. [Owner instruction](evidence/2026-10-17-g0-direction/owner-confirmation.md), [MVP scope](../README.md).
++
++Excluded: new modules, dashboards, user journeys, algorithms, optimization policies, learned AI models, replenishment, physical robot subsystems, real-world deployment, equipment procurement recommendations, staffing/layout investment advice, safety certification, productivity guarantees and ROI claims. The broader research methodology does not authorize implementation of additional experiments or features in this revision. Any later scope or model change needs separate authorization and affected gate review. [Decision log](RISK_AND_DECISION_LOG.md), [gate procedure](GATE_REVIEWS.md).
++
++## Assumptions and evidence boundaries
++
++| Evidence class | Current meaning and limitation |
++|---|---|
++| Observed source records | Publisher CSV/layout records and retained bytes establish what is published, not verified live stock or performance. Some data are anonymized/randomized. |
++| Derived values | Normalized joins, wave/order grouping and descriptive counts follow declared conversion rules; source ambiguities and exclusions remain visible. |
++| Assumed model inputs | One carton per allocation cell, size-token interpretation, 0.1 modeled m/source unit, stacked-tier treatment of source floors and hypothetical AMR/service/release settings are unvalidated assumptions. |
++| Simulated outputs | Travel, completions, failures, utilization and congestion are model-relative outcomes, not observed warehouse operations or causal improvement evidence. |
++
++Stock semantics, physical scale/floor connectivity, order reporting unit and representative workload remain unresolved. Published policies have unequal SKU-level supply; their current results cannot isolate a policy effect. No empirical AMR/stock/cost reference establishes operational accuracy or business benefit. No positive effect, physical error threshold or ROI target is invented. [Data card](DATA_CARD.md), [model card](MODEL_CARD.md), [findings F-02–F-12](RISK_AND_DECISION_LOG.md), [comparison assessment](EXPERIMENT_CREDIBILITY.md).
++
++## Proposed success and guardrail metrics
++
++These are proposed research-review criteria, not ratified gate thresholds. Existing EVAL results and numerical tolerances are retained unchanged; technical PASS does not validate a physical warehouse. No positive optimization result is required.
++
++| Dimension | Proposed success / guardrail measure | Evidence / acceptance boundary |
+ |---|---|---|
+-| Are input records faithfully represented? | Exact publisher hashes and transformation reconciliation; all exclusions and inference rules recorded | EVAL-01 in [evaluation plan](EVALUATION_PLAN.md); semantic truth remains unconfirmed |
+-| Is the declared abstract model implemented correctly? | Zero stock/accounting/occupancy violations in named tests; independent routing and KPI oracles within numerical tolerances | EVAL-02–07; does not establish physical validity |
+-| Are results reproducible and attributable? | Same pinned inputs/configuration yield identical event hash; every material claim has an evidence path | EVAL-05/10 |
+-| Can a storage-policy effect be identified? | Equivalent SKU-level supply and agreed controls before ranking | EVAL-08; currently INCONCLUSIVE |
+-| Can a real-world decision be supported? | Decision-specific field reference, tolerances, uncertainty assessment and human review | EVAL-09/11; currently INCONCLUSIVE |
++| Evidence quality | 100% of material claims have a source/evaluation link, evidence class and stated limit; unsupported field/causal/ROI claims: zero | [Claim register](CLAIM_REGISTER.json), EVAL-01/10; source semantics need domain review even when hashes reconcile. |
++| Methodological validity | Every proposed causal contrast declares its estimand, workload, SKU supply, geometry and parameter controls before ranking; failed controls yield INCONCLUSIVE, not a winner | EVAL-08/09, [experiment assessment](EXPERIMENT_CREDIBILITY.md); no minimum effect size or statistical confidence is yet justified. |
++| Technical correctness | Exact pinned-source reconciliation; zero named stock/accounting/reservation violations; routing and KPI oracle agreement at existing proposed tolerances | R-01–08/13, EVAL-01–07/13; evaluated cases only, separate from operational validity. |
++| Reproducibility | Identical pinned data/code/configuration reproduce the event hash in the tested environment; record run identity and all exceptions | EVAL-05/10; priority-seed aliases are not independent replications. |
++| Decision usefulness | Every research recommendation identifies the question, evidence, alternatives, assumptions, uncertainty, limits and next evidence/action; withholding a recommendation is valid | Owner + independent reviewer assess clarity and warranted scope at G0/G4; no empirical business-value threshold is available. |
++| Scope / authority guardrail | Zero MVP/data/KPI changes in this documentation revision; five PENDING gates and zero recorded gate decisions until formal review | [Preservation check](evidence/2026-10-17-g0-direction/preservation-checks.json), [gate register](GATE_REVIEWS.json); D-01 direction confirmation is not gate approval. |
+ 
+-No improvement percentage, ROI target, field-accuracy threshold, adoption metric, or delivery deadline has been approved. The owner must choose those only after defining a decision and obtaining a usable empirical baseline. [Gate reviews](GATE_REVIEWS.md).
++For any separately authorized future operational study, domain reviewers would need empirical references and decision-specific tolerances before validating a model or claiming business impact. EVAL-11 remains INCONCLUSIVE and is a transfer boundary, not a requirement that this educational project prove a real-world benefit. [Evaluation plan](EVALUATION_PLAN.md).
+ 
+-## Responsibility and approval
++## Stakeholders, authority and outstanding appointments
+ 
+-The requester is the proposed accountable product owner. A data-domain reviewer, an independent simulation/QA reviewer, and a decision owner must be named before relevant gate decisions. Roles are requested, not staffed. The AI prepares evidence and recommendations; it cannot supply independent review or human approval. [Gate procedure](GATE_REVIEWS.md).
++| Stakeholder / role | Current status and authority |
++|---|---|
++| Project owner (requester) | Confirmed D-01 intended-use direction; accountable for scope and progression. Must formally review the charter/criteria, appoint reviewers and record any gate outcome. No formal gate decision is recorded. |
++| Independent product/QA reviewer | Unassigned. Needed for G0 evidence/criteria review and challenge of author conclusions; no independent review claimed. |
++| Data steward / warehouse-domain reviewer | Unassigned. Needed to resolve source/stock/order/geometry meanings and review data applicability at G1 and later gates. |
++| Independent simulation/OR reviewer | Unassigned. Needed for technical evidence, model adequacy and experiment controls at G2–G3. |
++| G4 research decision reviewer / owner | Project owner accountable; reviewer appointment and review still pending. Judges whether conditional research conclusions follow from evidence; cannot extend intended use to deployment. |
++| AI assistant | Documents, checks and recommends; is not an independent reviewer, human approver or source of operational ground truth. |
+ 
+-DMAIC control for this assignment: Define this charter → Measure pinned records and invariants → Analyze confounders and defects → Improve only supported defects → Control through versioned tests, evidence hashes and reopened gates after material changes. This is a project-specific application of [ASQ DMAIC](https://asq.org/quality-resources/dmaic), not a completed continuous-improvement program.
++No actual warehouse operator, procurement authority, customer representative or independent validator is claimed as a participating stakeholder. G0 preparation evaluates document completeness separately from formal approval. All five gates stay PENDING. [G0 readiness assessment](G0_READINESS_ASSESSMENT.md), [gate procedure](GATE_REVIEWS.md).
+--- prior/docs/REQUIREMENTS.md
++++ current/docs/REQUIREMENTS.md
+@@ -1,10 +1,12 @@
+ # Warehouse Lab — requirements and acceptance contract
+ 
+ Owner: Project owner; QA reviewer role unassigned. Author: AI assistant.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+ Review requirements: owner ratifies frozen scope; independent reviewer ratifies thresholds and the evidence envelope. Technical PASS does not approve a requirement for operational use.
+ 
+-The original MVP and governance assignment are the scope authorities. Criteria below formalize existing capabilities and evidence obligations; they introduce no product feature. [Assignment](evidence/2026-10-17/assignment.md), [README](../README.md).
++The original MVP defines existing capabilities; the [owner direction instruction](evidence/2026-10-17-g0-direction/owner-confirmation.md) governs this documentation revision and preserves that MVP. Criteria below formalize existing capabilities and evidence obligations; they introduce no product feature. [Initial assignment](evidence/2026-10-17/assignment.md), [README](../README.md).
++
++The research objective is evidence-driven end-to-end operations improvement; AI PM/TPM governs the work and data analytics/OR/simulation supplies the methodology. Research success is evidence quality, methodological validity, technical correctness, reproducibility and decision usefulness, including negative/inconclusive outcomes. No specific warehouse inefficiency is established by this requirement list. The [charter](PROJECT_CHARTER.md) defines research objectives and proposed guardrails separately from the existing application requirements below. D-01 confirms intended-use direction only; formal gates and criterion ratification remain pending. [D-01](RISK_AND_DECISION_LOG.md#d-01--owner-confirmed-intended-use-direction).
+ 
+ | ID | Existing requirement / constraint | Proposed acceptance criterion | Verification and limit |
+ |---|---|---|---|
+@@ -19,7 +21,7 @@
+ | R-09 | Honest policy comparison | No causal ranking unless SKU-level inventory, demand, geometry and control conditions pass an agreed design | EVAL-08; current published scenarios fail necessary inventory controls |
+ | R-10 | Explicit assumptions and business limits | Stock, size, scale, floors, service, release, seed and experiment limits linked to source and decision records | EVAL-09/10/11; no ROI or deployment-readiness assertion |
+ | R-11 | Preserve the local MVP | Production build and existing browser workflow pass; visual/UI modules and model calculations remain in frozen scope | EVAL-12; scenario completion covers default 120 groups only |
+-| R-12 | Preserve human authority | Each gate remains review-state PENDING and decision null until an identified human records a decision; AI recommendations stay separate | EVAL-10; document checker does not authenticate a human identity |
++| R-12 | Preserve human authority | Each gate remains review-state PENDING and decision null until an identified human records a formal gate decision; AI recommendations stay separate | EVAL-10; document checker does not authenticate a human identity |
+ | R-13 | Reject unsafe local-data replacements | Invalid ZIP payload, duplicate source name or conflicting preserved bytes causes rejection before any source replacement | EVAL-13; isolated fixtures, not adversarial certification |
+ 
+ ## KPI contract
+@@ -30,4 +32,4 @@
+ 
+ ## Change control
+ 
+-A supported defect fix requires a reproducible failure, minimal correction, regression and impact evidence. Changing stock semantics, size rules, customer-order aggregation, metric calibration, topology or policy controls requires an owner/domain decision first. Any such change invalidates affected prior evaluations and reopens G1–G4. New product scope needs a separate authorization. [Risk and decision log](RISK_AND_DECISION_LOG.md).
++This revision authorizes documentation changes and consistency checks only; application, data, KPI, test and design changes are excluded. For separately authorized future work, a supported defect fix requires a reproducible failure, minimal correction, regression and impact evidence. Changing stock semantics, size rules, customer-order aggregation, metric calibration, topology or policy controls requires an owner/domain decision first. Any such change invalidates affected prior evaluations and reopens G1–G4. New product scope needs a separate authorization. [Risk and decision log](RISK_AND_DECISION_LOG.md).
+--- prior/docs/RISK_AND_DECISION_LOG.md
++++ current/docs/RISK_AND_DECISION_LOG.md
+@@ -1,16 +1,16 @@
+ # Risk, findings, corrections and decisions
+ 
+ Owner: project owner; independent data/QA/OR reviewers unassigned. Author: AI assistant.  
+-Version: 0.1.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
++Version: 0.2.0 · 2026-10-17. Status: DRAFT — PENDING HUMAN REVIEW.  
+ Review requirements: owner assigns reviewers, accepts residual risks only for a named use, and records decisions in GATE_REVIEWS. Fix implementation is not human acceptance.
+ 
+-Severity is about consequence within the proposed use: **Critical** prevents a defensible operational/business conclusion; **High** threatens source integrity, model/accounting contracts or governance authority; **Medium** limits evidence quality or generalization. Confidence refers to evidence for the finding, not certainty about unknown warehouse facts. No numerical probability or invented risk-priority score is assigned.
++Severity is about consequence within the stated use: **Critical** prevents a defensible operational/business conclusion; **High** threatens source integrity, model/accounting contracts or governance authority; **Medium** limits evidence quality or generalization. Confidence refers to evidence for the finding, not certainty about unknown warehouse facts. No numerical probability or invented risk-priority score is assigned.
+ 
+ ## Findings register
+ 
+ | ID | Severity; impact; confidence | Finding and cause | Required action / current treatment | Evidence; gate; responsible role |
+ |---|---|---|---|---|
+-| F-01 | High; purpose/ROI; high confidence in evidence gap | User intent is documented, but no economic problem baseline, buyer research or decision loss function is supplied | Owner confirms bounded purpose and success criteria; no savings/ROI assertion | E-01/E-11; G0/G4; project owner |
++| F-01 | High; purpose/ROI; high confidence in evidence gap | User intent is documented, but no economic problem baseline, buyer research or decision loss function is supplied | D-01 direction confirmed; formal G0 review of proposed criteria and reviewer appointments remains pending; no savings/ROI assertion | E-01/E-11; G0/G4; project owner |
+ | F-02 | Critical; stock/service conclusions; high confidence in ambiguity | README quantity label conflicts with size-like tokens; one carton per cell and size interpretation are assumptions; inventory as-of date unknown | Retain explicit model, obtain source-domain clarification before real stock claims; no silent reinterpretation | E-02, DATA_CARD; G1–G4; data steward/domain reviewer |
+ | F-03 | Critical; routing/time/capacity; high confidence in mismatch | Meter labels vs notebook floors; assumed 0.1 calibration and stacked-tier display; no physical inter-floor service model | Obtain surveyed units/topology and feasible picking constraints; current model stays an abstraction | Source README/notebook; MODEL_CARD; G1/G2/G4; domain/OR reviewer |
+ | F-04 | Critical; comparative decisions; high | Equal totals hide unequal SKU-level supply and geometry exclusions; feasible demand differs by policy | Mark causal effect INCONCLUSIVE; require common-inventory/control protocol before ranking | E-02/E-05, EXPERIMENT_CREDIBILITY; G3/G4; OR reviewer |
+@@ -52,14 +52,26 @@
+ 
+ No stock/size/grouping/scale/topology rule or KPI formula was changed. Existing UI and scene sources remain unchanged. [Correction impact](evidence/2026-10-17/correction-impact.json).
+ 
+-## Decision records — no human decision recorded
++## Decision records — direction confirmed, formal gates pending
+ 
+ | ID / status | Context and options | AI recommendation and consequence | Required human disposition |
+ |---|---|---|---|
+-| D-01 — PROPOSED | Keep abstract model as an inspectable sandbox, or authorize a calibrated operational model | Restrict current use to explicit sandbox hypotheses; no operational ROI/capacity claims | Owner confirms intended use and appoints reviewers at G0 |
++| D-01 — OWNER-CONFIRMED DIRECTION | End-to-end operations research is the primary objective; AI PM/TPM governs; analytics/OR/simulation provide methods | Educational/portfolio use only; current application is a research instrument; no deployment, procurement, productivity or ROI claims | Intended use confirmed by requester; formal G0 review, proposed criteria ratification and reviewer appointments remain pending |
+ | D-02 — PROPOSED; existing rules retained | Interpret payload as quantity, size/carton slots, or obtain source clarification; source is contradictory | Do not adopt a new interpretation during this review; preserve current inputs and disclose uncertainty | Data-domain owner resolves semantics and snapshot timing at G1 |
+ | D-03 — PROPOSED | Compare published unequal allocations descriptively, or create separately labeled controlled common-inventory treatments | Current ranking is INCONCLUSIVE; a controlled remapping needs explicit approval and a new protocol | Owner + OR reviewer decide estimand, inventory and workload controls at G3 |
+ | D-04 — PROPOSED | Aggregate across waves as customer orders, or retain wave/order task groups | Retain current computational unit; clarify internal throughput meaning; no unsupported regrouping | WMS/business reviewer decides reporting unit and treatment of repeated rows |
+ | D-05 — PROPOSED | Accept a numerical/model validity tolerance, or defer until reference evidence exists | Keep numeric roundoff tolerances for QA; do not invent field-accuracy or business thresholds | Owner/domain reviewer sets decision-specific criteria at G2/G4 |
+ 
++### D-01 — owner-confirmed intended-use direction
++
++**Status:** OWNER-CONFIRMED DIRECTION, recorded 2026-10-17 from the project owner's current chat instruction. This supersedes D-01's prior PROPOSED intended-use wording only. **G0–G4 remain PENDING; no formal gate decision, signature or independent validation is recorded.** [Owner evidence](evidence/2026-10-17-g0-direction/owner-confirmation.md), [prior decision record](evidence/2026-10-17-g0-direction/prior-documents/RISK_AND_DECISION_LOG.md).
++
++**Context and alternatives:** the earlier record proposed an inspectable sandbox and left project purpose unconfirmed. The owner has now selected an evidence-driven operations improvement research project. A simulation-feature-led objective and an operational deployment/procurement project are outside that confirmed direction; no comparative scoring of alternatives was performed.
++
++**Decision and rationale:** **A** is primary: demonstrate discovery, diagnosis, hypotheses, controlled experimentation and conditional recommendations. **C** is internal governance: AI Product Management and Technical Program Management practices manage requirements, evidence, evaluation, risk and human decisions without adding UI features. **B** is method: real-data analytics, operations research, optimization and simulation investigate operational questions; Three.js communicates processes/findings. Technical verification stays separate from operational-model validation. This hierarchy follows the owner's instruction, not an AI inference of proven warehouse problems.
++
++**Intended use and consequences:** educational and portfolio-oriented, evidence-grounded warehouse operations research. The current Three.js/10-robot application remains intact as an instrument. Research may find no improvement, an invalid comparison or insufficient evidence. Conditional research recommendations must disclose evidence and uncertainty. This direction does not authorize real-world deployment, equipment procurement recommendations, productivity guarantees or ROI claims. It does not validate stock, geometry, causal effects or economic benefit, or approve D-02–05.
++
++**Authority and next review:** the requester/project owner is the source of this intended-use confirmation; the AI records it and cannot sign as an independent reviewer. The current task authorizes documentation alignment and checks only. Formal G0 still requires review of the revised charter, proposed success/guardrail criteria, named reviewer appointments and a gate record under [the procedure](GATE_REVIEWS.md). No reviewer identity, decision date, signature, accepted evidence snapshot or gate outcome is filled in by this confirmation. [Charter](PROJECT_CHARTER.md), [G0 readiness](G0_READINESS_ASSESSMENT.md).
++
+ Review cadence proposal: inspect open findings at every data/model/claim change and before a gate decision. Reopen affected gates if their evidence hashes, approved use, assumptions or criteria change. This proposal creates no scheduled automation and no approval by itself.

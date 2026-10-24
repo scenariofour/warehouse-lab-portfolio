@@ -1,0 +1,14 @@
+{
+  "milestone": "M1",
+  "status": "PASS",
+  "executed_at_utc": "2026-10-18T16:25:42.868262+00:00",
+  "preserved_files": 162,
+  "gates": "G0\u2013G4 PENDING",
+  "simulation_executed": false,
+  "tests": "test_closure_and_correction_evidence (test_dq_contract.ContractTests.test_closure_and_correction_evidence) ... ok\ntest_each_required_field (test_dq_contract.ContractTests.test_each_required_field) ... ok\ntest_malformed_mutations (test_dq_contract.ContractTests.test_malformed_mutations) ... ok\ntest_unique_registry_ids (test_dq_contract.ContractTests.test_unique_registry_ids) ... ok\ntest_valid_and_unknown_metrics (test_dq_contract.ContractTests.test_valid_and_unknown_metrics) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.002s\n\nOK\n",
+  "input_hashes": {
+    "docs/data-quality/issue-record.schema.json": "f39a25f712446b2fe7c5b020f745a41f9ce6ede19cbf1ca052b3e0b9e4981e23",
+    "scripts/data_quality/contract.py": "00aa0d6926ffe1e1f671aa62318d5b750d04fbee7b42db83020bd1c1cde16b01",
+    "tests/test_dq_contract.py": "ce84773cb74e049bd65b09faa673bf099ffbecc7301c6227b8ea961099398792"
+  }
+}

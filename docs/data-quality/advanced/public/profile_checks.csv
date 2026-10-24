@@ -1,0 +1,13 @@
+source_id,field,check,affected_rows,population_rows
+Customer_Order.csv,waveNumber,blank_identifier,0,122370
+Customer_Order.csv,orderNumber,blank_identifier,0,122370
+Customer_Order.csv,Reference,blank_identifier,0,122370
+Picking_Wave.csv,waveNumber,blank_identifier,0,215192
+Picking_Wave.csv,reference,blank_identifier,0,215192
+Picking_Wave.csv,locations,blank_identifier,0,215192
+Product.csv,Reference,blank_identifier,0,208
+Storage_Location.csv,originalLocation,blank_identifier,0,2292
+Product.csv,Reference,duplicate_master_id_after_first,0,208
+Storage_Location.csv,originalLocation,duplicate_master_id_after_first,0,2292
+Customer_Order.csv,quantity (units),negative_quantity,0,122370
+Picking_Wave.csv,quantityToPick (units),negative_quantity,0,215192

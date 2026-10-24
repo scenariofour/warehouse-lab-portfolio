@@ -1,0 +1,71 @@
+{
+  "reviewDate": "2026-10-17",
+  "comparedAgainst": "baseline-inventory.json / baseline-scenarios.json",
+  "changedBaselineFiles": [
+    "src/pathfinding.ts",
+    "scripts/prepare_data.py",
+    "scripts/validate-scenarios.ts",
+    "tests/simulation.test.ts",
+    "docs/data-audit.md",
+    "docs/validation-results.json",
+    "README.md",
+    "package.json"
+  ],
+  "normalizedJSONFilesChanged": [],
+  "runtimeSourceFilesChanged": [
+    "src/pathfinding.ts"
+  ],
+  "uiSceneSimulationCalculationSourcesUnchanged": true,
+  "defaultPolicyOutcomeComparisons": [
+    {
+      "policy": true,
+      "time": true,
+      "completed": true,
+      "failed": true,
+      "failedUnits": true,
+      "delivered": true,
+      "distance": true,
+      "utilization": true,
+      "minSeparation": true,
+      "policyName": "Random"
+    },
+    {
+      "policy": true,
+      "time": true,
+      "completed": true,
+      "failed": true,
+      "failedUnits": true,
+      "delivered": true,
+      "distance": true,
+      "utilization": true,
+      "minSeparation": true,
+      "policyName": "Class_Based"
+    },
+    {
+      "policy": true,
+      "time": true,
+      "completed": true,
+      "failed": true,
+      "failedUnits": true,
+      "delivered": true,
+      "distance": true,
+      "utilization": true,
+      "minSeparation": true,
+      "policyName": "Dedicated"
+    },
+    {
+      "policy": true,
+      "time": true,
+      "completed": true,
+      "failed": true,
+      "failedUnits": true,
+      "delivered": true,
+      "distance": true,
+      "utilization": true,
+      "minSeparation": true,
+      "policyName": "Hybrid"
+    }
+  ],
+  "allDefaultNumericalOutcomesUnchanged": true,
+  "rawHashesStillMatchPublisher": true
+}

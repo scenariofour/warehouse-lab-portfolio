@@ -1,0 +1,17 @@
+PUBLIC COPY: absolute local workspace paths redacted for privacy. Test output otherwise preserved.
+Original evidence remains in the private development archive; see docs/release/PRIVACY_REDACTIONS.json.
+
+F
+======================================================================
+FAIL: test_corrupt_zip_does_not_overwrite_preserved_raw_file (test_data_pipeline.ImportRegression.test_corrupt_zip_does_not_overwrite_preserved_raw_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<local-workspace>/tests/test_data_pipeline.py", line 21, in test_corrupt_zip_does_not_overwrite_preserved_raw_file
+    self.assertEqual((root/'data/raw/Product.csv').read_bytes(),original,'Rejected ZIP replaced the original source bytes')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'corrupted payload' != b'Reference;ABCCOD;Sector\nTEST;A;PF\n' : Rejected ZIP replaced the original source bytes
+
+----------------------------------------------------------------------
+Ran 1 test in 0.066s
+
+FAILED (failures=1)

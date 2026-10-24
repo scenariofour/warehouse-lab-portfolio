@@ -1,0 +1,32 @@
+import {test,expect} from '@playwright/test';
+test('real warehouse: run, pause, follow, inspect, switch policies, export, responsive layout',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('./');await page.waitForFunction(()=>(window as any).warehouseLab?.scene);
+ await expect(page.getByRole('heading',{name:'Warehouse overview'})).toBeVisible();
+ expect(await page.evaluate(()=>(window as any).warehouseLab.simulation.robots.length)).toBe(10);
+ expect(await page.evaluate(()=>{const s=(window as any).warehouseLab.scene.scene;return {shelves:s.getObjectByName('Rack shelves')?.count,beams:s.getObjectByName('Rack beams')?.count,posts:s.getObjectByName('Rack posts')?.count}})).toEqual({shelves:2292,beams:4584,posts:9168});
+ await page.getByRole('button',{name:'Start simulation',exact:true}).click();
+ await page.getByRole('button',{name:'20×',exact:true}).click();
+ await page.waitForFunction(()=>(window as any).warehouseLab.simulation.time>=5);
+ await page.getByRole('button',{name:'Pause simulation',exact:true}).click();
+ const paused=await page.evaluate(()=>(window as any).warehouseLab.simulation.time);
+ await page.waitForTimeout(400);expect(await page.evaluate(()=>(window as any).warehouseLab.simulation.time)).toBe(paused);
+ await page.getByRole('button',{name:/AMR-01/}).click();await page.getByRole('button',{name:'Follow robot',exact:true}).click();
+ expect(await page.evaluate(()=>(window as any).warehouseLab.scene.follow)).toBe(true);
+ await page.getByRole('button',{name:'Isometric view',exact:true}).click();
+ await page.evaluate(()=>{const lab=(window as any).warehouseLab;lab.simulation.running=true;lab.advance(600);lab.simulation.running=false});
+ const stats=await page.evaluate(()=>{const s=(window as any).warehouseLab.simulation;return {delivered:s.delivered,distance:s.distance,picked:s.initialStock-s.stockTotal}});
+ expect(stats.delivered).toBeGreaterThan(0);expect(stats.distance).toBeGreaterThan(100);expect(stats.picked).toBeGreaterThanOrEqual(stats.delivered);
+ await page.getByRole('button',{name:'Top-down view',exact:true}).click();
+ await page.getByRole('tab',{name:'Inventory',exact:true}).click();await page.getByRole('textbox',{name:'Storage location ID'}).fill('A-14-11');await page.getByRole('button',{name:'Find location',exact:true}).click();
+ await expect(page.locator('.location-details')).toContainText('TQBVRI');await expect(page.locator('.location-details')).toContainText('Source XYZ: (368, 0, 1)');
+ await page.getByRole('button',{name:'Which robot is busiest?',exact:true}).click();await expect(page.locator('.answer-bubble')).toContainText('seconds working');await page.getByRole('button',{name:'Close dialog'}).click();
+ const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Export run',exact:true}).click();expect((await downloadPromise).suggestedFilename()).toContain('warehouse-lab-Random');
+ await page.getByRole('button',{name:'Reset simulation',exact:true}).click();expect(await page.evaluate(()=>(window as any).warehouseLab.simulation.time)).toBe(0);
+ await page.getByRole('tab',{name:'Experiments',exact:true}).click();await page.locator('[data-policy="Dedicated"]').click();
+ await page.waitForFunction(()=>(window as any).warehouseLab.simulation.policy==='Dedicated');await expect(page.locator('#policy-title')).toContainText('Dedicated');
+ for(const p of ['Class_Based','Hybrid','Random']){await page.getByRole('tab',{name:'Experiments',exact:true}).click();await page.locator(`[data-policy="${p}"]`).click();await page.waitForFunction(p=>(window as any).warehouseLab.simulation.policy===p,p)}
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);
+ await expect(page.getByRole('button',{name:'Start simulation',exact:true})).toBeVisible();
+ expect(errors).toEqual([]);
+});

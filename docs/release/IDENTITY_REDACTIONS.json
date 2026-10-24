@@ -1,0 +1,77 @@
+{
+  "scope": "Public copy only. Original authoring records remain in private archives. Prior historical hash manifests refer to the original snapshots.",
+  "files": [
+    {
+      "path": "README.md",
+      "private_original_sha256": "e61928374a841a3f6d7b4719928c411cbec46253afc406ba262ce6c63dc7f059",
+      "public_sha256": "11dd5bba5cf6dec8a7a562593bdc74a507074d834571611fd2081903e3830fdf",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/PORTFOLIO_SUMMARY.md",
+      "private_original_sha256": "1c0fcbdde8ba3e789b71323d73817ae911fee39a2a4082707698eac66f9ea841",
+      "public_sha256": "07eb00ba1c195707bbbe28494a1ef407587d2f4a89046b3c305f2445ab4a3fe4",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/control-tower/CONTROL_TOWER_TABLEAU_PLAN.md",
+      "private_original_sha256": "bd685159b9607bf2a50293f7def4be20d4aaee87202e16a9fc8f3653ac174f75",
+      "public_sha256": "6b447d0da59b7b2cace23d9938d036c5d24fd729ac5a00daac009ef009f64deb",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/control-tower/index.html",
+      "private_original_sha256": "0af99b3ced1c81fac0a6b94e01352c30bf32491a7fdd193e05e9858d1ba92b12",
+      "public_sha256": "6864d48cce51f2e75cdf1bfbfa33ac5837f746b23bc5175b8f5fd980bbb8cdc6",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/data-quality/advanced/tableau-workbook/DASHBOARD_02_CASE_STUDY.md",
+      "private_original_sha256": "19100a4baf43b6f220b3fd62b4e6c3312338f54aa9f7f94a14fd9ef3adb97b69",
+      "public_sha256": "590be7a67c1c0cd76684d455eeb386e6cfc7db1386142bfb544496d0a2903ed2",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/data-quality/advanced/tableau-workbook/DASHBOARD_03_CASE_STUDY.md",
+      "private_original_sha256": "9de65595241eeacc41571d42266af679596c86d551f30e1c6650a47cdb294e90",
+      "public_sha256": "ff1cfa3f49227303573982cfeb9b0da016c1cb70f790a7d4b4cddff073074069",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/data-quality/advanced/tableau-workbook/EVIDENCE_REGISTER.md",
+      "private_original_sha256": "f638f9d0e146d61551f8a8d5badf121cf2dc2efc71787277d79beea8fc512cef",
+      "public_sha256": "fb17bd9a4a39b41fa6119c9de83babd0f56ce7f8fd8ba9df01def4dab7e2036d",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/data-quality/advanced/tableau-workbook/README.md",
+      "private_original_sha256": "292d776b0010fd4c0d9b1c31d3557d180444585921f4fde4a547cfdb660e0464",
+      "public_sha256": "1c8c7a257941fb6c43634370d91b9baf0e7adc0064735b1d47eddbf310c3689f",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/data-quality/advanced/tableau-workbook/worksheets/B04.md",
+      "private_original_sha256": "f42e71eaca6e6de8905a610fd04221202eb501bc11d1e2c46e2d9d7c2163c4f8",
+      "public_sha256": "db1a1253b424ca81674c77701bdc14b1272fed2bfc7acd4344ebe93234afb592",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/data-quality/advanced/tableau-workbook/worksheets/C03.md",
+      "private_original_sha256": "914b6cc325902ffbbf9e41b39fb0da56e608ee82ecd6f1a562af252203f4a732",
+      "public_sha256": "388af738c992bf2183e570ed54b3a0ef6e0c2e5624de767c879affa8e20e2563",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/release/RELEASE_STATUS.md",
+      "private_original_sha256": "88f83137fbf2176b3ae6bbd24f17a194bf33e4321fef6e21c39ae3fa15b69a40",
+      "public_sha256": "9cb60019e758c1fadadf699302b582173e891b3ed1dd5e632d80f4ed1f9aa168",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    },
+    {
+      "path": "docs/tableau/README.md",
+      "private_original_sha256": "94a1ab441ed18e2f7ee066b1bb0d5856d67398969c8b6c10335c722132985ee7",
+      "public_sha256": "2b4d354bc7c8034dbdbc1d6bcb86cca2dbbc048abfd7adc2ac59731ff2b1c36f",
+      "change": "Owner-requested author alias and profile-independent Tableau navigation; no analytical values changed."
+    }
+  ]
+}

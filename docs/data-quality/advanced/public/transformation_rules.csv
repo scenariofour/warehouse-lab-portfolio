@@ -1,0 +1,10 @@
+rule_id,rule_kind,approval_state,description,affected_calculations
+PARSE,AUTHORIZED_REPRESENTATION,NOT_A_SOURCE_CORRECTION,Existing delimiter/BOM parsing; raw bytes untouched.,All parsed fields and populations
+TRIM,AUTHORIZED_REPRESENTATION,NOT_A_SOURCE_CORRECTION,Existing whitespace-trimmed analytical keys; retain original tokens in token ledger.,Identifier joins; numeric parsing
+NUMERIC,AUTHORIZED_REPRESENTATION,NOT_A_SOURCE_CORRECTION,Existing Decimal spelling; missing remains missing.,Size-key equality
+HALF_SIZE,EXISTING_INFERRED_NORMALIZATION,SEMANTIC_APPROVAL_PENDING,"Existing customer tokens 35,45,55,65,75,85,95,105,115,125 divided by ten.",Reconciliation; size eligibility; SKU demand
+LITERAL_SIZE,ANALYTICAL_SENSITIVITY,NOT_APPROVED_FOR_PRODUCTION,Customer half tokens remain literal numeric sizes. All source records retained.,Reconciliation; size-key population
+CUSTOMER_DEDUP,ANALYTICAL_SENSITIVITY,NOT_APPROVED_FOR_PRODUCTION,"Keep first exact original customer tuple, then current normalization. No source rows removed.",Demand denominator; matched/gap/excess; key presence
+RETAIN,RETENTION,NO_CORRECTION_APPROVED,"Keep repeated rows, zero quantities and missing sizes in current measures; unknown stays unknown.",All current populations
+ABC_VOLUME,DERIVED_ALTERNATIVE_BASIS,NOT_A_PUBLISHED_LABEL_REPLACEMENT,"Rank full customer unit volume; cumulative-before thresholds 80/95, original reference tie order.",Derived ABC and classification disagreement
+CELL_ASSUMPTION,CONDITIONAL_ASSUMPTION,SEMANTIC_APPROVAL_PENDING,Existing token-as-size / one-cell-assumed-unit arithmetic; omit coordinate-excluded cells only for retained analysis.,Policy SKU counters; conditional finite-snapshot ceiling

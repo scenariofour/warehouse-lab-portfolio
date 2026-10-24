@@ -1,0 +1,6 @@
+# Findings
+M2 has 14 issues, all unknown causes and pending human review; 112442 full reconciliation keys, 208 ABC references, 6 policy pairs, 16819 policy SKU counters. M3 has 10 internal / 4 public summary tables. Discovery scripts and artifacts are untracked and must not be changed or committed. Customer totals 228195; picks 215192; current gap 13003; unmapped picking units 23609. Literal matching 149514; exact customer dedup sensitivity creates 12717 picking excess units. No source corrections approved.
+
+External research (untrusted source facts only): official Tableau feature comparison documents calculations/parameters/table calculations in web authoring, Desktop configuration for advanced actions and Viz in Tooltip. Public supports file uploads. Use explicit controls and workbook tabs as baseline; actual UI smoke test remains manual. Public viz URL failed web fetch; no workbook inspection claimed.
+
+First independent verifier PASS: all new table groups reconcile, 16 replay files byte-identical, 210 preserved files, five invalid mutations rejected, M1–M3 suites pass. Added consumer SQL checks and full local source lookup for literal-only/current/dedup keys; final verification pending. Planning selector restored to pre-task bytes; this task remains pinned by explicit plan path.

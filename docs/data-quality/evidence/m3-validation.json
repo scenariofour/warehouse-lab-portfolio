@@ -1,0 +1,22 @@
+{
+  "milestone": "M3",
+  "status": "PASS",
+  "executed_at_utc": "2026-10-18T16:36:53.415676+00:00",
+  "preserved_files": 162,
+  "gates": "G0\u2013G4 PENDING",
+  "simulation_executed": false,
+  "tests": "test_closure_and_correction_evidence (test_dq_contract.ContractTests.test_closure_and_correction_evidence) ... ok\ntest_each_required_field (test_dq_contract.ContractTests.test_each_required_field) ... ok\ntest_malformed_mutations (test_dq_contract.ContractTests.test_malformed_mutations) ... ok\ntest_unique_registry_ids (test_dq_contract.ContractTests.test_unique_registry_ids) ... ok\ntest_valid_and_unknown_metrics (test_dq_contract.ContractTests.test_valid_and_unknown_metrics) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.002s\n\nOK\ntest_abc_and_customer_ambiguities (test_dq_registry.RegistryTests.test_abc_and_customer_ambiguities) ... ok\ntest_complete_reconciliation_lineage (test_dq_registry.RegistryTests.test_complete_reconciliation_lineage) ... ok\ntest_contract_sources_review_and_hashes (test_dq_registry.RegistryTests.test_contract_sources_review_and_hashes) ... ok\ntest_deterministic_replay (test_dq_registry.RegistryTests.test_deterministic_replay) ... ok\ntest_independent_sql_primary_metrics (test_dq_registry.RegistryTests.test_independent_sql_primary_metrics) ... ok\ntest_policy_cells_and_pairs (test_dq_registry.RegistryTests.test_policy_cells_and_pairs) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 11.239s\n\nOK\ntest_detail_measures_and_population_totals (test_dq_tableau.TableauTests.test_detail_measures_and_population_totals) ... ok\ntest_deterministic_csv_and_manifest_replay (test_dq_tableau.TableauTests.test_deterministic_csv_and_manifest_replay) ... ok\ntest_keys_headers_grains_and_foreign_keys (test_dq_tableau.TableauTests.test_keys_headers_grains_and_foreign_keys) ... ok\ntest_metric_identity_and_missing_treatments (test_dq_tableau.TableauTests.test_metric_identity_and_missing_treatments) ... ok\ntest_public_allowlist_and_no_transaction_identifiers (test_dq_tableau.TableauTests.test_public_allowlist_and_no_transaction_identifiers) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 2.891s\n\nOK\n",
+  "input_hashes": {
+    "docs/data-quality/issue-record.schema.json": "f39a25f712446b2fe7c5b020f745a41f9ce6ede19cbf1ca052b3e0b9e4981e23",
+    "scripts/data_quality/contract.py": "00aa0d6926ffe1e1f671aa62318d5b750d04fbee7b42db83020bd1c1cde16b01",
+    "tests/test_dq_contract.py": "ce84773cb74e049bd65b09faa673bf099ffbecc7301c6227b8ea961099398792",
+    "scripts/data_quality/build_registry.py": "3ee3fc680e41e472b4d7340f12e4a8ce50e553ee03febb3e793d2541af16cbc0",
+    "tests/test_dq_registry.py": "91f6967403e590ad7018ca4992eab986f0be140d97b5d8855c7f56ac279460e9",
+    "scripts/data_quality/export_tableau.py": "50c60bf4975832a1a0c94fc1bbf235b4fcd5d6f63e58a5883a3d02b7738278e9",
+    "tests/test_dq_tableau.py": "b9f283af3feff52f5cd49af666aed41d3577af5e13d8e85aca904dd6b5a086a5"
+  },
+  "registry_manifest_sha256": "a12eb217ee6b51dfad5bb974d841a7ebbe402339af287604bdafdcdffb618539",
+  "tableau_manifest_sha256": "d2b5f496e3586260f758e7519d123b836cee25e13a0b13c1db7c2d62bfe59b5b",
+  "tableau_authored_or_published": false,
+  "synthetic_fixtures_generated": false
+}

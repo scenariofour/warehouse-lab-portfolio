@@ -1,0 +1,5 @@
+policy,raw_encoded_cells,retained_encoded_cells,excluded_cells,conditional_supply_ceiling,demand_denominator_units
+Class_Based,42138,41256,882,17079,228195
+Dedicated,42120,41256,864,33093,228195
+Hybrid,42120,41256,864,32201,228195
+Random,41256,41256,0,28392,228195

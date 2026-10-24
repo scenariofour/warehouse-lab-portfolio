@@ -1,0 +1,18 @@
+
+> warehouse-lab@1.0.0 evaluate:governance
+> tsx scripts/evaluate_governance.ts
+
+baseline {"time":17837.6,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.8414069674909115e-7}
+exact replay {"time":17837.6,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.8414069674909115e-7}
+speed 0.8 {"time":21858,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":0.000002986140316352248}
+speed 1.2 {"time":15476.6,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":3.9278529584407806e-7}
+pick 9.6s {"time":17744.4,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.3544998839497566e-7}
+pick 14.4s {"time":18109,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.3207394406199455e-7}
+unload 8s {"time":17635.6,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.953456714749336e-7}
+unload 12s {"time":18128.8,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.9994407668709755e-7}
+release 4.8s {"time":17837.6,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.8414069674909115e-7}
+release 7.2s {"time":17837.6,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.8414069674909115e-7}
+priority seed 43 {"time":17856.8,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":3.005843609571457e-7}
+priority seed 52 {"time":17837.6,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":2.8414069674909115e-7}
+time step 0.1s {"time":17984.7,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":0.000004088185960426927}
+time step 0.4s {"time":17784.8,"completed":83,"delivered":825,"conflicts":0,"maxOracleError":0.000001046573743224144}

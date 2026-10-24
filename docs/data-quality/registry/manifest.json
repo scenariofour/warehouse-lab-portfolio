@@ -1,0 +1,68 @@
+{
+  "assumptions": [
+    "Allocation token interpreted as size and one cell as assumed unit, not verified stock.",
+    "Source row is logical CSV ordinal, header=1.",
+    "No synthetic or simulation input; no correction or closure."
+  ],
+  "author": "Rodrigo Furlan de Assis",
+  "code_hashes": {
+    "scripts/data_quality/build_registry.py": "3ee3fc680e41e472b4d7340f12e4a8ce50e553ee03febb3e793d2541af16cbc0",
+    "scripts/data_quality/contract.py": "00aa0d6926ffe1e1f671aa62318d5b750d04fbee7b42db83020bd1c1cde16b01"
+  },
+  "contract_version": "1.0",
+  "data_origin": "REAL_SOURCE_DERIVED",
+  "license": "CC BY 4.0",
+  "normalization": "Exact existing customer half-token mapping; Decimal numeric spelling; whitespace joins; raw tuples for repeats; zero/repeat records retained.",
+  "outputs": {
+    "classification.csv": "cc216188d4cde1ba3dacd5cc5fba3d2c19f8a1a610ecb9ebf1a8c6b761852bc8",
+    "excluded_cells.csv": "7944e184f0c52717691346ae9258126fd46d7c9b1919c7f7f6f35b0e24eea614",
+    "issues.json": "446c2cdb768c40a1d3a929cd3055c79886bc8301657cbbb9d40d45b2d4ef8196",
+    "policy_pairs.csv": "65a08d38de0a8d3d15a04247ac52d4fd53c65201c8556f6394d92788bb3ee3ff",
+    "policy_skus.csv": "383c134d41609a0114c4b481f28de6399944f9e4d0955eee63d172485a7066f7",
+    "profile_checks.csv": "0fb8ac512e87e4b0ea5ab89df238863ece49e88ef85ea6025d0d610ed4aa3fb5",
+    "reconciliation.csv": "3d013dd495076f0e9b4e7ff03cd627017897079b82125473dc64e9f6025d470b",
+    "unknown_reference_cells.csv": "8227fe968c5c2e599b6f7b924ce3c69b20a3fa8aac0d936e2028813d08be4d33"
+  },
+  "source_doi": "10.17632/pf2w725pw3.1",
+  "source_hashes": {
+    "Class_Based_Storage.csv": "3c26a318c3639e1cbdd7ad3a7968ba1c7a669d1b2d38e3b618e8e538637942a8",
+    "Customer_Order.csv": "e28ae8ac9b368b9496b153fafb5af685bd94ba1530ffcb308dfcd5403601f325",
+    "Dedicated_Storage.csv": "eb3497a43844f99c2a4e7f00b6ca0b7eb4562d06b3db38dbc345858efe8c56b0",
+    "Full layout.dwg": "28c720d406a49247a7240590ffc9dd51efd57565a04184c8ca8e6e240968139f",
+    "Hybrid_Storage.csv": "5ec97f5129c28c84970fd4435f1ca1f6ad25333cef3b91143e7a68c7ed1c1527",
+    "Layout_Z1.0.pdf": "da2dc6ceba278846ccf16a5494710b21810eccd5d7aea11b016c49a09d2aff8c",
+    "Layout_Z1.0.svg": "53b5b5fc56fd977ee167c1262c2f885179319b23679ad5791298bd31d91db709",
+    "Layout_Z2.0.pdf": "69f90a6d760d5a9a2f2c523e8d773056e7f07d9c6637859222f81ed35277525d",
+    "Layout_Z2.0.svg": "8b516142acf08f6e187bb20bf4a5aa814d99b8e23a45db498e054e2a1e5f6a65",
+    "Layout_Z3.0.pdf": "bdd4a6f5bfe0fa10d96a71f3a574ef903a9b1224fa1814d05640a62802b34263",
+    "Layout_Z3.0.svg": "d7345fb00dd3a2727b9f6ec8a5f54679e63cab6614710562c4e9aea58538f35c",
+    "Layout_Z4.0.pdf": "aebcd748349ffd82c7c57ff9a29138e1b110e3795a3023663b55ca1ca68f8d55",
+    "Layout_Z4.0.svg": "3f5184c1696f8c176063b2345e5483084e42447ba6287a0b5b868e764d138df5",
+    "Link Colab.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Order_Picking_dataset.ipynb": "c5228bd089b8c55d5d80ee85dc7d807c5efdfe73abc09be09eb311f695a7564d",
+    "Picking_Wave.csv": "4065a8a94f68c402ef4543245373ac91f6835ecdf34a1e4674cb6981b394b88c",
+    "Product.csv": "416527e5260c17003177e1389fd48042d9790be9ef9cabe4c6c07e583e01eb2f",
+    "README.txt": "123b25c62bcfab3e4506ae77ba391915f5ed5f236559e24435b17efb02077df9",
+    "Random_Storage.csv": "c9c2eb25ff24f3fdc7f47c02cb44de7702c0416b2a309b754a939c4ae100a0b0",
+    "Storage_Location.csv": "2895d9da16b4d63e85a17bfe050cc77b72d5654298072d6fa3b1732b1c1d6cc3",
+    "Support_Points_Navigation.csv": "848dd2bafd5cce8506555e5fc83369eb985cb446edd84d3fa259f19be449c479"
+  },
+  "source_record_counts": {
+    "Class_Based_Storage.csv": 2341,
+    "Customer_Order.csv": 122370,
+    "Dedicated_Storage.csv": 2340,
+    "Hybrid_Storage.csv": 2340,
+    "Picking_Wave.csv": 215192,
+    "Product.csv": 208,
+    "Random_Storage.csv": 2292,
+    "Storage_Location.csv": 2292,
+    "Support_Points_Navigation.csv": 44
+  },
+  "totals": {
+    "customer_units": 228195,
+    "gap_units": 13003,
+    "matched_units": 215192,
+    "picking_excess_units": 0,
+    "picking_units": 215192
+  }
+}

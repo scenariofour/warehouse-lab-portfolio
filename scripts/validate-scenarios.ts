@@ -1,0 +1,12 @@
+import fs from 'node:fs';import {createHash} from 'node:crypto';import {Simulation} from '../src/simulation';import assert from 'node:assert/strict';import {DEFAULT_CONFIG} from '../src/types';
+const data=JSON.parse(fs.readFileSync('public/data/warehouse.json','utf8'));const results=[];
+for(const policy of ['Random','Class_Based','Dedicated','Hybrid'] as const){
+ const inv=JSON.parse(fs.readFileSync('public/data/'+policy.toLowerCase()+'.json','utf8'));
+ const s=new Simulation(data,inv,data.orders,{},policy);s.running=true;const start=performance.now();let min=Infinity;
+ for(let i=0;i<500000&&!s.finished;i++){s.step();const occupied=new Set<number>();for(const r of s.robots){assert.ok(!occupied.has(r.cell),policy+' occupied source conflict');occupied.add(r.cell);assert.ok(!s.grid.blocked.has(r.cell));if(r.edge){assert.ok(!occupied.has(r.edge.to),policy+' edge reservation conflict');occupied.add(r.edge.to);assert.ok(!s.grid.blocked.has(r.edge.to))}}if(i%10===0){for(let a=0;a<10;a++)for(let b=a+1;b<10;b++)min=Math.min(min,Math.hypot(s.robots[a].x-s.robots[b].x,s.robots[a].z-s.robots[b].z));for(const r of s.robots)assert.ok(!s.grid.blocked.has(r.cell))}}
+ assert.ok(s.finished,policy+' unfinished at '+s.time);assert.ok(min>=.99);assert.ok(s.stock.every(v=>v.remaining>=0&&v.reserved>=0));assert.equal(s.completedOrders+s.failedOrders,120);assert.equal(s.delivered,s.initialStock-s.stockTotal);
+ assert.equal(s.delivered+s.failedUnits,s.demand.reduce((n,o)=>n+o.lines.reduce((m,l)=>m+l.qty,0),0));
+ const deliveries=s.events.filter(e=>e.type==='delivered');assert.equal(deliveries.length,s.delivered);assert.equal(new Set(deliveries.map(e=>e.task)).size,s.delivered);
+ const out={policy,time:s.time,completed:s.completedOrders,failed:s.failedOrders,failedUnits:s.failedUnits,delivered:s.delivered,distance:s.distance,utilization:s.utilization,minSeparation:min,wallMs:Math.round(performance.now()-start)};results.push(out);console.log(out);
+}
+fs.writeFileSync('docs/validation-results.json',JSON.stringify({validatedOn:new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York'}).format(new Date()),recordedAtUTC:new Date().toISOString(),inputSHA256:Object.fromEntries(['public/data/warehouse.json','public/data/random.json','public/data/class_based.json','public/data/dedicated.json','public/data/hybrid.json','src/simulation.ts','src/pathfinding.ts','src/types.ts'].map(p=>[p,createHash('sha256').update(fs.readFileSync(p)).digest('hex')])),doi:data.provenance.doi,config:DEFAULT_CONFIG,demandOrders:data.orders.length,results},null,2));

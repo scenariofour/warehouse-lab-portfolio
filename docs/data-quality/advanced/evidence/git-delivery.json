@@ -1,0 +1,14 @@
+{
+  "branch": "codex/data-quality-foundation",
+  "remote": "origin",
+  "url": "https://github.com/scenariofour/warehouse-lab.git",
+  "force_push": false,
+  "milestone_tip": "a056532a482106a90a66595eebd8df47a01c9ba2",
+  "remote_tip_verified": "a056532a482106a90a66595eebd8df47a01c9ba2",
+  "status": "PUSHED_AND_VERIFIED",
+  "model_commit": "3d97b658d5562a65ddfc8bef16c6dd0e1440447b",
+  "analytics_commit": "75a3856d47f95cb6321cb9e1b7b708bd41e6d75e",
+  "validation_commit": "a056532a482106a90a66595eebd8df47a01c9ba2",
+  "receipt": "49461b5..a056532 HEAD -> codex/data-quality-foundation; exit 0",
+  "note": "This receipt verifies the three substantive milestones. A following documentation-only commit records this receipt and completed planning state; its final remote hash is verified in the final delivery."
+}

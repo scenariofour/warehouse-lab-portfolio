@@ -1,0 +1,8 @@
+node_modules/
+dist/
+work/
+.DS_Store
+test-results/
+playwright-report/
+__pycache__/
+*.py[cod]

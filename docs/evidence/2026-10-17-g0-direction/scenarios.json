@@ -1,0 +1,75 @@
+{
+  "validatedOn": "2026-10-17",
+  "recordedAtUTC": "2026-10-17T14:37:05.161Z",
+  "inputSHA256": {
+    "public/data/warehouse.json": "04ac848b05c153f7e320d199e373ba309f1a61556a9f200970cc7e30cf3d4c4a",
+    "public/data/random.json": "7c5284db12748141a2e43fe99f81f31be1b43dad33055490a83c7f7f3a8d7381",
+    "public/data/class_based.json": "9b3b4d8f362ede67b8a28dcf79f4a26e618a06fa6cc490e123b542e7a38c6ceb",
+    "public/data/dedicated.json": "e1823733ae927609a1890cfac53b4c9b9cb4897ef6fba6a31bbae63d21fd13ea",
+    "public/data/hybrid.json": "6356e5b9a70ec494a0505a1077052337c64994cf130c7950b57b64ab7ad8df5a",
+    "src/simulation.ts": "8f77542269cb447b2df37f1b353fcf1bd405b418c3899dc2b0cf5b1a9393bbde",
+    "src/pathfinding.ts": "d2c00dd0e74da7659fc842c986def60cd20c846321da64f6260222552e22d517",
+    "src/types.ts": "fdaabe9a8c7d3ce1f5425a9af86a1c20a77281726c8e797bf83b27fae30d18c3"
+  },
+  "doi": "10.17632/pf2w725pw3.1",
+  "config": {
+    "robotCount": 10,
+    "speed": 1,
+    "pickTime": 12,
+    "unloadTime": 10,
+    "dt": 0.2,
+    "releaseInterval": 6,
+    "seed": 42
+  },
+  "demandOrders": 120,
+  "results": [
+    {
+      "policy": "Random",
+      "time": 17837.6,
+      "completed": 83,
+      "failed": 37,
+      "failedUnits": 97,
+      "delivered": 825,
+      "distance": 152876.00000020553,
+      "utilization": 0.9587949051453498,
+      "minSeparation": 1,
+      "wallMs": 1059
+    },
+    {
+      "policy": "Class_Based",
+      "time": 17849,
+      "completed": 95,
+      "failed": 25,
+      "failedUnits": 115,
+      "delivered": 807,
+      "distance": 153532.00000020792,
+      "utilization": 0.9596391954743076,
+      "minSeparation": 1,
+      "wallMs": 1212
+    },
+    {
+      "policy": "Dedicated",
+      "time": 20374.6,
+      "completed": 117,
+      "failed": 3,
+      "failedUnits": 6,
+      "delivered": 916,
+      "distance": 173638.00000028108,
+      "utilization": 0.9511352370121764,
+      "minSeparation": 1,
+      "wallMs": 1141
+    },
+    {
+      "policy": "Hybrid",
+      "time": 18469.8,
+      "completed": 118,
+      "failed": 2,
+      "failedUnits": 6,
+      "delivered": 916,
+      "distance": 156180.00000021758,
+      "utilization": 0.9547044364325515,
+      "minSeparation": 1,
+      "wallMs": 981
+    }
+  ]
+}

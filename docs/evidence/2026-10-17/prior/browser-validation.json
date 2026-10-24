@@ -1,0 +1,14 @@
+{
+  "testedOn": "2026-10-15",
+  "target": "Vite production preview",
+  "pageErrors": [],
+  "sourceFilesVerified": 21,
+  "locations": 2292,
+  "robots": 10,
+  "simTime": 600,
+  "delivered": 29,
+  "stock": 41220,
+  "fps": 60,
+  "drawCalls": 211,
+  "externalRuntimeRequests": []
+}

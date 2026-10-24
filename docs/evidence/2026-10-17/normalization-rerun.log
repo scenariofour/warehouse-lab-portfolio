@@ -1,0 +1,56 @@
+
+> warehouse-lab@1.0.0 data
+> python3 scripts/prepare_data.py
+
+{
+  "counts": {
+    "Storage_Location": 2292,
+    "Random_Storage": 2292,
+    "Class_Based_Storage": 2341,
+    "Dedicated_Storage": 2340,
+    "Hybrid_Storage": 2340,
+    "Product": 208,
+    "Customer_Order": 122370,
+    "Picking_Wave": 215192,
+    "Support_Points_Navigation": 44
+  },
+  "sha256Verified": 21,
+  "orderCount": 39858,
+  "customerOrderNumberCount": 32634,
+  "dateMin": "2023-01-05T07:42:00",
+  "dateMax": "2023-10-19T07:18:00",
+  "duplicateCustomerRows": 2559,
+  "duplicatePickingRows": 102201,
+  "missingOrderSizes": 16,
+  "orderRowsMatchingWaveSKU": 116277,
+  "waveLocationsMissingGeometry": [
+    "C-014",
+    "C-021",
+    "C-022",
+    "C-023",
+    "C-024",
+    "C-026",
+    "C-061",
+    "C-102",
+    "E-25-20",
+    "EX-01",
+    "EX-04",
+    "EX-11",
+    "G-25-10",
+    "I-25-20",
+    "J-25-20",
+    "K-25-20",
+    "K-26-20",
+    "RC-01",
+    "RC-03",
+    "RC-04",
+    "RC-05",
+    "ZN-COR"
+  ],
+  "waveReferencesMissingProduct": [],
+  "orderRowsWithoutRandomSKU": 12551,
+  "negativeOrderQuantities": 0,
+  "duplicateGeometryIDs": 0,
+  "modeledStock": 41256
+}
+Normalized files generated in public/data; audit in docs/data-audit.md

@@ -1,0 +1,85 @@
+{
+  "review_date": "2026-10-23",
+  "status": "CLEAN_REPLACEMENT_PREPARED",
+  "node": "22.22.3",
+  "simulation_tests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "data_pipeline_tests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "data_quality_foundation_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "advanced_independent_verifier": {
+    "checks": 386,
+    "negative_checks": 5,
+    "preserved_files": 210,
+    "scope": "Read-only verify() on original private checkout before release edits; original evidence not rewritten. All analytical inputs/scripts/exports are unchanged in release."
+  },
+  "production_build": "PASS",
+  "production_browser_tests": {
+    "passed": 3,
+    "base": "https://scenariofour.github.io/warehouse-lab-portfolio/",
+    "scope": [
+      "WebGL rendering",
+      "all four policies",
+      "play/pause/reset/follow",
+      "source inspection",
+      "JSON export",
+      "mobile layout",
+      "font and asset subpaths",
+      "data provenance links",
+      "600-order demand load",
+      "no page/resource errors"
+    ],
+    "authentication": "Fresh Playwright contexts; no GitHub sign-in",
+    "console_errors": 0
+  },
+  "default_scenarios": {
+    "policies": 4,
+    "all_analytical_values_equal_historical": true,
+    "only_differences": "Execution timestamps and wall-clock durations; historical results restored byte-for-byte."
+  },
+  "unchanged_data_and_analytics_files": "Numerical source/normalized inputs, analytical CSVs/JSON and analytical scripts unchanged; narrative attribution/navigation adapted at owner request.",
+  "new_document_local_links": 61,
+  "portfolio_description_words": 124,
+  "historical_governance_check": {
+    "status": "NOT_CURRENT_RELEASE_PASS",
+    "reason": "Default evidence directory is date-dependent and absent. Historical manifests attest to original files; release changes and separately labeled public redactions must not be presented as matching those old snapshots."
+  },
+  "limitations": [
+    "Workbook download did not return an inspectable artifact; no workbook archived.",
+    "All Tableau parameter/action branches and uploaded extract byte identity not independently verified.",
+    "Historical advanced preservation harness includes unrelated untracked Discovery work absent from a clean checkout; original-checkout verification plus unchanged analytics hashes establish this release boundary.",
+    "Vite retains a warning for the existing Three.js chunk size."
+  ],
+  "privacy_snapshot": {
+    "original_history_included": false,
+    "new_commit_email": "GitHub no-reply",
+    "private_identity_scan": "PASS, current source files and every reachable Git object",
+    "log_redactions": "PRIVACY_REDACTIONS.json",
+    "generated_python_bytecode": "Excluded from Git; may contain machine paths.",
+    "original_repository": "Remains private; main integrates development via merged PR #1."
+  },
+  "hosted_deployment": {
+    "workflow_run": null,
+    "conclusion": "success",
+    "page_http_status": 200,
+    "repository_anonymous_api_private": false,
+    "original_repository_anonymous_api_status": 404,
+    "initial_public_job_logs_reviewed": 2,
+    "private_identity_hits_in_public_job_logs": 0,
+    "note": "Prior deployment evidence is in the private publication archive; clean replacement deployment will be recorded after verification."
+  },
+  "floor_rendering_fix": {
+    "cause": "Depth-buffer precision allowed the slab beneath the opaque floor to bleed through at distant camera angles.",
+    "change": "Camera near plane increased from 0.1 to 1; existing minimum orbit distance is 8.",
+    "regression": "1,065 floor pixels sampled at each of three camera angles, compared with buried slab removed. Failed before fix, passes after fix.",
+    "analytical_or_simulation_changes": false
+  },
+  "owner_requested_identity_redactions": "IDENTITY_REDACTIONS.json"
+}

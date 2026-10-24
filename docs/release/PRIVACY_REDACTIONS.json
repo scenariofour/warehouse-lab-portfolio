@@ -1,0 +1,19 @@
+{
+  "scope": "Public snapshot copies only. Original private files and historical manifests preserved. Old evidence hashes refer to original private bytes, not these redacted copies.",
+  "files": [
+    {
+      "path": "docs/evidence/2026-10-17/before-import-regression.log",
+      "original_sha256": "038155e8c53d13b10688dcfe7496420c6a692a76d467b435aa181318fe9f75ba",
+      "public_sha256": "7bc380e0686b1aa600467774d9dcac600144687a4725a47932c3b89d36ccb1d5",
+      "change": "Absolute local workspace prefix replaced with <local-workspace>; explicit notice added.",
+      "original_location": "Private development archive; not included in public Git history."
+    },
+    {
+      "path": "docs/evidence/2026-10-17/before-routing-regression.log",
+      "original_sha256": "0327cecb7e373badd2e3c57ab54d8b3da1a9e5e51e4024cff6337f7c58668dc0",
+      "public_sha256": "643c8afc705cf4a808d2396518a46a4cfbc7afaaed8cf8279be813c8b9d59da3",
+      "change": "Absolute local workspace prefix replaced with <local-workspace>; explicit notice added.",
+      "original_location": "Private development archive; not included in public Git history."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+PUBLIC COPY: absolute local workspace paths redacted for privacy. Test output otherwise preserved.
+Original evidence remains in the private development archive; see docs/release/PRIVACY_REDACTIONS.json.
+
+
+> warehouse-lab@1.0.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# {"time":2790,"completed":4,"failed":8,"delivered":125,"distance":22510.000000001433,"minSeparation":1}
+# Subtest: real data: publisher verified, complete geometry, unique source row lineage
+ok 1 - real data: publisher verified, complete geometry, unique source row lineage
+  ---
+  duration_ms: 0.966542
+  type: 'test'
+  ...
+# Subtest: all source storage locations have a reachable rack-free service cell
+ok 2 - all source storage locations have a reachable rack-free service cell
+  ---
+  duration_ms: 31.181958
+  type: 'test'
+  ...
+# Subtest: pause is exact, reset starts clean, repeated fixed seed is reproducible
+ok 3 - pause is exact, reset starts clean, repeated fixed seed is reproducible
+  ---
+  duration_ms: 156.901583
+  type: 'test'
+  ...
+# Subtest: 10 robots complete a real demand window; stock, collision, and task lifecycle invariants
+ok 4 - 10 robots complete a real demand window; stock, collision, and task lifecycle invariants
+  ---
+  duration_ms: 194.137
+  type: 'test'
+  ...
+# Subtest: unknown SKU fails explicitly and does not consume stock or complete successfully
+ok 5 - unknown SKU fails explicitly and does not consume stock or complete successfully
+  ---
+  duration_ms: 26.208
+  type: 'test'
+  ...
+# Subtest: different policy remaps inventory and same inputs give identical task choices
+ok 6 - different policy remaps inventory and same inputs give identical task choices
+  ---
+  duration_ms: 37.698166
+  type: 'test'
+  ...
+# Subtest: head-on conflict near outbound stations yields without a symmetric detour livelock
+ok 7 - head-on conflict near outbound stations yields without a symmetric detour livelock
+  ---
+  duration_ms: 27.768917
+  type: 'test'
+  ...
+# Subtest: exhausted stock is reserved once, fractional speed integrates correctly, and unavailable units fail
+ok 8 - exhausted stock is reserved once, fractional speed integrates correctly, and unavailable units fail
+  ---
+  duration_ms: 18.298417
+  type: 'test'
+  ...
+# Subtest: A* rejects blocked and out-of-grid endpoints, including identical invalid endpoints
+not ok 9 - A* rejects blocked and out-of-grid endpoints, including identical invalid endpoints
+  ---
+  duration_ms: 16.685083
+  type: 'test'
+  location: '<local-workspace>/tests/simulation.test.ts:69:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    [] !== null
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: ~
+  actual:
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (<local-workspace>/tests/simulation.test.ts:71:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 8
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1085.074666

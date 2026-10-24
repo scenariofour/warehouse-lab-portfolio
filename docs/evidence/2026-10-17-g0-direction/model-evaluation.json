@@ -1,0 +1,712 @@
+{
+  "reviewDate": "2026-10-17",
+  "recordedAtUTC": "2026-10-17T14:52:27.208Z",
+  "kind": "Technical verification and hypothetical local sensitivity, not operational validation",
+  "inputHashes": {
+    "public/data/warehouse.json": "04ac848b05c153f7e320d199e373ba309f1a61556a9f200970cc7e30cf3d4c4a",
+    "public/data/random.json": "7c5284db12748141a2e43fe99f81f31be1b43dad33055490a83c7f7f3a8d7381",
+    "public/data/orders.json": "c49726d9fab6bb5c3e162c177b5406df1722f3b9d97dd9e0f7da9848e9da5749",
+    "src/simulation.ts": "8f77542269cb447b2df37f1b353fcf1bd405b418c3899dc2b0cf5b1a9393bbde",
+    "src/pathfinding.ts": "d2c00dd0e74da7659fc842c986def60cd20c846321da64f6260222552e22d517",
+    "src/types.ts": "fdaabe9a8c7d3ce1f5425a9af86a1c20a77281726c8e797bf83b27fae30d18c3",
+    "scripts/evaluate_governance.ts": "3c0617f9065edacc55a360fcb3c73c1f33cead7c285481f9884e995f69a4e202"
+  },
+  "demandHash": "0f736c0b949f9639ba7378d90bc35e3a77a0968c5850116ea2d97f002651592b",
+  "routing": {
+    "samples": 39,
+    "reference": "Independent queue-based BFS over the same declared occupancy grid",
+    "results": [
+      {
+        "location": "A-14-11",
+        "length": 29,
+        "referenceBFS": 29
+      },
+      {
+        "location": "B-14-21",
+        "length": 30,
+        "referenceBFS": 30
+      },
+      {
+        "location": "B-21-30",
+        "length": 50,
+        "referenceBFS": 50
+      },
+      {
+        "location": "C-17-12",
+        "length": 87,
+        "referenceBFS": 87
+      },
+      {
+        "location": "C-24-22",
+        "length": 73,
+        "referenceBFS": 73
+      },
+      {
+        "location": "D-19-40",
+        "length": 91,
+        "referenceBFS": 91
+      },
+      {
+        "location": "E-15-13",
+        "length": 64,
+        "referenceBFS": 64
+      },
+      {
+        "location": "E-22-23",
+        "length": 80,
+        "referenceBFS": 80
+      },
+      {
+        "location": "F-17-22",
+        "length": 76,
+        "referenceBFS": 76
+      },
+      {
+        "location": "F-24-40",
+        "length": 92,
+        "referenceBFS": 92
+      },
+      {
+        "location": "H-02-30",
+        "length": 69,
+        "referenceBFS": 69
+      },
+      {
+        "location": "H-20-12",
+        "length": 91,
+        "referenceBFS": 91
+      },
+      {
+        "location": "I-05-22",
+        "length": 89,
+        "referenceBFS": 89
+      },
+      {
+        "location": "I-14-40",
+        "length": 90,
+        "referenceBFS": 90
+      },
+      {
+        "location": "I-22-13",
+        "length": 112,
+        "referenceBFS": 112
+      },
+      {
+        "location": "J-05-23",
+        "length": 99,
+        "referenceBFS": 99
+      },
+      {
+        "location": "J-15-11",
+        "length": 112,
+        "referenceBFS": 112
+      },
+      {
+        "location": "J-22-21",
+        "length": 128,
+        "referenceBFS": 128
+      },
+      {
+        "location": "K-05-30",
+        "length": 107,
+        "referenceBFS": 107
+      },
+      {
+        "location": "K-15-12",
+        "length": 122,
+        "referenceBFS": 122
+      },
+      {
+        "location": "K-22-22",
+        "length": 138,
+        "referenceBFS": 138
+      },
+      {
+        "location": "L-05-40",
+        "length": 116,
+        "referenceBFS": 116
+      },
+      {
+        "location": "L-15-13",
+        "length": 133,
+        "referenceBFS": 133
+      },
+      {
+        "location": "L-22-23",
+        "length": 149,
+        "referenceBFS": 149
+      },
+      {
+        "location": "M-06-11",
+        "length": 124,
+        "referenceBFS": 124
+      },
+      {
+        "location": "M-15-21",
+        "length": 139,
+        "referenceBFS": 139
+      },
+      {
+        "location": "M-22-30",
+        "length": 156,
+        "referenceBFS": 156
+      },
+      {
+        "location": "N-06-12",
+        "length": 135,
+        "referenceBFS": 135
+      },
+      {
+        "location": "N-15-22",
+        "length": 149,
+        "referenceBFS": 149
+      },
+      {
+        "location": "N-22-40",
+        "length": 165,
+        "referenceBFS": 165
+      },
+      {
+        "location": "O-06-13",
+        "length": 145,
+        "referenceBFS": 145
+      },
+      {
+        "location": "O-15-23",
+        "length": 160,
+        "referenceBFS": 160
+      },
+      {
+        "location": "O-23-11",
+        "length": 177,
+        "referenceBFS": 177
+      },
+      {
+        "location": "P-06-21",
+        "length": 151,
+        "referenceBFS": 151
+      },
+      {
+        "location": "P-15-30",
+        "length": 167,
+        "referenceBFS": 167
+      },
+      {
+        "location": "P-23-12",
+        "length": 185,
+        "referenceBFS": 185
+      },
+      {
+        "location": "Q-13-22",
+        "length": 171,
+        "referenceBFS": 171
+      },
+      {
+        "location": "Q-20-40",
+        "length": 187,
+        "referenceBFS": 187
+      },
+      {
+        "location": "R-19-13",
+        "length": 197,
+        "referenceBFS": 197
+      }
+    ]
+  },
+  "baseline": {
+    "label": "baseline",
+    "config": {
+      "robotCount": 10,
+      "speed": 1,
+      "pickTime": 12,
+      "unloadTime": 10,
+      "dt": 0.2,
+      "releaseInterval": 6,
+      "seed": 42
+    },
+    "steps": 89188,
+    "time": 17837.6,
+    "completedGroups": 83,
+    "failedGroups": 37,
+    "delivered": 825,
+    "failedUnits": 97,
+    "distance": 152876.00000020553,
+    "throughput": 16.751132439341617,
+    "averageCompletion": 8080.889156626506,
+    "utilization": 0.9587949051453498,
+    "congestion": 3010.399999999453,
+    "positionTravel": 152875.9999999228,
+    "minSeparation": 1,
+    "conflicts": 0,
+    "oracleErrors": {
+      "travel": 2.8274371288716793e-7,
+      "averageCompletion": 0,
+      "workingSeconds": 2.8414069674909115e-7,
+      "throughput": 0,
+      "utilization": 1.592836973429712e-12,
+      "occupancy": 0,
+      "stock": 0
+    },
+    "eventCount": 4802,
+    "eventHash": "0f7c8b60980f069832197379410afd744d31ba074f10ded58056900a59157d2e"
+  },
+  "replay": {
+    "eventHash": "0f7c8b60980f069832197379410afd744d31ba074f10ded58056900a59157d2e",
+    "time": 17837.6,
+    "distance": 152876.00000020553,
+    "exactMatch": true
+  },
+  "sensitivity": [
+    {
+      "label": "speed 0.8",
+      "config": {
+        "robotCount": 10,
+        "speed": 0.8,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 109290,
+      "time": 21858,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 154129.99999994706,
+      "throughput": 13.670052154817459,
+      "averageCompletion": 9964.373493975902,
+      "utilization": 0.9644638118779466,
+      "congestion": 2950.349999999572,
+      "positionTravel": 154130.0000026142,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 0.00000266713323071599,
+        "averageCompletion": 0,
+        "workingSeconds": 0.000002986140316352248,
+        "throughput": 0,
+        "utilization": 1.3661627384919939e-11,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4758,
+      "eventHash": "f72c09225fed15e51cf22ca0417ab5210ed1c09d7d8507556f0f50ef87517ede"
+    },
+    {
+      "label": "speed 1.2",
+      "config": {
+        "robotCount": 10,
+        "speed": 1.2,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 77383,
+      "time": 15476.6,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 154523.99999994444,
+      "throughput": 19.30656604163705,
+      "averageCompletion": 6967.21686746988,
+      "utilization": 0.9493041107226841,
+      "congestion": 2922.83333333286,
+      "positionTravel": 154524.00000033723,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 3.9278529584407806e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 1.7409911379218102e-7,
+        "throughput": 0,
+        "utilization": 1.1249889908526711e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4743,
+      "eventHash": "1fd9f43cf4afcc0ed245a8cbbdf8293f4240b4c261b556ce26bd2451f8179ab2"
+    },
+    {
+      "label": "pick 9.6s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 9.6,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 88722,
+      "time": 17744.4,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 153760.00000020873,
+      "throughput": 16.839115439237165,
+      "averageCompletion": 8107.648192771084,
+      "utilization": 0.9576542458477587,
+      "congestion": 2868.9999999995816,
+      "positionTravel": 153759.99999997424,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.3448956198990345e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 2.3544998839497566e-7,
+        "throughput": 0,
+        "utilization": 1.326938559031987e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4789,
+      "eventHash": "c4855efa5244f0d9f5c698e4036b66e268b9df68efa5ad6f20d8f58b8a34806a"
+    },
+    {
+      "label": "pick 14.4s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 14.4,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 90545,
+      "time": 18109,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 153838.00000020902,
+      "throughput": 16.50008283174112,
+      "averageCompletion": 8287.872289156629,
+      "utilization": 0.9606714893158698,
+      "congestion": 3040.199999999426,
+      "positionTravel": 153837.99999997878,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.3024040274322033e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 2.3207394406199455e-7,
+        "throughput": 3.552713678800501e-15,
+        "utilization": 1.2815304373248182e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4789,
+      "eventHash": "19f800ae6df50ce26a878420486f427156188abf3af0824f6d1f8d2ed22a1eee"
+    },
+    {
+      "label": "unload 8s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 8,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 88178,
+      "time": 17635.6,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 152664.00000020475,
+      "throughput": 16.943001655741796,
+      "averageCompletion": 7979.853012048192,
+      "utilization": 0.9592188527762355,
+      "congestion": 3006.199999999457,
+      "positionTravel": 152663.99999991045,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.942979335784912e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 2.953456714749336e-7,
+        "throughput": 0,
+        "utilization": 1.6746604103445861e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4810,
+      "eventHash": "1340faa3b5b3afc1883789b3b0302d2cd4bcb35bb5b341587cb3eed8c91a66ca"
+    },
+    {
+      "label": "unload 12s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 12,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 90644,
+      "time": 18128.8,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 152594.00000020448,
+      "throughput": 16.482061691893563,
+      "averageCompletion": 8221.257831325302,
+      "utilization": 0.9509399408687079,
+      "congestion": 3119.399999999354,
+      "positionTravel": 152593.99999990637,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.981105353683233e-7,
+        "averageCompletion": 1.8189894035458565e-12,
+        "workingSeconds": 2.9994407668709755e-7,
+        "throughput": 0,
+        "utilization": 1.6545653735988708e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4791,
+      "eventHash": "aeb5ffefbc5f70e625b48520fc5fbf6637f00cd13ca94033ab88d5cf382fbee7"
+    },
+    {
+      "label": "release 4.8s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 4.8,
+        "seed": 42
+      },
+      "steps": 89188,
+      "time": 17837.6,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 152876.00000020553,
+      "throughput": 16.751132439341617,
+      "averageCompletion": 8157.139759036144,
+      "utilization": 0.9587949051453498,
+      "congestion": 3010.399999999453,
+      "positionTravel": 152875.9999999228,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.8274371288716793e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 2.8414069674909115e-7,
+        "throughput": 0,
+        "utilization": 1.592836973429712e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4802,
+      "eventHash": "66f9a1c7376cbfc0a88b9b7d456370f628bf0dfe2c11b3961c061e3b4f3caecb"
+    },
+    {
+      "label": "release 7.2s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 7.2,
+        "seed": 42
+      },
+      "steps": 89188,
+      "time": 17837.6,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 152876.00000020553,
+      "throughput": 16.751132439341617,
+      "averageCompletion": 8004.638554216867,
+      "utilization": 0.9587949051453498,
+      "congestion": 3010.399999999453,
+      "positionTravel": 152875.9999999228,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.8274371288716793e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 2.8414069674909115e-7,
+        "throughput": 0,
+        "utilization": 1.592836973429712e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4802,
+      "eventHash": "34301cd69bf8f0a8aadb1d373d3c6f49c9e6c082fa5395a3442bcac69236b2db"
+    },
+    {
+      "label": "priority seed 43",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 43
+      },
+      "steps": 89284,
+      "time": 17856.8,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 152574.00000020443,
+      "throughput": 16.7331212759285,
+      "averageCompletion": 8106.120481927714,
+      "utilization": 0.9560727565980791,
+      "congestion": 2879.799999999572,
+      "positionTravel": 152573.9999999052,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.992164809256792e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 3.005843609571457e-7,
+        "throughput": 0,
+        "utilization": 1.6833201499366623e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4778,
+      "eventHash": "838cc96fb6e41c72d592d88a91cae0ccff1fbdc19027e61c8500410ea1459ac1"
+    },
+    {
+      "label": "priority seed 52",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.2,
+        "releaseInterval": 6,
+        "seed": 52
+      },
+      "steps": 89188,
+      "time": 17837.6,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 152876.00000020553,
+      "throughput": 16.751132439341617,
+      "averageCompletion": 8080.889156626506,
+      "utilization": 0.9587949051453498,
+      "congestion": 3010.399999999453,
+      "positionTravel": 152875.9999999228,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 2.8274371288716793e-7,
+        "averageCompletion": 0,
+        "workingSeconds": 2.8414069674909115e-7,
+        "throughput": 0,
+        "utilization": 1.592836973429712e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4802,
+      "eventHash": "0f7c8b60980f069832197379410afd744d31ba074f10ded58056900a59157d2e"
+    },
+    {
+      "label": "time step 0.1s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.1,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 179847,
+      "time": 17984.7,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 153946.00000038475,
+      "throughput": 16.614122003703148,
+      "averageCompletion": 8129.622891566264,
+      "utilization": 0.9569022558084784,
+      "congestion": 2997.3999999983694,
+      "positionTravel": 153946.00000447294,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 0.000004088185960426927,
+        "averageCompletion": 0,
+        "workingSeconds": 0.000004085508408024907,
+        "throughput": 0,
+        "utilization": 2.2716606373762716e-11,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4765,
+      "eventHash": "d9a70876e6c6eb6ae03854be75bb1496f21db546a7c10c31aaa33b54ac7aa2f7"
+    },
+    {
+      "label": "time step 0.4s",
+      "config": {
+        "robotCount": 10,
+        "speed": 1,
+        "pickTime": 12,
+        "unloadTime": 10,
+        "dt": 0.4,
+        "releaseInterval": 6,
+        "seed": 42
+      },
+      "steps": 44462,
+      "time": 17784.8,
+      "completedGroups": 83,
+      "failedGroups": 37,
+      "delivered": 825,
+      "failedUnits": 97,
+      "distance": 151645.99999996496,
+      "throughput": 16.80086365885475,
+      "averageCompletion": 8031.566265060241,
+      "utilization": 0.9547253834733274,
+      "congestion": 3196.8000000003617,
+      "positionTravel": 151645.99999891839,
+      "minSeparation": 1,
+      "conflicts": 0,
+      "oracleErrors": {
+        "travel": 0.000001046573743224144,
+        "averageCompletion": 0,
+        "workingSeconds": 0.0000010459334589540958,
+        "throughput": 0,
+        "utilization": 5.881073406044379e-12,
+        "occupancy": 0,
+        "stock": 0
+      },
+      "eventCount": 4839,
+      "eventHash": "e4890cf5865f7c3dcf9cdff82d1250dd8cc71d1e65cfc7b03703f4027636b933"
+    }
+  ],
+  "sensitivityLimitations": [
+    "Values are analyst-selected +/-20% diagnostics, not measured field ranges.",
+    "Only source-order prefix of 120 groups and the adopted stock/geometry assumptions are covered.",
+    "Seeds are deterministic priority offsets, not random experimental replications; seed 42 and 52 are equivalent with 10 robots.",
+    "No calibrated scale, stock, floor topology, or real service-time ground truth is available.",
+    "No causal ranking, confidence interval, ROI, or deployment recommendation is established."
+  ]
+}

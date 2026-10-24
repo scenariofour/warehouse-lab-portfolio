@@ -1,0 +1,191 @@
+{
+  "version": "0.2.0",
+  "status": "DRAFT — PENDING HUMAN REVIEW",
+  "reviewDate": "2026-10-17",
+  "claims": [
+    {
+      "id": "CL-01",
+      "claim": "Published raw bytes and all normalized records reconcile under existing conversion rules.",
+      "classification": "SOURCE_AND_DERIVED",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/data-evaluation.json"
+      ],
+      "limitations": "Does not confirm stock, size, floor or unit semantics.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-02",
+      "claim": "Default workload is first120 wave/order groups and922 real-demand units.",
+      "classification": "SOURCE_AND_DERIVED",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "public/data/warehouse.json",
+        "docs/evidence/2026-10-17/data-evaluation.json"
+      ],
+      "limitations": "Not representative random or chronological sampling.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-03",
+      "claim": "One carton per allocation cell and numeric token as size are adopted assumptions.",
+      "classification": "ASSUMPTION",
+      "evaluationStatus": "INCONCLUSIVE",
+      "evidence": [
+        "src/simulation.ts",
+        "scripts/prepare_data.py",
+        "data/raw/README.txt"
+      ],
+      "limitations": "Provider reconciliation unavailable; never presented as verified warehouse stock.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-04",
+      "claim": "0.1 modeled-meter scale and stacked floor/tier interpretation are assumptions.",
+      "classification": "ASSUMPTION",
+      "evaluationStatus": "INCONCLUSIVE",
+      "evidence": [
+        "scripts/prepare_data.py",
+        "src/scene.ts",
+        "data/raw/README.txt"
+      ],
+      "limitations": "Physical dimensions and inter-floor feasibility unvalidated.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-05",
+      "claim": "Model accounting and declared-grid collision invariants pass named scenarios.",
+      "classification": "SIMULATED_TECHNICAL",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/scenarios.json",
+        "docs/evidence/2026-10-17/model-evaluation.json"
+      ],
+      "limitations": "Default120 groups and named diagnostic settings only; no hardware safety certification.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-06",
+      "claim": "39 A* lengths match independent BFS over the same assumed grid.",
+      "classification": "TECHNICAL_VERIFICATION",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/model-evaluation.json"
+      ],
+      "limitations": "The occupancy model is shared; physical geometry not independently validated.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-07",
+      "claim": "KPI oracles reconcile within proposed numerical tolerance1e-5.",
+      "classification": "TECHNICAL_VERIFICATION",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/model-evaluation.json"
+      ],
+      "limitations": "Floating-point consistency, not physical prediction accuracy.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-08",
+      "claim": "Default Random event sequence reproduces exactly; seed42 and52 are aliases.",
+      "classification": "TECHNICAL_VERIFICATION",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/model-evaluation.json",
+        "src/simulation.ts"
+      ],
+      "limitations": "Not independent random replications or cross-platform proof.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-09",
+      "claim": "Current policy results establish a causal storage-policy advantage.",
+      "classification": "CAUSAL_COMPARISON",
+      "evaluationStatus": "INCONCLUSIVE",
+      "evidence": [
+        "docs/evidence/2026-10-17/data-evaluation.json",
+        "docs/EXPERIMENT_CREDIBILITY.md"
+      ],
+      "limitations": "Claim is unsupported: unequal SKU supply and task mixes.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-10",
+      "claim": "Model outputs establish factory savings, capacity or ROI.",
+      "classification": "BUSINESS_DECISION",
+      "evaluationStatus": "INCONCLUSIVE",
+      "evidence": [
+        "docs/PROJECT_CHARTER.md",
+        "docs/MODEL_CARD.md",
+        "docs/RISK_AND_DECISION_LOG.md"
+      ],
+      "limitations": "No field/business reference or approved loss/effect threshold.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-11",
+      "claim": "Rejected source ZIP preserves existing bytes after supported correction.",
+      "classification": "TECHNICAL_VERIFICATION",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/before-import-regression.log",
+        "docs/evidence/2026-10-17/after-import-regression.log",
+        "scripts/import_source_zip.py"
+      ],
+      "limitations": "Five isolated fixtures; not a complete archive security certification.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-12",
+      "claim": "Invalid routing endpoints are rejected after supported correction.",
+      "classification": "TECHNICAL_VERIFICATION",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/before-routing-regression.log",
+        "docs/evidence/2026-10-17/after-unit-tests.log",
+        "src/pathfinding.ts"
+      ],
+      "limitations": "Default scenario numerical outputs unchanged.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-13",
+      "claim": "Frozen MVP workflow and production build pass fresh checks.",
+      "classification": "TECHNICAL_VERIFICATION",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17/browser-tests.log",
+        "docs/evidence/2026-10-17/build.log",
+        "docs/evidence/2026-10-17/correction-impact.json"
+      ],
+      "limitations": "One browser/workflow; build bundle-size warning retained.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-14",
+      "claim": "Any gate has human approval or this self-assessment is independent sign-off.",
+      "classification": "GOVERNANCE",
+      "evaluationStatus": "INCONCLUSIVE",
+      "evidence": [
+        "docs/GATE_REVIEWS.json",
+        "docs/GATE_REVIEWS.md"
+      ],
+      "limitations": "No formal gate approval or independent review is recorded; all gate decisions remain null. Owner-confirmed intended-use direction in D-01 is distinct from a gate approval.",
+      "reviewer": "Unassigned independent human reviewer; PENDING"
+    },
+    {
+      "id": "CL-15",
+      "claim": "The project owner confirmed A as the primary operations-research objective, C as internal AI PM/TPM governance, and B as the analytics/OR/simulation methodology, for educational and portfolio use only.",
+      "classification": "OWNER_DIRECTION",
+      "evaluationStatus": "PASS",
+      "evidence": [
+        "docs/evidence/2026-10-17-g0-direction/owner-confirmation.md",
+        "docs/RISK_AND_DECISION_LOG.md",
+        "docs/PROJECT_CHARTER.md"
+      ],
+      "limitations": "PASS means the documented direction matches the owner instruction; it is not a formal G0 decision, independent review, completed research, operational validity, or permission for deployment, procurement recommendations, productivity guarantees or ROI claims. Proposed criteria still await formal review.",
+      "reviewer": "AI transcription/alignment check only; independent human review PENDING"
+    }
+  ]
+}

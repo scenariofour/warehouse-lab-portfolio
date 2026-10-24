@@ -1,0 +1,19 @@
+
+> warehouse-lab@1.0.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1562 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.73 kB │ gzip:   0.44 kB
+dist/assets/index-DAqgWch0.css   32.37 kB │ gzip:   7.51 kB
+dist/assets/index-BUR_AGiI.js    75.30 kB │ gzip:  26.66 kB
+dist/assets/three-BzZm7wAe.js   511.05 kB │ gzip: 127.85 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.19s

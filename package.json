@@ -1,0 +1,31 @@
+{
+  "name": "warehouse-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build && node scripts/copy-notices.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "tsx --test tests/*.test.ts",
+    "data": "python3 scripts/prepare_data.py",
+    "test:browser": "playwright test",
+    "validate:scenarios": "tsx scripts/validate-scenarios.ts",
+    "test:data": "python3 -m unittest discover -s tests -p 'test_data_pipeline.py'",
+    "audit:data": "python3 scripts/audit_governance_data.py",
+    "evaluate:governance": "tsx scripts/evaluate_governance.ts",
+    "check:governance": "python3 scripts/check_governance_docs.py"
+  },
+  "dependencies": {
+    "lucide": "^0.468.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.18.0",
+    "@types/three": "^0.180.0",
+    "tsx": "^4.20.6",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.9"
+  }
+}

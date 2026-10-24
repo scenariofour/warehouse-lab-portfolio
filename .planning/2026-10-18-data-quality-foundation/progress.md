@@ -1,0 +1,7 @@
+# Progress
+- 2026-10-18: Inspected branch, remote and working tree. Recorded acceptance criteria before implementation. Began review of prior discovery and governance.
+- M1: taxonomy, JSON schema, standard-library validator and five test methods completed. Negative subtests cover missing fields, synthetic origins, counts, lineage, closure and correction approval. Baseline discovery verifier PASS (195 checks / 19 identical generated artifacts). M1 preservation and gate checks PASS. Commit/push destination confirmation remains pending.
+- M1 committed 93adfdb and pushed to origin/codex/data-quality-foundation. Existing discovery prerequisites left untracked and unchanged; new generator is self-contained.
+- M2 PASS: six independent registry test methods plus five contract methods, all 162 baseline hashes, source lineage/cells, SQL totals, policy comparisons and byte replay. 14 unresolved real-source issues; no correction or synthetic input.
+- M2 committed 2f01713 and pushed to origin/codex/data-quality-foundation.
+- M3: ten internal/four public-subset CSVs prepared, Tableau A/B/C authoring specification and industry-supported design-only synthetic proposal completed. CSV consumer tests caught oversized fields; compact selectors/references fixed transport while preserving exact registry ordinals. All 16 test methods and all 162 baseline/gate checks pass. No Tableau workbook authored/published; human semantics review remains pending.

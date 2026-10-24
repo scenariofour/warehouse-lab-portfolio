@@ -1,0 +1,967 @@
+{
+  "approved_source_corrections": 0,
+  "generator_sha256": "4002e90595cb0145a9eac7182e477501f4f747b988784a6fa42024c6bb17065d",
+  "human_review": "PENDING",
+  "identifier_encoding": "domain + SHA256(JSON compact [domain, original parts]) first 20 hex; pseudonymous, not anonymous",
+  "inputs": {
+    "data/raw/Class_Based_Storage.csv": "3c26a318c3639e1cbdd7ad3a7968ba1c7a669d1b2d38e3b618e8e538637942a8",
+    "data/raw/Customer_Order.csv": "e28ae8ac9b368b9496b153fafb5af685bd94ba1530ffcb308dfcd5403601f325",
+    "data/raw/Dedicated_Storage.csv": "eb3497a43844f99c2a4e7f00b6ca0b7eb4562d06b3db38dbc345858efe8c56b0",
+    "data/raw/Full layout.dwg": "28c720d406a49247a7240590ffc9dd51efd57565a04184c8ca8e6e240968139f",
+    "data/raw/Hybrid_Storage.csv": "5ec97f5129c28c84970fd4435f1ca1f6ad25333cef3b91143e7a68c7ed1c1527",
+    "data/raw/Layout_Z1.0.pdf": "da2dc6ceba278846ccf16a5494710b21810eccd5d7aea11b016c49a09d2aff8c",
+    "data/raw/Layout_Z1.0.svg": "53b5b5fc56fd977ee167c1262c2f885179319b23679ad5791298bd31d91db709",
+    "data/raw/Layout_Z2.0.pdf": "69f90a6d760d5a9a2f2c523e8d773056e7f07d9c6637859222f81ed35277525d",
+    "data/raw/Layout_Z2.0.svg": "8b516142acf08f6e187bb20bf4a5aa814d99b8e23a45db498e054e2a1e5f6a65",
+    "data/raw/Layout_Z3.0.pdf": "bdd4a6f5bfe0fa10d96a71f3a574ef903a9b1224fa1814d05640a62802b34263",
+    "data/raw/Layout_Z3.0.svg": "d7345fb00dd3a2727b9f6ec8a5f54679e63cab6614710562c4e9aea58538f35c",
+    "data/raw/Layout_Z4.0.pdf": "aebcd748349ffd82c7c57ff9a29138e1b110e3795a3023663b55ca1ca68f8d55",
+    "data/raw/Layout_Z4.0.svg": "3f5184c1696f8c176063b2345e5483084e42447ba6287a0b5b868e764d138df5",
+    "data/raw/Link Colab.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/raw/Order_Picking_dataset.ipynb": "c5228bd089b8c55d5d80ee85dc7d807c5efdfe73abc09be09eb311f695a7564d",
+    "data/raw/Picking_Wave.csv": "4065a8a94f68c402ef4543245373ac91f6835ecdf34a1e4674cb6981b394b88c",
+    "data/raw/Product.csv": "416527e5260c17003177e1389fd48042d9790be9ef9cabe4c6c07e583e01eb2f",
+    "data/raw/README.txt": "123b25c62bcfab3e4506ae77ba391915f5ed5f236559e24435b17efb02077df9",
+    "data/raw/Random_Storage.csv": "c9c2eb25ff24f3fdc7f47c02cb44de7702c0416b2a309b754a939c4ae100a0b0",
+    "data/raw/Storage_Location.csv": "2895d9da16b4d63e85a17bfe050cc77b72d5654298072d6fa3b1732b1c1d6cc3",
+    "data/raw/Support_Points_Navigation.csv": "848dd2bafd5cce8506555e5fc83369eb985cb446edd84d3fa259f19be449c479",
+    "docs/data-quality/registry/classification.csv": "cc216188d4cde1ba3dacd5cc5fba3d2c19f8a1a610ecb9ebf1a8c6b761852bc8",
+    "docs/data-quality/registry/excluded_cells.csv": "7944e184f0c52717691346ae9258126fd46d7c9b1919c7f7f6f35b0e24eea614",
+    "docs/data-quality/registry/issues.json": "446c2cdb768c40a1d3a929cd3055c79886bc8301657cbbb9d40d45b2d4ef8196",
+    "docs/data-quality/registry/manifest.json": "a12eb217ee6b51dfad5bb974d841a7ebbe402339af287604bdafdcdffb618539",
+    "docs/data-quality/registry/policy_pairs.csv": "65a08d38de0a8d3d15a04247ac52d4fd53c65201c8556f6394d92788bb3ee3ff",
+    "docs/data-quality/registry/policy_skus.csv": "383c134d41609a0114c4b481f28de6399944f9e4d0955eee63d172485a7066f7",
+    "docs/data-quality/registry/profile_checks.csv": "0fb8ac512e87e4b0ea5ab89df238863ece49e88ef85ea6025d0d610ed4aa3fb5",
+    "docs/data-quality/registry/reconciliation.csv": "3d013dd495076f0e9b4e7ff03cd627017897079b82125473dc64e9f6025d470b",
+    "docs/data-quality/registry/unknown_reference_cells.csv": "8227fe968c5c2e599b6f7b924ce3c69b20a3fa8aac0d936e2028813d08be4d33",
+    "docs/data-quality/tableau/internal/classification_detail.csv": "1c08737f25e5c7143e49ef0863f6834b2400b298f9c810faee5e3ab5eebb931c",
+    "docs/data-quality/tableau/internal/decision_impacts.csv": "9c1a6301dab0d72d317c25082694f6eda9ce96d21c78c0d91242632946e146b3",
+    "docs/data-quality/tableau/internal/issue_metrics.csv": "d6a511513586b435812665d33e24bc6953357b5af806a9d7ca6b43db5e1efb90",
+    "docs/data-quality/tableau/internal/issue_sources.csv": "b1184895b8138bdef9833e770b4d46296c01370e85f6098192f343df7afcb337",
+    "docs/data-quality/tableau/internal/issues.csv": "abbafdffb6a7af54c87d14b041d5444d1b9f2b6ab95fcef533e3145ccd223d72",
+    "docs/data-quality/tableau/internal/policy_pairs.csv": "0aad3a42cbe2d7ecba45306ffae1f22487fbef72031034847e9953250b9061e9",
+    "docs/data-quality/tableau/internal/policy_supply.csv": "8dec213fe3ae546d754270a6c4d8a0d6062f33549baad48eecc01d056c60b44f",
+    "docs/data-quality/tableau/internal/reconciliation_detail.csv": "2829f795946fd0aaf995c48893a5d08b071eed2eaa45a684c4dacdfaef946b8c",
+    "docs/data-quality/tableau/internal/source_counts.csv": "4a59c6fca29c859a1d3d863d3384cb3271a737b2a2527d1c727e95e5f17c348c",
+    "docs/data-quality/tableau/internal/unmapped_locations.csv": "76f171155529ea0dc4eed5c9da357984989e04f4f517605c8b83e1a72209b735",
+    "docs/data-quality/tableau/manifest.json": "d2b5f496e3586260f758e7519d123b836cee25e13a0b13c1db7c2d62bfe59b5b",
+    "scripts/data_quality/build_registry.py": "3ee3fc680e41e472b4d7340f12e4a8ce50e553ee03febb3e793d2541af16cbc0",
+    "scripts/data_quality/contract.py": "00aa0d6926ffe1e1f671aa62318d5b750d04fbee7b42db83020bd1c1cde16b01"
+  },
+  "null_policy": "CSV blank = unknown/not present; size_key MISSING preserves unknown identity; never numeric zero",
+  "public_allowlist": [
+    "reconciliation.csv",
+    "reconciliation_summary.csv",
+    "exception_pareto.csv",
+    "order_groups.csv",
+    "location_coverage.csv",
+    "abc_comparison.csv",
+    "normalization_tokens.csv",
+    "transformation_rules.csv",
+    "policy_pairs.csv",
+    "policy_supply.csv",
+    "experiment_controls.csv",
+    "decision_evidence.csv",
+    "issue_evidence.csv",
+    "profile_checks.csv"
+  ],
+  "publication": "OFFLINE_PREPARED_NOT_UPLOADED",
+  "reused_public_sources": [
+    "docs/data-quality/tableau/public/issues.csv",
+    "docs/data-quality/tableau/public/issue_metrics.csv",
+    "docs/data-quality/tableau/public/source_counts.csv"
+  ],
+  "source_attribution": "Rodrigo Furlan de Assis; Mendeley Data v1; 10.17632/pf2w725pw3.1; CC BY 4.0",
+  "synthetic_inventory_scenarios_generated": false,
+  "tables": {
+    "abc_comparison": {
+      "bytes": 10998,
+      "denominator": "208 references or MIN demand_denominator_units for quantity share",
+      "evidence_class": "PUBLISHED_SOURCE_OBSERVATION + SOURCE_DERIVED",
+      "fields": {
+        "cumulative_customer_units": {
+          "aggregation": "ATTR_OR_MIN_PER_REFERENCE",
+          "definition": "Fixed full-extract demand cumulative through ranked reference; never sum.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "customer_units": {
+          "aggregation": "SUM_WITHIN_ONE_GRAIN",
+          "definition": "Sum of published customer quantities in the declared group or interpretation.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "demand_denominator_units": {
+          "aggregation": "MIN_NEVER_SUM",
+          "definition": "Full customer demand (228195) repeated per alternative/reference; use MIN, never SUM.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "derived_abc": {
+          "aggregation": "DIMENSION",
+          "definition": "Extract-volume 80/95 ABC using cumulative share BEFORE each reference; ties by original reference ascending.",
+          "nullable": false,
+          "type": "string"
+        },
+        "disagrees": {
+          "aggregation": "SUM_WITHIN_REFERENCES",
+          "definition": "1 if published and derived ABC differ; not a confirmed source error.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "published_abc": {
+          "aggregation": "DIMENSION",
+          "definition": "Product.ABCCOD as published; basis and effective date unverified.",
+          "nullable": false,
+          "type": "string"
+        },
+        "rank": {
+          "aggregation": "DO_NOT_SUM",
+          "definition": "One-based descending quantity rank; original source key ascending breaks ties.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "reference_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one demanded reference",
+      "primary_key": [
+        "reference_id"
+      ],
+      "rows": 208,
+      "sha256": "933204753efa1ae43e2dc706802fc3c00d6f0b6f0bb333c4c4f567b531b49555"
+    },
+    "decision_evidence": {
+      "bytes": 10362,
+      "denominator": "COUNTD issue_id is questions, not unique affected units",
+      "evidence_class": "AI_PROPOSED_REQUIRES_HUMAN_REVIEW",
+      "fields": {
+        "business_decision": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "business_mechanism": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "competing_explanations": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "decision_category": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "evidence_class": {
+          "aggregation": "DIMENSION",
+          "definition": "Provenance/interpretation label; does not establish source truth, cause or operational effect.",
+          "nullable": false,
+          "type": "string"
+        },
+        "evidence_readiness": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "evidence_ref": {
+          "aggregation": "DIMENSION",
+          "definition": "Registry lineage identity/role/hash/path. Hash authenticates bytes; contributing populations are not affected counts.",
+          "nullable": false,
+          "type": "string"
+        },
+        "issue_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Unmodified issue registry ID/title/workflow/review/proposed decision-priority; not measured business severity.",
+          "nullable": false,
+          "type": "string"
+        },
+        "kpi_at_risk": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "next_evidence_request": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "recommendation": {
+          "aggregation": "DIMENSION",
+          "definition": "AI-proposed decision interpretation anchored in issue evidence; unmeasured effects and human review remain explicit.",
+          "nullable": false,
+          "type": "string"
+        },
+        "review_state": {
+          "aggregation": "DIMENSION",
+          "definition": "Unmodified issue registry ID/title/workflow/review/proposed decision-priority; not measured business severity.",
+          "nullable": false,
+          "type": "string"
+        },
+        "severity": {
+          "aggregation": "DIMENSION",
+          "definition": "Unmodified issue registry ID/title/workflow/review/proposed decision-priority; not measured business severity.",
+          "nullable": false,
+          "type": "string"
+        },
+        "status": {
+          "aggregation": "DIMENSION",
+          "definition": "Unmodified issue registry ID/title/workflow/review/proposed decision-priority; not measured business severity.",
+          "nullable": false,
+          "type": "string"
+        },
+        "title": {
+          "aggregation": "DIMENSION",
+          "definition": "Unmodified issue registry ID/title/workflow/review/proposed decision-priority; not measured business severity.",
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one issue-to-decision question",
+      "primary_key": [
+        "issue_id"
+      ],
+      "rows": 14,
+      "sha256": "7c16f03f982fbf6b6f5346aa22c9326eaf7be23718870523fbe522435bff56af"
+    },
+    "exception_pareto": {
+      "bytes": 128007,
+      "denominator": "gap_denominator_units MIN; each dimension totals 13003",
+      "evidence_class": "SOURCE_DERIVED",
+      "fields": {
+        "cumulative_gap_units": {
+          "aggregation": "ATTR_OR_MIN_PER_MEMBER",
+          "definition": "Full-extract cumulative positive gap in fixed rank order, not recalculated after filters.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "dimension": {
+          "aggregation": "DIMENSION",
+          "definition": "wave or reference; each is an alternative grouping of the same positive-gap units.",
+          "nullable": false,
+          "type": "string"
+        },
+        "gap_denominator_units": {
+          "aggregation": "MIN_NEVER_SUM",
+          "definition": "Full current positive-gap population (13003), repeated per group. Not customer-demand denominator.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "gap_units": {
+          "aggregation": "SUM_WITHIN_ONE_DIMENSION_OR_INTERPRETATION",
+          "definition": "Sum of key-level max(customer-picking,0); unmatched quantity, not observed failed service.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "member_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "positive_gap_keys": {
+          "aggregation": "ONE_INTERPRETATION_ONLY",
+          "definition": "Count of keys with source records (or positive gap for positive_gap_keys), not quantity.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "rank": {
+          "aggregation": "DO_NOT_SUM",
+          "definition": "One-based descending quantity rank; original source key ascending breaks ties.",
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "positive current gap group within alternative dimension",
+      "primary_key": [
+        "dimension",
+        "member_id"
+      ],
+      "rows": 2483,
+      "sha256": "6e2e9332cd8299c2ea4403559f29250fa9b733235c6f3f9e074fd432f5f09d1f"
+    },
+    "experiment_controls": {
+      "bytes": 2886,
+      "denominator": "no readiness percentage: controls have different states/meaning",
+      "evidence_class": "AI_PROPOSED_REQUIRES_HUMAN_REVIEW",
+      "fields": {
+        "control_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Control identity/scope, explicit state and evidence needed. PASS_DESCRIPTIVE is not experiment approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "control_name": {
+          "aggregation": "DIMENSION",
+          "definition": "Control identity/scope, explicit state and evidence needed. PASS_DESCRIPTIVE is not experiment approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "observation": {
+          "aggregation": "DIMENSION",
+          "definition": "Control identity/scope, explicit state and evidence needed. PASS_DESCRIPTIVE is not experiment approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "required_evidence": {
+          "aggregation": "DIMENSION",
+          "definition": "Control identity/scope, explicit state and evidence needed. PASS_DESCRIPTIVE is not experiment approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "result": {
+          "aggregation": "DIMENSION",
+          "definition": "Control identity/scope, explicit state and evidence needed. PASS_DESCRIPTIVE is not experiment approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "scope": {
+          "aggregation": "DIMENSION",
+          "definition": "Control identity/scope, explicit state and evidence needed. PASS_DESCRIPTIVE is not experiment approval.",
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one global or pair-scoped experiment control",
+      "primary_key": [
+        "control_id"
+      ],
+      "rows": 14,
+      "sha256": "f22ead4c39da4efa643cddc79cc85e4376451620ed0aeca61e5e91782b377ff2"
+    },
+    "issue_evidence": {
+      "bytes": 6064,
+      "denominator": "counts by role; no cross-issue affected count or source population sum",
+      "evidence_class": "SOURCE_DERIVED",
+      "fields": {
+        "evidence_ref": {
+          "aggregation": "DIMENSION",
+          "definition": "Registry lineage identity/role/hash/path. Hash authenticates bytes; contributing populations are not affected counts.",
+          "nullable": false,
+          "type": "string"
+        },
+        "issue_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Unmodified issue registry ID/title/workflow/review/proposed decision-priority; not measured business severity.",
+          "nullable": false,
+          "type": "string"
+        },
+        "issue_source_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Registry lineage identity/role/hash/path. Hash authenticates bytes; contributing populations are not affected counts.",
+          "nullable": false,
+          "type": "string"
+        },
+        "lineage_role": {
+          "aggregation": "DIMENSION",
+          "definition": "Registry lineage identity/role/hash/path. Hash authenticates bytes; contributing populations are not affected counts.",
+          "nullable": false,
+          "type": "string"
+        },
+        "selected_record_count": {
+          "aggregation": "DO_NOT_SUM_ACROSS_ISSUES",
+          "definition": "Exact selected source ordinals from registry role; not automatically affected records; blank for definition evidence.",
+          "nullable": true,
+          "type": "integer"
+        },
+        "source_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Pinned source filename (without personal data), original field name or exact profile check name.",
+          "nullable": false,
+          "type": "string"
+        },
+        "source_record_count": {
+          "aggregation": "MIN_PER_SOURCE",
+          "definition": "All logical records in named source CSV; repeated per evidence relationship; blank for non-CSV definitions.",
+          "nullable": true,
+          "type": "integer"
+        },
+        "source_sha256": {
+          "aggregation": "DIMENSION",
+          "definition": "Registry lineage identity/role/hash/path. Hash authenticates bytes; contributing populations are not affected counts.",
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one issue/source lineage role",
+      "primary_key": [
+        "issue_source_id"
+      ],
+      "rows": 35,
+      "sha256": "f7787436e266429bc2c29288b39df35ed86f7fe9bb09c485bf0097e00e86679c"
+    },
+    "location_coverage": {
+      "bytes": 861909,
+      "denominator": "MIN scope_denominator within exactly one source scope; units differ",
+      "evidence_class": "SOURCE_DERIVED",
+      "fields": {
+        "location_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "mapped": {
+          "aggregation": "DIMENSION",
+          "definition": "1 iff stripped location joins Storage_Location; 0 means unmatched, not physically invalid.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "quantity": {
+          "aggregation": "SUM_WITHIN_SOURCE_SCOPE",
+          "definition": "Picking units for Picking_Wave, nonempty encoded cells for allocation files; consult unit.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "records": {
+          "aggregation": "SUM_WITHIN_SOURCE_SCOPE",
+          "definition": "Source records contributing to location; for allocation each row counted once, not once per cell.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "scope_denominator": {
+          "aggregation": "MIN_WITHIN_SOURCE_SCOPE",
+          "definition": "Full same-source quantity (picking units or all raw nonempty allocation cells), repeated per location.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "source_scope": {
+          "aggregation": "DIMENSION",
+          "definition": "Pinned source filename (without personal data), original field name or exact profile check name.",
+          "nullable": false,
+          "type": "string"
+        },
+        "unit": {
+          "aggregation": "DIMENSION",
+          "definition": "published picking units or encoded allocation cells; populations cannot be mixed.",
+          "nullable": false,
+          "type": "string"
+        },
+        "unknown_reference_cells": {
+          "aggregation": "SUM_WITHIN_SOURCE_SCOPE",
+          "definition": "Nonempty allocation cells absent from Product.Reference; may overlap unmapped cells.",
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "one source scope / stripped location",
+      "primary_key": [
+        "source_scope",
+        "location_id"
+      ],
+      "rows": 10534,
+      "sha256": "696dd7b10b5a939ec98ffb5435b1bd98b27ad91b8d88f037d6804b4676d2cd72"
+    },
+    "normalization_tokens": {
+      "bytes": 7641,
+      "denominator": "SUM token_records or token_units separately within source",
+      "evidence_class": "PUBLISHED_SOURCE_OBSERVATION + EXISTING_INFERRED_NORMALIZATION",
+      "fields": {
+        "alternative_value": {
+          "aggregation": "DIMENSION",
+          "definition": "Literal trimmed Decimal spelling; alternative interpretation, not a correction.",
+          "nullable": true,
+          "type": "string"
+        },
+        "current_value": {
+          "aggregation": "DIMENSION",
+          "definition": "Existing trimmed Decimal numeric spelling, with customer half-token inference; blank stays unknown.",
+          "nullable": true,
+          "type": "string"
+        },
+        "field": {
+          "aggregation": "DIMENSION",
+          "definition": "Pinned source filename (without personal data), original field name or exact profile check name.",
+          "nullable": false,
+          "type": "string"
+        },
+        "original_token": {
+          "aggregation": "DIMENSION",
+          "definition": "Exact source size spelling, including whitespace; blank means original missing size.",
+          "nullable": true,
+          "type": "string"
+        },
+        "rule_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Declared rule identifier. A token uses its governing size rule; foundational parse/trim rules also apply.",
+          "nullable": false,
+          "type": "string"
+        },
+        "source_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Pinned source filename (without personal data), original field name or exact profile check name.",
+          "nullable": false,
+          "type": "string"
+        },
+        "token_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "token_records": {
+          "aggregation": "SUM_WITHIN_SOURCE",
+          "definition": "Records with exactly this original token in this source.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "token_units": {
+          "aggregation": "SUM_WITHIN_SOURCE",
+          "definition": "Published quantity on records with exactly this original token.",
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "one source / original size token",
+      "primary_key": [
+        "token_id"
+      ],
+      "rows": 91,
+      "sha256": "9f1c86067f8b0a1acbc6a44e1bfab43ebe5966e352500567e2aedfc43fa7f450"
+    },
+    "order_groups": {
+      "bytes": 3842526,
+      "denominator": "39858 groups; picking has no order attribution",
+      "evidence_class": "SOURCE_DERIVED",
+      "fields": {
+        "customer_units": {
+          "aggregation": "SUM_WITHIN_ONE_GRAIN",
+          "definition": "Sum of published customer quantities in the declared group or interpretation.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "distinct_references": {
+          "aggregation": "DO_NOT_SUM",
+          "definition": "Distinct members within a group; counts overlap between groups.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "distinct_size_skus": {
+          "aggregation": "DO_NOT_SUM",
+          "definition": "Distinct members within a group; counts overlap between groups.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "missing_size_records": {
+          "aggregation": "SUM_SEPARATELY",
+          "definition": "Source records satisfying named check in the group; checks can overlap.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "order_group_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "order_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "order_wave_count": {
+          "aggregation": "MIN_PER_ORDER_NEVER_SUM",
+          "definition": "Distinct source waves for this order pseudonym; repeated per wave/order group.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "repeat_records": {
+          "aggregation": "SUM_WITHIN_ORDER_GROUPS",
+          "definition": "Complete original tuple occurrences after first in source; retained in current calculations.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "source_records": {
+          "aggregation": "SUM_WITHIN_ORDER_GROUPS",
+          "definition": "Contributing records in the wave/order group, including zeros and repeats.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "wave_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "zero_quantity_records": {
+          "aggregation": "SUM_SEPARATELY",
+          "definition": "Source records satisfying named check in the group; checks can overlap.",
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "one wave/order source group; demand only",
+      "primary_key": [
+        "order_group_id"
+      ],
+      "rows": 39858,
+      "sha256": "f9755f070ef48b2ce4fad9471c883207738fbedcec3cd5a97d3135294ed8288f"
+    },
+    "policy_pairs": {
+      "bytes": 390,
+      "denominator": "union_skus per pair; no across-pair SUM",
+      "evidence_class": "CONDITIONAL_ASSUMPTION",
+      "fields": {
+        "differing_skus": {
+          "aggregation": "ONE_PAIR_ONLY",
+          "definition": "Pair keys with unequal encoded-cell counts; denominator union_skus.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "l1_cell_difference": {
+          "aggregation": "ONE_PAIR_ONLY",
+          "definition": "Sum of absolute pair SKU-counter differences; not required moves, stock loss or unique units.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "policy_a": {
+          "aggregation": "DIMENSION",
+          "definition": "Published configuration name or unordered pair. Alternative configurations are not additive.",
+          "nullable": false,
+          "type": "string"
+        },
+        "policy_b": {
+          "aggregation": "DIMENSION",
+          "definition": "Published configuration name or unordered pair. Alternative configurations are not additive.",
+          "nullable": false,
+          "type": "string"
+        },
+        "policy_pair_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Published configuration name or unordered pair. Alternative configurations are not additive.",
+          "nullable": false,
+          "type": "string"
+        },
+        "union_skus": {
+          "aggregation": "ONE_PAIR_ONLY",
+          "definition": "Union of coordinate-retained reference/size keys in this pair.",
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "one unordered published policy pair",
+      "primary_key": [
+        "policy_pair_id"
+      ],
+      "rows": 6,
+      "sha256": "370db691abfff582e0abe457f65aa4bee6fbe4f466246dc17fddbf6bfa3d8b87"
+    },
+    "policy_supply": {
+      "bytes": 265,
+      "denominator": "MIN demand_denominator_units; no alternative-policy SUM",
+      "evidence_class": "CONDITIONAL_ASSUMPTION",
+      "fields": {
+        "conditional_supply_ceiling": {
+          "aggregation": "ONE_POLICY_ONLY",
+          "definition": "Existing M3 sum min(full-history SKU demand, retained encoded-cell count); one undated snapshot/no receipts assumption.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "demand_denominator_units": {
+          "aggregation": "MIN_NEVER_SUM",
+          "definition": "Full customer demand (228195) repeated per alternative/reference; use MIN, never SUM.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "excluded_cells": {
+          "aggregation": "ONE_POLICY_ONLY",
+          "definition": "Nonempty cells without joined coordinate IDs; preserved in source.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "policy": {
+          "aggregation": "DIMENSION",
+          "definition": "Published configuration name or unordered pair. Alternative configurations are not additive.",
+          "nullable": false,
+          "type": "string"
+        },
+        "raw_encoded_cells": {
+          "aggregation": "ONE_POLICY_ONLY",
+          "definition": "Nonempty numbered allocation cells before coordinate exclusion.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "retained_encoded_cells": {
+          "aggregation": "ONE_POLICY_ONLY",
+          "definition": "Nonempty cells with joined coordinate IDs; each assumed one unit, physical stock unverified.",
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "one published policy, existing M3 stock arithmetic only",
+      "primary_key": [
+        "policy"
+      ],
+      "rows": 4,
+      "sha256": "4e868d41d66b1923079bc341460579a6dca7009856dd19d6593e026af74ce8a1"
+    },
+    "profile_checks": {
+      "bytes": 754,
+      "denominator": "population_rows for that source/check, including zero results",
+      "evidence_class": "PUBLISHED_SOURCE_OBSERVATION + SOURCE_DERIVED",
+      "fields": {
+        "affected_rows": {
+          "aggregation": "ONE_CHECK_ONLY",
+          "definition": "Source rows flagged by the named completed check; checks may overlap.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "check": {
+          "aggregation": "DIMENSION",
+          "definition": "Pinned source filename (without personal data), original field name or exact profile check name.",
+          "nullable": false,
+          "type": "string"
+        },
+        "field": {
+          "aggregation": "DIMENSION",
+          "definition": "Pinned source filename (without personal data), original field name or exact profile check name.",
+          "nullable": false,
+          "type": "string"
+        },
+        "population_rows": {
+          "aggregation": "MIN_PER_SOURCE",
+          "definition": "Full named source record denominator; repeated across checks.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "source_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Pinned source filename (without personal data), original field name or exact profile check name.",
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one completed source/field/check",
+      "primary_key": [
+        "source_id",
+        "field",
+        "check"
+      ],
+      "rows": 12,
+      "sha256": "72f2b6cbb905cc4fbb08561b71aae2f8be45a360a6ca773b433d7c2e4a3bc9c6"
+    },
+    "reconciliation": {
+      "bytes": 14190166,
+      "denominator": "selected interpretation SUM customer quantity; presence uses records > 0",
+      "evidence_class": "SOURCE_DERIVED + EXISTING_INFERRED_NORMALIZATION / ANALYTICAL_SENSITIVITY",
+      "fields": {
+        "current_customer_records": {
+          "aggregation": "SUM_WITHIN_SELECTED_KEYS",
+          "definition": "Contributing source-record count for named branch, including zero quantities. Presence is count > 0.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "current_customer_units": {
+          "aggregation": "SUM_WITHIN_SELECTED_KEYS",
+          "definition": "Customer quantity at key under existing inferred size mapping; zeros/repeats retained.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "dedup_customer_records": {
+          "aggregation": "SUM_WITHIN_SELECTED_KEYS",
+          "definition": "Contributing source-record count for named branch, including zero quantities. Presence is count > 0.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "dedup_customer_units": {
+          "aggregation": "SUM_WITHIN_SELECTED_KEYS",
+          "definition": "Customer quantity after keeping first complete original tuple under current size mapping; analytical sensitivity, not approved removal.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "literal_customer_records": {
+          "aggregation": "SUM_WITHIN_SELECTED_KEYS",
+          "definition": "Contributing source-record count for named branch, including zero quantities. Presence is count > 0.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "literal_customer_units": {
+          "aggregation": "SUM_WITHIN_SELECTED_KEYS",
+          "definition": "Customer quantity at key with numeric spelling only and no half-token inference; analytical sensitivity.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "picking_records": {
+          "aggregation": "SUM_WITHIN_SELECTED_KEYS",
+          "definition": "Contributing source-record count for named branch, including zero quantities. Presence is count > 0.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "picking_units": {
+          "aggregation": "SUM_WITHIN_ONE_GRAIN",
+          "definition": "Published picking quantity at this key/location, all repeat occurrences retained.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "reconciliation_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "reference_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        },
+        "size_key": {
+          "aggregation": "DIMENSION",
+          "definition": "Numeric size spelling or MISSING; declared key under each interpretation, never a physical quantity.",
+          "nullable": false,
+          "type": "string"
+        },
+        "wave_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Stable domain-separated SHA-256 pseudonym (20 hex digits). String dimension; not proof of anonymization.",
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "union wave/reference/size key across declared interpretations",
+      "primary_key": [
+        "reconciliation_id"
+      ],
+      "rows": 148887,
+      "sha256": "2986c81c5675b0168e1c0a134b712eae9f54fd92406c221ed0394bb4252b37be"
+    },
+    "reconciliation_summary": {
+      "bytes": 449,
+      "denominator": "customer_units in same row; never sum interpretations",
+      "evidence_class": "MIXED_EXPLICIT_PER_ROW",
+      "fields": {
+        "customer_keys": {
+          "aggregation": "ONE_INTERPRETATION_ONLY",
+          "definition": "Count of keys with source records (or positive gap for positive_gap_keys), not quantity.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "customer_units": {
+          "aggregation": "SUM_WITHIN_ONE_GRAIN",
+          "definition": "Sum of published customer quantities in the declared group or interpretation.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "evidence_class": {
+          "aggregation": "DIMENSION",
+          "definition": "Provenance/interpretation label; does not establish source truth, cause or operational effect.",
+          "nullable": false,
+          "type": "string"
+        },
+        "excess_units": {
+          "aggregation": "SUM_WITHIN_ONE_INTERPRETATION",
+          "definition": "Sum of key-level max(picking-customer,0); not observed over-picking.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "gap_units": {
+          "aggregation": "SUM_WITHIN_ONE_DIMENSION_OR_INTERPRETATION",
+          "definition": "Sum of key-level max(customer-picking,0); unmatched quantity, not observed failed service.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "interpretation": {
+          "aggregation": "DIMENSION",
+          "definition": "CURRENT_INFERRED (established but unconfirmed), LITERAL_SIZE or CUSTOMER_DEDUP (sensitivity only). Select one.",
+          "nullable": false,
+          "type": "string"
+        },
+        "matched_units": {
+          "aggregation": "SUM_WITHIN_ONE_INTERPRETATION",
+          "definition": "Sum of key-level min(customer,picking), for one interpretation.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "picking_keys": {
+          "aggregation": "ONE_INTERPRETATION_ONLY",
+          "definition": "Count of keys with source records (or positive gap for positive_gap_keys), not quantity.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "picking_units": {
+          "aggregation": "SUM_WITHIN_ONE_GRAIN",
+          "definition": "Published picking quantity at this key/location, all repeat occurrences retained.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "positive_gap_keys": {
+          "aggregation": "ONE_INTERPRETATION_ONLY",
+          "definition": "Count of keys with source records (or positive gap for positive_gap_keys), not quantity.",
+          "nullable": false,
+          "type": "integer"
+        },
+        "union_keys": {
+          "aggregation": "ONE_INTERPRETATION_ONLY",
+          "definition": "Count of keys with source records (or positive gap for positive_gap_keys), not quantity.",
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "one full-extract interpretation",
+      "primary_key": [
+        "interpretation"
+      ],
+      "rows": 3,
+      "sha256": "a82b4f1f47e2f8a5db0e43f76101cca379a3ae1ee0cad45cf0e65cbdcc1c5632"
+    },
+    "transformation_rules": {
+      "bytes": 1715,
+      "denominator": "not a rate; no approved corrections",
+      "evidence_class": "MIXED_EXPLICIT_PER_ROW",
+      "fields": {
+        "affected_calculations": {
+          "aggregation": "DIMENSION",
+          "definition": "Declared normalization, retention or sensitivity and its semantic approval boundary; no source correction approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "approval_state": {
+          "aggregation": "DIMENSION",
+          "definition": "Declared normalization, retention or sensitivity and its semantic approval boundary; no source correction approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "description": {
+          "aggregation": "DIMENSION",
+          "definition": "Declared normalization, retention or sensitivity and its semantic approval boundary; no source correction approval.",
+          "nullable": false,
+          "type": "string"
+        },
+        "rule_id": {
+          "aggregation": "DIMENSION",
+          "definition": "Declared rule identifier. A token uses its governing size rule; foundational parse/trim rules also apply.",
+          "nullable": false,
+          "type": "string"
+        },
+        "rule_kind": {
+          "aggregation": "DIMENSION",
+          "definition": "Declared normalization, retention or sensitivity and its semantic approval boundary; no source correction approval.",
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one declared transformation, retention or scenario rule",
+      "primary_key": [
+        "rule_id"
+      ],
+      "rows": 9,
+      "sha256": "d3f2b10ec33f811fc04fcde7271cc45703db1a64510c8cac600c6e161527b883"
+    }
+  },
+  "version": "M4-B-1.0"
+}

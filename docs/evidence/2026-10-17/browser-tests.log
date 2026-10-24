@@ -1,0 +1,14 @@
+
+> warehouse-lab@1.0.0 test:browser
+> playwright test
+
+[WebServer] (node:87699) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:87706) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/warehouse.spec.ts:2:1 › real warehouse: run, pause, follow, inspect, switch policies, export, responsive layout (2.9s)
+
+  1 passed (4.6s)

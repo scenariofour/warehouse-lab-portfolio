@@ -1,0 +1,14 @@
+{
+  "reviewDate": "2026-10-17",
+  "recordedAtUTC": "2026-10-17T14:52:46.991125+00:00",
+  "status": "PASS",
+  "scope": "Structural references/metadata/input identity only; not semantic validation or human approval",
+  "requiredCoreDocuments": 7,
+  "additionalReviewDocuments": 4,
+  "checkedLocalLinks": 127,
+  "evaluationContracts": 13,
+  "claimRecords": 14,
+  "gatesPending": 5,
+  "humanDecisionsRecorded": 0,
+  "manifestFilesVerified": 92
+}

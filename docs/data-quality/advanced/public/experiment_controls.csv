@@ -1,0 +1,15 @@
+control_id,scope,control_name,result,observation,required_evidence
+SKU:Random:Class_Based,Random:Class_Based,Equal retained SKU quantities,FAIL,6867 / 7095 SKU counters differ; L1 40898 encoded cells.,Approved common reference/size quantity ledger and eligibility population.
+SKU:Random:Dedicated,Random:Dedicated,Equal retained SKU quantities,FAIL,3072 / 3298 SKU counters differ; L1 30166 encoded cells.,Approved common reference/size quantity ledger and eligibility population.
+SKU:Random:Hybrid,Random:Hybrid,Equal retained SKU quantities,FAIL,3439 / 3554 SKU counters differ; L1 31586 encoded cells.,Approved common reference/size quantity ledger and eligibility population.
+SKU:Class_Based:Dedicated,Class_Based:Dedicated,Equal retained SKU quantities,FAIL,6845 / 7117 SKU counters differ; L1 40086 encoded cells.,Approved common reference/size quantity ledger and eligibility population.
+SKU:Class_Based:Hybrid,Class_Based:Hybrid,Equal retained SKU quantities,FAIL,6835 / 7147 SKU counters differ; L1 37374 encoded cells.,Approved common reference/size quantity ledger and eligibility population.
+SKU:Dedicated:Hybrid,Dedicated:Hybrid,Equal retained SKU quantities,FAIL,2468 / 3532 SKU counters differ; L1 20726 encoded cells.,Approved common reference/size quantity ledger and eligibility population.
+TOTAL,GLOBAL,Equal retained cell totals,PASS_DESCRIPTIVE,Each policy has 41256 retained encoded cells. Total equality does not imply SKU equality.,Retain this descriptive check alongside SKU-level controls.
+COVERAGE,GLOBAL,Common coordinate coverage,FAIL,"Raw excluded cells differ: Random 0, Class_Based 882, Dedicated 864, Hybrid 864.",Aligned location master and agreed common eligible placement domain.
+UOM,GLOBAL,Verified payload and unit meaning,UNVERIFIED,README quantity wording and adopted size/one-cell-unit assumptions differ.,Source-owner decoded cell/UOM example.
+TIME,GLOBAL,Aligned inventory and demand horizon,UNVERIFIED,"Snapshot dates, receipts and inventory trajectories unavailable.",Dated inventory plus matching demand window and receipt rules.
+TASKS,GLOBAL,Common eligible task mix,NOT_ESTABLISHED,Unequal supply can select different feasible tasks.,Predeclared same eligible SKU/task workload and service denominator.
+LAYOUT,GLOBAL,Validated geometry and movement assumptions,UNVERIFIED,"Scale, floors, transfers and access graph lack physical validation.","Surveyed path segment, floor transfer and safety/access constraints."
+OUTCOMES,GLOBAL,Observed operational performance baseline,NOT_MEASURED,"No completion durations, due dates or real cost observations.",Representative pick/release/completion events and agreed KPI baseline.
+PROTOCOL,GLOBAL,Independent human-approved controlled protocol,NOT_APPROVED,G0–G4 PENDING; no controlled experiment authorized by this handoff.,"Named reviewer, common-stock protocol, acceptance and stop conditions."

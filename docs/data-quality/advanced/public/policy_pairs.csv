@@ -1,0 +1,7 @@
+policy_pair_id,policy_a,policy_b,union_skus,differing_skus,l1_cell_difference
+Random:Class_Based,Random,Class_Based,7095,6867,40898
+Random:Dedicated,Random,Dedicated,3298,3072,30166
+Random:Hybrid,Random,Hybrid,3554,3439,31586
+Class_Based:Dedicated,Class_Based,Dedicated,7117,6845,40086
+Class_Based:Hybrid,Class_Based,Hybrid,7147,6835,37374
+Dedicated:Hybrid,Dedicated,Hybrid,3532,2468,20726

@@ -1,0 +1,24 @@
+{
+  "recordedAtUTC": "2026-10-17T16:22:34.467941+00:00",
+  "status": "PASS",
+  "scope": "Byte preservation only; not rerun evaluation, semantic validity or approval",
+  "baselineFiles": 253,
+  "unchangedFiles": 244,
+  "changedFiles": [
+    "docs/CLAIM_REGISTER.json",
+    "docs/EVALUATION_PLAN.md",
+    "docs/EVIDENCE_INDEX.md",
+    "docs/GATE_REVIEWS.md",
+    "docs/INTERNAL_PRODUCT_PRACTICES.md",
+    "docs/MODEL_CARD.md",
+    "docs/PROJECT_CHARTER.md",
+    "docs/REQUIREMENTS.md",
+    "docs/RISK_AND_DECISION_LOG.md"
+  ],
+  "missingUnexpectedFiles": [],
+  "packageOutputOmissions": [],
+  "priorEvidenceFilesVerified": 27,
+  "priorOutputFilesVerified": 118,
+  "nonDocumentationChanges": [],
+  "historicalReportsCopiedExactly": true
+}

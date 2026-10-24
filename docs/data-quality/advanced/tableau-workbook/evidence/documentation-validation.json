@@ -1,0 +1,87 @@
+{
+  "allowed_existing_edit": "docs/data-quality/advanced/README.md",
+  "answered_self_checks": 24,
+  "base_commit": "3727b3525f6a1737e09e5d9341294ba4fad52989",
+  "confirmed_drilldown_evidence": "Author-reported manual B01 -> B02 and B05 -> B02 Wave demonstrations; not retested by this task",
+  "data_scripts_model_numerical_outputs_or_gates_changed": false,
+  "external_reference_urls_count": 9,
+  "external_validation": "Public workbook inspected through browser; selected Tableau docs consulted. No blanket HTTP/link/render test claimed.",
+  "fragment_links_checked": 13,
+  "fresh_csv_checks": {
+    "abc_disagreements": 96,
+    "abc_references": 208,
+    "half_size_records": 38846,
+    "half_size_units": 67383,
+    "summary": {
+      "CURRENT_INFERRED": [
+        228195,
+        215192,
+        215192,
+        13003,
+        0
+      ],
+      "CUSTOMER_DEDUP": [
+        215460,
+        215192,
+        202475,
+        12985,
+        12717
+      ],
+      "LITERAL_SIZE": [
+        228195,
+        215192,
+        149514,
+        78681,
+        65678
+      ]
+    },
+    "top20_wave_gap_units": 1720
+  },
+  "historical_computational_validation": "Recorded PASS authenticated; analytical test scripts not rerun",
+  "markdown_files_checked": 16,
+  "new_markdown_files": 15,
+  "note_hashes": {
+    "docs/data-quality/advanced/README.md": "94efcaec774019cfb99afb9cca6d9136083c513ec33cf9a0f0105a9302936f9c",
+    "docs/data-quality/advanced/tableau-workbook/CALCULATION_REFERENCE.md": "9fd93469298901b0e930bcf7e5701f0684a440ff4b71eebcac3457b2ad6e77e5",
+    "docs/data-quality/advanced/tableau-workbook/DASHBOARD_02_CASE_STUDY.md": "19100a4baf43b6f220b3fd62b4e6c3312338f54aa9f7f94a14fd9ef3adb97b69",
+    "docs/data-quality/advanced/tableau-workbook/DASHBOARD_03_CASE_STUDY.md": "9de65595241eeacc41571d42266af679596c86d551f30e1c6650a47cdb294e90",
+    "docs/data-quality/advanced/tableau-workbook/EVIDENCE_REGISTER.md": "f638f9d0e146d61551f8a8d5badf121cf2dc2efc71787277d79beea8fc512cef",
+    "docs/data-quality/advanced/tableau-workbook/LEARNING_INDEX.md": "a83905bd748a9fceeb34640d5376cc1b742418360d9e1d7f23ec39d78bc0d5a5",
+    "docs/data-quality/advanced/tableau-workbook/QA_AND_MAINTENANCE.md": "7e7140eb7ab401fdbdd4d8fbb6057abf4e29f7027d8e90c13215541fceba5acd",
+    "docs/data-quality/advanced/tableau-workbook/README.md": "292d776b0010fd4c0d9b1c31d3557d180444585921f4fde4a547cfdb660e0464",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/B01.md": "6686380421ad137af0d41421c8433aea5d5999f7b3b2fa9fc6ee87bb993edb9b",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/B02.md": "255fb7f61da1d272b46a254dccc8bf267be4ca5b934e03e1fb8c23e59772a78b",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/B04.md": "f42e71eaca6e6de8905a610fd04221202eb501bc11d1e2c46e2d9d7c2163c4f8",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/B05.md": "8dea40907e048dfaaf3247bb5cad8d12a572a484ef9921f9b53f209bcd6609ec",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/C01.md": "781bbe9f8bf19ba9ec982f9516f9c6cc4585af28e08307cc67eddf7fcae2b8cc",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/C01b.md": "733100f47b7ba2ad5e72cf4d7bf4cf82451d58a94ff2a748f5cc3e947cb3cf50",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/C02.md": "a5459fbc762ea47d96599f7399dc56fad1912cc8c4329e2f6b8224304f4db51b",
+    "docs/data-quality/advanced/tableau-workbook/worksheets/C03.md": "914b6cc325902ffbbf9e41b39fb0da56e608ee82ecd6f1a562af252203f4a732"
+  },
+  "preserved_existing_files": 243,
+  "public_csv_hashes_checked": 14,
+  "relative_links_checked": 160,
+  "scope": "Documentation, linked repository artifacts and read-only source checks; not workbook QA",
+  "screenshot_or_workbook_export_files_added": false,
+  "snapshot_date": "2026-10-18",
+  "status": "PASS",
+  "unverified": [
+    "full parameter-branch QA",
+    "clearing/combined/multi-select edge cases",
+    "thumbnail and viewport rendering",
+    "exact stored workbook formulas/actions",
+    "uploaded extract byte identity",
+    "independent source/domain review"
+  ],
+  "workbook_files_found": [],
+  "worksheet_notes": [
+    "B01",
+    "B02",
+    "B04",
+    "B05",
+    "C01",
+    "C01b",
+    "C02",
+    "C03"
+  ]
+}

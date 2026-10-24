@@ -1,6 +1,6 @@
 {
   "review_date": "2026-10-23",
-  "status": "CLEAN_REPLACEMENT_PREPARED",
+  "status": "PUBLIC_REPLACEMENT_AND_HOSTED_BROWSER_CHECKS_PASS",
   "node": "22.22.3",
   "simulation_tests": {
     "passed": 9,
@@ -63,17 +63,20 @@
     "private_identity_scan": "PASS, current source files and every reachable Git object",
     "log_redactions": "PRIVACY_REDACTIONS.json",
     "generated_python_bytecode": "Excluded from Git; may contain machine paths.",
-    "original_repository": "Remains private; main integrates development via merged PR #1."
+    "original_repository": "Remains private; main integrates development via merged PR #1.",
+    "commit_identity": "scenariofour with GitHub no-reply author and committer",
+    "old_merge_in_new_repo_anonymous_http_status": 422,
+    "affected_archive_anonymous_http_status": 404
   },
   "hosted_deployment": {
-    "workflow_run": null,
+    "workflow_run": "https://github.com/scenariofour/warehouse-lab-portfolio/actions/runs/40053266109",
     "conclusion": "success",
     "page_http_status": 200,
     "repository_anonymous_api_private": false,
     "original_repository_anonymous_api_status": 404,
     "initial_public_job_logs_reviewed": 2,
     "private_identity_hits_in_public_job_logs": 0,
-    "note": "Prior deployment evidence is in the private publication archive; clean replacement deployment will be recorded after verification."
+    "note": "Clean replacement deployed successfully; all 3 browser tests passed anonymously against the original live URL."
   },
   "floor_rendering_fix": {
     "cause": "Depth-buffer precision allowed the slab beneath the opaque floor to bleed through at distant camera angles.",

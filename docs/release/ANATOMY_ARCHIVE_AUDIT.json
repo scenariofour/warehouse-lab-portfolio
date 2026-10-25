@@ -1,0 +1,376 @@
+{
+  "review_date": "2026-10-25",
+  "curation": "Only anatomy docs/prototype/geometry/evidence plus its original generator and focused tests; no private history, internal datasets, untracked discovery work or workbook copied.",
+  "checks": {
+    "curated_files_byte_identical": 35,
+    "reviewed_identifier_term": "Customer_Order.orderNumber appears once as a denominator-definition field name, not as a raw identifier value.",
+    "manifest_input_output_hashes_schemas_and_csv_public_guards": "PASS in both repositories; 7 output CSVs, 4 public inputs and generator pin",
+    "focused_text_privacy_secret_patterns": "PASS; reviewed scope only, not a whole-repository/history audit",
+    "local_markdown_links_and_heading_anchors": {
+      "passed": 171
+    },
+    "existing_runtime_models_analytical_data_and_scripts_changed": [],
+    "external_links": [
+      {
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "status": 200,
+        "final_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "url": "https://doi.org/10.17632/pf2w725pw3.1",
+        "status": 200,
+        "final_url": "https://data.mendeley.com/datasets/pf2w725pw3/1"
+      },
+      {
+        "url": "https://github.com/scenariofour/warehouse-lab-portfolio",
+        "status": 200,
+        "final_url": "https://github.com/scenariofour/warehouse-lab-portfolio"
+      },
+      {
+        "url": "https://help.tableau.com/current/pro/desktop/en-us/actions_parameters.htm",
+        "status": 200,
+        "final_url": "https://help.tableau.com/current/pro/desktop/en-us/actions_parameters.htm"
+      },
+      {
+        "url": "https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm",
+        "status": 200,
+        "final_url": "https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm"
+      },
+      {
+        "url": "https://help.tableau.com/current/pro/desktop/en-us/maps_howto_origin_destination.htm",
+        "status": 200,
+        "final_url": "https://help.tableau.com/current/pro/desktop/en-us/maps_howto_origin_destination.htm"
+      },
+      {
+        "url": "https://help.tableau.com/current/pro/desktop/en-us/parameters_create.htm",
+        "status": 200,
+        "final_url": "https://help.tableau.com/current/pro/desktop/en-us/parameters_create.htm"
+      },
+      {
+        "url": "https://help.tableau.com/current/pro/desktop/en-us/server_desktop_web_edit_differences.htm",
+        "status": 200,
+        "final_url": "https://help.tableau.com/current/pro/desktop/en-us/server_desktop_web_edit_differences.htm"
+      },
+      {
+        "url": "https://help.tableau.com/current/pro/desktop/en-us/viewparts_marks_markproperties.htm",
+        "status": 200,
+        "final_url": "https://help.tableau.com/current/pro/desktop/en-us/viewparts_marks_markproperties.htm"
+      },
+      {
+        "url": "https://help.tableau.com/current/public/desktop/en-us/public_faq.htm",
+        "status": 200,
+        "final_url": "https://help.tableau.com/current/public/desktop/en-us/public_faq.htm"
+      },
+      {
+        "url": "https://public.tableau.com/app/profile/jiaxin.iris.li/viz/Warehouse_Lab_Anatomy_of_a_Decision/TheAnatomyofaDecision",
+        "status": 200,
+        "final_url": "https://public.tableau.com/app/profile/jiaxin.iris.li/viz/Warehouse_Lab_Anatomy_of_a_Decision/TheAnatomyofaDecision"
+      },
+      {
+        "url": "https://public.tableau.com/views/WarehouseLabDataQualityDecisionIntelligence/Dashboard01-DataQualityOverview?:showVizHome=n",
+        "status": 200,
+        "final_url": "https://public.tableau.com/views/WarehouseLabDataQualityDecisionIntelligence/Dashboard01-DataQualityOverview?:showVizHome=n"
+      },
+      {
+        "url": "https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/B04GapConcentration?:showVizHome=n",
+        "status": 200,
+        "final_url": "https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/B04GapConcentration?:showVizHome=n"
+      },
+      {
+        "url": "https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/Dashboard02NormalizationInterpretationLab2?:showVizHome=n",
+        "status": 200,
+        "final_url": "https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/Dashboard02NormalizationInterpretationLab2?:showVizHome=n"
+      },
+      {
+        "url": "https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/Dashboard3?:showVizHome=n",
+        "status": 200,
+        "final_url": "https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/Dashboard3?:showVizHome=n"
+      },
+      {
+        "url": "https://scenariofour.github.io/warehouse-lab-portfolio/",
+        "status": 200,
+        "final_url": "https://scenariofour.github.io/warehouse-lab-portfolio/"
+      }
+    ],
+    "commit_identity": {
+      "author_and_committer": "scenariofour <113313052+scenariofour@users.noreply.github.com>",
+      "checked_commits": [
+        "2f36790b3673f47e217bcafaae458394003d916c",
+        "42e47faee20832df1423ce9cb7206498b792a80c"
+      ]
+    },
+    "protected_paths_at_committed_heads": "PASS: no changes to src/, data/, public/, analytical pipelines/CSVs or model card compared with each repository baseline."
+  },
+  "files": [
+    {
+      "path": "docs/control-tower/anatomy/AUTHORING.md",
+      "sha256": "83f64be0bbbcc9766704623284a2774fbc51330288c68d390a853129fa2d9cb7"
+    },
+    {
+      "path": "docs/control-tower/anatomy/CAPABILITIES.md",
+      "sha256": "a39cd977cf2fe8329930982550b66662f24cc28696410c2061abf7d82ce77dea"
+    },
+    {
+      "path": "docs/control-tower/anatomy/INTERACTIONS.md",
+      "sha256": "b33cc86ae11732e32be87a8c50e40008412478e5c2e322d91b2114e4bbceeb0c"
+    },
+    {
+      "path": "docs/control-tower/anatomy/LEARN.md",
+      "sha256": "d48f881e9b604505b9d13fc68f4ec5e80a4ae3449392dfc8977dbbedd6fd548e"
+    },
+    {
+      "path": "docs/control-tower/anatomy/LICENSE.md",
+      "sha256": "9826f7e197a4aba835430a46b8befcccca7d7a900e9de32e032a688200f89482"
+    },
+    {
+      "path": "docs/control-tower/anatomy/PORTFOLIO_HANDOFF.md",
+      "sha256": "158baee0f643c04d3f463a14b100aaaf01544d5e17344b2badf29e44d40a7c40"
+    },
+    {
+      "path": "docs/control-tower/anatomy/PUBLISHED.md",
+      "sha256": "7e267ff8142657f8eaf2237520396413a3dea018ae9a62e4744381ea5a539ef3"
+    },
+    {
+      "path": "docs/control-tower/anatomy/README.md",
+      "sha256": "1dd9188116a853d360cd48a2dfa5a6a1de6129bd6af57b5c2955c795d61c7b30"
+    },
+    {
+      "path": "docs/control-tower/anatomy/SCHEMA.md",
+      "sha256": "a1c754bb558023d14c8057d82b0e1ff911e1ffe99fb52a16644627f40e4c5677"
+    },
+    {
+      "path": "docs/control-tower/anatomy/app.js",
+      "sha256": "e77d67935a0cc6dd383c62443ae8ddb723d38cfb0a9e0e065a8bc7cc113ca948"
+    },
+    {
+      "path": "docs/control-tower/anatomy/assets/constellation-overview.svg",
+      "sha256": "df894fe8a4aed0dc404f96bef6b319813ccdd18821e23ca0e0992df9c3e9a1d1"
+    },
+    {
+      "path": "docs/control-tower/anatomy/data.js",
+      "sha256": "83c6d7930d187e7bdf3fbfd94cb82df107f63e514c1ae78d5da92d96041b3442"
+    },
+    {
+      "path": "docs/control-tower/anatomy/index.html",
+      "sha256": "cfa4cf73aa036d8b7eaba98c6e2a4c677c80e815290d5c36959dbb621246348e"
+    },
+    {
+      "path": "docs/control-tower/anatomy/manifest.json",
+      "sha256": "f7acac63ca22eab52a5a2f70736e7ae7af09b58ceaf588a049342c07f53591ae"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/README.md",
+      "sha256": "9abf7592bffe038e8927679f65486cbd796023a8641525baf7c0adc05d67afc3"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/desktop-1440.png",
+      "sha256": "78677efdf28fafa6e22293aec0b9020f266194eca8287bc716605e19a2b8a60c"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/desktop-1600.png",
+      "sha256": "23e1b6bf24c04c727918145bd61c94d3f4080853682e0ffd9c93aec0ca243cea"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/desktop-reconciliation.png",
+      "sha256": "281f8ad5c402796605e0a97200e92de32ea071667d7aa520c84b713f56d77b87"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/narrow.png",
+      "sha256": "114283acb09545dad5eb9e9b4d80368d98b914f503583fa933b2a0affd402315"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/published-validation.json",
+      "sha256": "9a0b59bfd6481e37d24e38ec8901f89cd5467e33f9c99f5930417b9717cae8d6"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/tableau-public-default.png",
+      "sha256": "424ecacff9c859bde36ff3354b8f41536e741fe2254162801bfeb16eae345895"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/tableau-public-reconciliation.png",
+      "sha256": "e30e365d595bebaf227ed6a1e7b0876b65b0f36376b05e3c15197dde4c80c30c"
+    },
+    {
+      "path": "docs/control-tower/anatomy/review/validation.json",
+      "sha256": "56f3ffb8e316554db64517542ccf07cedb5ca8bd7b2a6c30733baed7562cc184"
+    },
+    {
+      "path": "docs/control-tower/anatomy/style.css",
+      "sha256": "01cb569ad5ae2e74341b8ba164bdaf5d8ef264396ec1b171fe48bf39122a0779"
+    },
+    {
+      "path": "docs/control-tower/anatomy/tableau/edge_points.csv",
+      "sha256": "8d65e87dad69cbc9c63574122e3c1b732264706d24d90ed9235f0c51ebb9092c"
+    },
+    {
+      "path": "docs/control-tower/anatomy/tableau/edges.csv",
+      "sha256": "2d5633fa8cca411cf9d517822eec8f060cb7afb2a11f2e206b6b3b43b013fd66"
+    },
+    {
+      "path": "docs/control-tower/anatomy/tableau/issue_context.csv",
+      "sha256": "f9d8f4d3e6b57741540e34707be8497d32e9c64c2ee583c099d975439ea9d69c"
+    },
+    {
+      "path": "docs/control-tower/anatomy/tableau/issue_metrics.csv",
+      "sha256": "d6a511513586b435812665d33e24bc6953357b5af806a9d7ca6b43db5e1efb90"
+    },
+    {
+      "path": "docs/control-tower/anatomy/tableau/lineage_roles.csv",
+      "sha256": "04c5ff455286c3bb36824533aca3f42b99a3cb3ff11496d798d52e3eec534292"
+    },
+    {
+      "path": "docs/control-tower/anatomy/tableau/nodes.csv",
+      "sha256": "1480af98131254a350772a2e6cea38e22793e3983d378f676b376437a988d18f"
+    },
+    {
+      "path": "docs/control-tower/anatomy/tableau/tableau_marks.csv",
+      "sha256": "c60f777a724bae4ef636c7dfeb4a42da3041d320de87e5745dfad80f538d6a2f"
+    },
+    {
+      "path": "scripts/control_tower/build_constellation.py",
+      "sha256": "612a2d236ce1083fe5b1c38303523ee4995f9d977ea95c343425a9195c812594"
+    },
+    {
+      "path": "tests/test_constellation.py",
+      "sha256": "8207de777b4fe4dedcd0db58d6b8595309313b240ed2e4b6b563bbdb94b173ab"
+    },
+    {
+      "path": "tests/constellation-browser/playwright.config.ts",
+      "sha256": "8e1bdbeab49f459bf2396aba657235ebf6cf39f54d3e30248b31305f8f4fde2e"
+    },
+    {
+      "path": "tests/constellation-browser/constellation.spec.ts",
+      "sha256": "efe5cbf0d5d41bc6114584c33d5c0982ccf2da2027d759dbf1555158b3821db1"
+    }
+  ],
+  "validation": {
+    "constellation_integrity_tests": {
+      "development": 9,
+      "public_portfolio": 9
+    },
+    "prototype_browser_tests": {
+      "development": 2,
+      "public_portfolio": 2,
+      "scope": "All-issue selection/hover/reset/keyboard and offline file-open; original composition screenshots preserved"
+    },
+    "simulation_tests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "production_build": {
+      "result": "PASS",
+      "node": "22.22.3",
+      "warning": "Existing Three.js chunk size warning"
+    },
+    "published_tableau": {
+      "parameter_states": 15,
+      "geometry_and_styles_match_csv": true,
+      "all_14_issue_panel_values_match_csv": true,
+      "issue_click_parameter_actions": "UNVERIFIED"
+    },
+    "post_push_urls": [
+      {
+        "url": "https://github.com/scenariofour/warehouse-lab-portfolio",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://github.com/scenariofour/warehouse-lab-portfolio/tree/main/docs/control-tower/anatomy",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://github.com/scenariofour/warehouse-lab-portfolio/blob/main/docs/control-tower/anatomy/review/tableau-public-default.png",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/scenariofour/warehouse-lab-portfolio/main/docs/control-tower/anatomy/review/tableau-public-default.png",
+        "status": 200,
+        "content_type": "image/png",
+        "sha256": "424ecacff9c859bde36ff3354b8f41536e741fe2254162801bfeb16eae345895",
+        "matches_local_capture": true
+      },
+      {
+        "url": "https://scenariofour.github.io/warehouse-lab-portfolio/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ]
+  },
+  "public_entry_points_updated": [
+    "README.md",
+    "docs/tableau/README.md",
+    "docs/PORTFOLIO_SUMMARY.md",
+    "docs/data-quality/advanced/tableau-workbook/LEARNING_INDEX.md"
+  ],
+  "remaining_qa": "See docs/control-tower/anatomy/PUBLISHED.md#remaining-qa; final editable workbook not archived.",
+  "commits": {
+    "private_archive": {
+      "sha": "2f36790b3673f47e217bcafaae458394003d916c",
+      "branch": "codex/data-quality-foundation",
+      "url": "https://github.com/scenariofour/warehouse-lab/commit/2f36790b3673f47e217bcafaae458394003d916c"
+    },
+    "public_archive": {
+      "sha": "42e47faee20832df1423ce9cb7206498b792a80c",
+      "branch": "main",
+      "url": "https://github.com/scenariofour/warehouse-lab-portfolio/commit/42e47faee20832df1423ce9cb7206498b792a80c"
+    },
+    "delivery": "Normal fast-forward pushes; no force-push or private history transfer. This audit is a separate follow-up commit."
+  },
+  "private_updated_files": [
+    "docs/control-tower/anatomy/AUTHORING.md",
+    "docs/control-tower/anatomy/CAPABILITIES.md",
+    "docs/control-tower/anatomy/INTERACTIONS.md",
+    "docs/control-tower/anatomy/LEARN.md",
+    "docs/control-tower/anatomy/PORTFOLIO_HANDOFF.md",
+    "docs/control-tower/anatomy/PUBLISHED.md",
+    "docs/control-tower/anatomy/README.md",
+    "docs/control-tower/anatomy/review/README.md",
+    "docs/control-tower/anatomy/review/published-validation.json",
+    "docs/control-tower/anatomy/review/tableau-public-default.png",
+    "docs/control-tower/anatomy/review/tableau-public-reconciliation.png"
+  ],
+  "public_updated_files": [
+    "README.md",
+    "docs/PORTFOLIO_SUMMARY.md",
+    "docs/control-tower/anatomy/AUTHORING.md",
+    "docs/control-tower/anatomy/CAPABILITIES.md",
+    "docs/control-tower/anatomy/INTERACTIONS.md",
+    "docs/control-tower/anatomy/LEARN.md",
+    "docs/control-tower/anatomy/LICENSE.md",
+    "docs/control-tower/anatomy/PORTFOLIO_HANDOFF.md",
+    "docs/control-tower/anatomy/PUBLISHED.md",
+    "docs/control-tower/anatomy/README.md",
+    "docs/control-tower/anatomy/SCHEMA.md",
+    "docs/control-tower/anatomy/app.js",
+    "docs/control-tower/anatomy/assets/constellation-overview.svg",
+    "docs/control-tower/anatomy/data.js",
+    "docs/control-tower/anatomy/index.html",
+    "docs/control-tower/anatomy/manifest.json",
+    "docs/control-tower/anatomy/review/README.md",
+    "docs/control-tower/anatomy/review/desktop-1440.png",
+    "docs/control-tower/anatomy/review/desktop-1600.png",
+    "docs/control-tower/anatomy/review/desktop-reconciliation.png",
+    "docs/control-tower/anatomy/review/narrow.png",
+    "docs/control-tower/anatomy/review/published-validation.json",
+    "docs/control-tower/anatomy/review/tableau-public-default.png",
+    "docs/control-tower/anatomy/review/tableau-public-reconciliation.png",
+    "docs/control-tower/anatomy/review/validation.json",
+    "docs/control-tower/anatomy/style.css",
+    "docs/control-tower/anatomy/tableau/edge_points.csv",
+    "docs/control-tower/anatomy/tableau/edges.csv",
+    "docs/control-tower/anatomy/tableau/issue_context.csv",
+    "docs/control-tower/anatomy/tableau/issue_metrics.csv",
+    "docs/control-tower/anatomy/tableau/lineage_roles.csv",
+    "docs/control-tower/anatomy/tableau/nodes.csv",
+    "docs/control-tower/anatomy/tableau/tableau_marks.csv",
+    "docs/data-quality/advanced/tableau-workbook/LEARNING_INDEX.md",
+    "docs/tableau/README.md",
+    "scripts/control_tower/build_constellation.py",
+    "tests/constellation-browser/constellation.spec.ts",
+    "tests/constellation-browser/playwright.config.ts",
+    "tests/test_constellation.py",
+    "docs/release/ANATOMY_ARCHIVE_AUDIT.json"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "version": "M5-anatomy-1",
+  "geometry_only": true,
+  "encoding": "Registered associations; no causality, weights, or measured distances. Decision associations are AI proposed.",
+  "generator_sha256": "612a2d236ce1083fe5b1c38303523ee4995f9d977ea95c343425a9195c812594",
+  "inputs": {
+    "docs/data-quality/advanced/public/issue_evidence.csv": "f7787436e266429bc2c29288b39df35ed86f7fe9bb09c485bf0097e00e86679c",
+    "docs/data-quality/advanced/public/decision_evidence.csv": "7c16f03f982fbf6b6f5346aa22c9326eaf7be23718870523fbe522435bff56af",
+    "docs/data-quality/tableau/public/issues.csv": "abbafdffb6a7af54c87d14b041d5444d1b9f2b6ab95fcef533e3145ccd223d72",
+    "docs/data-quality/tableau/public/issue_metrics.csv": "d6a511513586b435812665d33e24bc6953357b5af806a9d7ca6b43db5e1efb90"
+  },
+  "geometry": {
+    "viewbox": [
+      0,
+      0,
+      1000,
+      760
+    ],
+    "points_per_edge": 41,
+    "curve": "cubic Bezier; t=path_order/40",
+    "layout": "fixed editorial arcs; no metric scaling"
+  },
+  "populations": {
+    "issues": 14,
+    "sources": 11,
+    "lineage_records": 35,
+    "occupied_issue_source_pairs": 33,
+    "decision_categories": 5,
+    "decision_associations": 14
+  },
+  "null_policy": "Blank is absent/unknown, never zero. Context and metrics must not be summed across geometry points.",
+  "tables": {
+    "nodes": {
+      "columns": [
+        "node_id",
+        "node_type",
+        "label",
+        "short_label",
+        "x",
+        "y",
+        "label_x",
+        "label_y",
+        "label_align",
+        "shape",
+        "issue_id",
+        "source_id",
+        "decision_category"
+      ],
+      "rows": 30,
+      "sha256": "1480af98131254a350772a2e6cea38e22793e3983d378f676b376437a988d18f"
+    },
+    "edges": {
+      "columns": [
+        "edge_id",
+        "edge_kind",
+        "from_node",
+        "to_node",
+        "issue_id",
+        "source_id",
+        "decision_category",
+        "lineage_ids",
+        "roles",
+        "lineage_count",
+        "c1x",
+        "c1y",
+        "c2x",
+        "c2y"
+      ],
+      "rows": 47,
+      "sha256": "2d5633fa8cca411cf9d517822eec8f060cb7afb2a11f2e206b6b3b43b013fd66"
+    },
+    "edge_points": {
+      "columns": [
+        "edge_id",
+        "edge_kind",
+        "issue_id",
+        "source_id",
+        "decision_category",
+        "roles",
+        "lineage_count",
+        "path_order",
+        "x",
+        "y"
+      ],
+      "rows": 1927,
+      "sha256": "8d65e87dad69cbc9c63574122e3c1b732264706d24d90ed9235f0c51ebb9092c"
+    },
+    "lineage_roles": {
+      "columns": [
+        "edge_id",
+        "lineage_id",
+        "issue_id",
+        "source_id",
+        "lineage_role"
+      ],
+      "rows": 35,
+      "sha256": "04c5ff455286c3bb36824533aca3f42b99a3cb3ff11496d798d52e3eec534292"
+    },
+    "issue_context": {
+      "columns": [
+        "issue_id",
+        "decision_category",
+        "title",
+        "review_state",
+        "business_decision",
+        "kpi_at_risk",
+        "business_mechanism",
+        "competing_explanations",
+        "next_evidence_request",
+        "recommendation",
+        "evidence_class",
+        "evidence_ref",
+        "claim_limit",
+        "source_count",
+        "lineage_record_count"
+      ],
+      "rows": 14,
+      "sha256": "f9d8f4d3e6b57741540e34707be8497d32e9c64c2ee583c099d975439ea9d69c"
+    },
+    "issue_metrics": {
+      "columns": [
+        "issue_id",
+        "category",
+        "status",
+        "data_origin",
+        "unit",
+        "evidence_ref",
+        "metric_key",
+        "metric_id",
+        "affected_count",
+        "population",
+        "denominator",
+        "denominator_definition",
+        "calculation",
+        "additivity",
+        "cross_issue_sum_allowed"
+      ],
+      "rows": 18,
+      "sha256": "d6a511513586b435812665d33e24bc6953357b5af806a9d7ca6b43db5e1efb90"
+    },
+    "tableau_marks": {
+      "columns": [
+        "focus_issue",
+        "mark_kind",
+        "mark_id",
+        "node_id",
+        "node_type",
+        "edge_id",
+        "edge_kind",
+        "issue_id",
+        "source_id",
+        "decision_category",
+        "label",
+        "roles",
+        "lineage_count",
+        "path_order",
+        "x",
+        "y",
+        "edge_y",
+        "node_y",
+        "label_x",
+        "label_y",
+        "label_align",
+        "style_key",
+        "is_selected",
+        "title",
+        "review_state",
+        "business_decision",
+        "kpi_at_risk",
+        "business_mechanism",
+        "competing_explanations",
+        "next_evidence_request",
+        "recommendation",
+        "evidence_class",
+        "evidence_ref",
+        "claim_limit",
+        "source_count",
+        "lineage_record_count"
+      ],
+      "rows": 29370,
+      "sha256": "c60f777a724bae4ef636c7dfeb4a42da3041d320de87e5745dfad80f538d6a2f"
+    }
+  },
+  "attribution": "Source: Rodrigo Furlan de Assis, Mendeley Data v1, DOI 10.17632/pf2w725pw3.1, CC BY 4.0. Interpretation: AI proposed, pending human review."
+}

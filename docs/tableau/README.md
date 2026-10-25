@@ -1,6 +1,6 @@
 # Tableau showcase
 
-Warehouse Lab's published analytics move from data-quality triage to interpretation sensitivity and reconciliation evidence. Links and visible titles were checked in the signed-out Tableau Public viewer on October 23, 2026. Existing workbook notes remain the detailed source of methodology and learning history.
+Warehouse Lab's published analytics move from data-quality triage to interpretation sensitivity and reconciliation evidence. Links and visible titles were checked in the signed-out Tableau Public viewer on October 23, 2026. Existing workbook notes remain the detailed source of methodology and learning history. The Anatomy of a Decision was separately reviewed on October 25, 2026; its dated evidence is linked below.
 
 ## Data Quality & Decision Intelligence
 
@@ -34,6 +34,18 @@ A Top 20 wave view and broader wave scatter help prioritize investigation, while
 
 The ranked view separates the visible Top 20 waves from the full gap denominator. Its 1,720 displayed gap units are part of 13,003 current positive-gap units, rather than the entire population. This makes concentration useful for investigation without presenting a selected subset as a warehouse-wide rate. [Worksheet explanation and denominator lessons](../data-quality/advanced/tableau-workbook/worksheets/B04.md).
 
+## The Anatomy of a Decision
+
+[Open the published dashboard](https://public.tableau.com/app/profile/jiaxin.iris.li/viz/Warehouse_Lab_Anatomy_of_a_Decision/TheAnatomyofaDecision).
+
+![Actual signed-out Tableau Public capture, DQ-EXP-001](../control-tower/anatomy/review/tableau-public-default.png)
+
+A warm editorial network connects **11 sources, 14 unresolved issues and five proposed decision categories**: Measurement Baseline, Source Definition, Spatial Feasibility, Experiment Design and Slotting Hypothesis. Sage Green evidence and orange decision associations distinguish 33 registered source–issue pairs (35 original role records) from 14 proposed issue–category assignments. The 47 curves encode associations; coordinates and lengths carry no measured meaning. Two evidence pairs each retain two roles on one curve.
+
+The `pIssue` control drives CT01 emphasis and the CT02–CT07 investigation panel: question, decision, competing explanations, next evidence, review limits and source/lineage summary. The owner manually built the Desktop dashboard from the separately preserved, tested HTML prototype and CSV kit. Published geometry, active styles and panel summary data were compared with the CSVs for all 15 parameter states. A manual dropdown change was also observed. Issue-click Parameter Actions, tooltip completeness and full mobile behavior remain unverified; no final editable workbook is archived.
+
+[Project archive](../control-tower/anatomy/README.md) · [Methodology, grains and provenance](../control-tower/anatomy/SCHEMA.md) · [Worksheet learning case study](../control-tower/anatomy/LEARN.md#worksheet-case-study-ct01ct07) · [Interaction contract](../control-tower/anatomy/INTERACTIONS.md) · [Publication verification and remaining QA](../control-tower/anatomy/PUBLISHED.md) · [Portfolio handoff](../control-tower/anatomy/PORTFOLIO_HANDOFF.md).
+
 ## Reproduce and learn
 
 [14 analytical CSVs](../data-quality/advanced/public/) · [Data dictionary](../data-quality/advanced/DATA_DICTIONARY.md) · [Manifest](../data-quality/advanced/manifest.json) · [Audit and model](../data-quality/advanced/AUDIT_AND_MODEL.md) · [Calculation reference](../data-quality/advanced/tableau-workbook/CALCULATION_REFERENCE.md) · [Learning index](../data-quality/advanced/tableau-workbook/LEARNING_INDEX.md) · [Evidence register](../data-quality/advanced/tableau-workbook/EVIDENCE_REGISTER.md) · [Remaining QA](../data-quality/advanced/tableau-workbook/QA_AND_MAINTENANCE.md).
@@ -48,4 +60,4 @@ Published labels and visible charts were inspected; hidden formulas, uploaded ex
 
 ## Workbook archive status
 
-**No Tableau workbook was archived in Git.** The public viewer offered a workbook download, but the attempted download did not produce an inspectable local artifact. No package or extract has therefore been cleared for redistribution here. The interactive workbooks remain hosted on Tableau Public; repository CSVs and notes are versioned separately. The generated image URL from Tableau’s embed code returned HTTP 404, so it is not embedded. The repository’s application screenshot is a verified local capture. No Tableau Public workbook was edited.
+**No Tableau workbook was archived in Git.** The public viewer offered a workbook download, but the attempted download did not produce an inspectable local artifact. No package or extract has therefore been cleared for redistribution here. The interactive workbooks remain hosted on Tableau Public; repository CSVs and notes are versioned separately. The generated image URL from Tableau’s embed code returned HTTP 404, so it is not embedded. The repository’s application screenshot is a verified local capture. No Tableau Public workbook was edited. For The Anatomy of a Decision, a local unpackaged one-sheet draft was inspected and excluded because it does not match the final seven-sheet dashboard and references local/temporary data paths. No `.twbx` was found in the scoped local search. Its final editable workbook remains unarchived; [separate disposition and QA](../control-tower/anatomy/PUBLISHED.md#workbook-disposition) apply. The verified Anatomy screenshots above are local browser captures, independent of the earlier failed generated-image URL.

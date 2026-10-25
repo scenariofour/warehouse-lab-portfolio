@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-24",
+  "baseline_commit": "9204da2bceec575c5d76d831e4b30cbb48f46bd0",
+  "tests": [
+    {
+      "command": "python3 -B -m unittest tests/test_constellation.py",
+      "passed": 9
+    },
+    {
+      "command": "npx playwright test -c tests/constellation-browser/playwright.config.ts",
+      "passed": 5
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_dq_*.py'",
+      "passed": 16
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_data_pipeline.py'",
+      "passed": 5
+    },
+    {
+      "command": "npm test",
+      "passed": 9
+    }
+  ],
+  "production_build": {
+    "command": "npm run build",
+    "result": "PASS",
+    "note": "Existing Three.js bundle-size warning remains; no simulator changes."
+  },
+  "layouts": [
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "focal_panel": {
+        "x": 28,
+        "y": 178,
+        "width": 1200,
+        "height": 822
+      },
+      "viewport_fraction": 0.6165
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "focal_panel": {
+        "x": 28,
+        "y": 178,
+        "width": 1040,
+        "height": 722
+      },
+      "viewport_fraction": 0.5793827160493827
+    }
+  ],
+  "original_files": {
+    "checked": 269,
+    "changed": 0,
+    "scope": "All pre-existing tracked and untracked files captured before implementation; excludes the newly added integrity test."
+  },
+  "offline_file_open": {
+    "passed": true,
+    "external_requests": 0,
+    "local_font_loaded": true,
+    "console_errors": 0
+  },
+  "screenshots": {
+    "reduced_motion": true,
+    "actual_html_renders": true
+  },
+  "tableau": {
+    "workbook_authored": false,
+    "published": false,
+    "observed": "Create > Web Authoring led to sign-in in available browser",
+    "unverified": [
+      "CSV upload and field types",
+      "Line Path and dual axis in Public web UI",
+      "Parameter actions",
+      "Exact floating layout and transparent overlay",
+      "Public save/reopen and published interactions"
+    ]
+  }
+}

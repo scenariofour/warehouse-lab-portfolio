@@ -1,0 +1,750 @@
+{
+  "review_date": "2026-10-25",
+  "timezone": "America/New_York",
+  "url": "https://public.tableau.com/app/profile/jiaxin.iris.li/viz/Warehouse_Lab_Anatomy_of_a_Decision/TheAnatomyofaDecision",
+  "source_implementation_commit": "e55b3415613ba3d5216d706519e561f36035c8d8",
+  "published_date_shown_by_tableau": "2026-10-24",
+  "viewer": "Signed out; Chrome/Playwright; no workbook edits",
+  "method": "Tableau JavaScript API: changeParameterValueAsync(pIssue), getSummaryDataAsync on CT01–CT07; independent comparison against edge_points.csv, nodes.csv, edges.csv and issue_context.csv",
+  "manual_dropdown_check": {
+    "from": "DQ-EXP-001",
+    "to": "DQ-RECON-001",
+    "parameter_value_and_question_updated": true
+  },
+  "metadata": {
+    "dashboard": "The Anatomy of a Decision",
+    "sheets": [
+      "CT01 · Evidence Constellation",
+      "CT02 · Question",
+      "CT03 · Business Decision",
+      "CT04 · Competing Explanations",
+      "CT05 · Next Evidence",
+      "CT06 · Review & Limits",
+      "CT07 · Evidence Summary"
+    ],
+    "parameters": [
+      {
+        "name": "pIssue",
+        "value": "DQ-EXP-001",
+        "values": [
+          "__ALL__",
+          "DQ-ABC-001",
+          "DQ-DUP-CUSTOMER",
+          "DQ-DUP-PICKING",
+          "DQ-EXP-001",
+          "DQ-ID-001",
+          "DQ-LAYOUT-001",
+          "DQ-LOC-001",
+          "DQ-LOC-002",
+          "DQ-MASTER-001",
+          "DQ-QTY-001",
+          "DQ-RECON-001",
+          "DQ-SIZE-001",
+          "DQ-SIZE-002",
+          "DQ-STOCK-001"
+        ]
+      }
+    ]
+  },
+  "parameter_states": [
+    {
+      "focus_issue": "__ALL__",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 47,
+      "active_nodes": 30,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "Choose an investigation question"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "%null%"
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": ""
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "%null%"
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\n"
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "33 evidence pairs · 35 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-ABC-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 3,
+      "active_nodes": 4,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-ABC-001\nPublished versus extract-volume ABC disagreement"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Confirm classification objective before choosing fast movers."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· ABC based on value/margin \n·  Different effective period \n·  Anonymization"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "ABC basis, effective date and one worked source classification."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nNeither classification is an approved replacement for the other."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "2 sources · 2 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-DUP-CUSTOMER",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 2,
+      "active_nodes": 3,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-DUP-CUSTOMER\nExact repeated Customer_Order records retained"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Clarify transaction granularity before any deletion."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Legitimate repeated lines \n·  One-unit picking expansion \n·  Extract duplication"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "Line event identifiers or source-owner explanation for one exact repeat pair."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nRow equality is confirmed; duplicate transaction identity and deletion eligibility remain unknown."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "1 sources · 2 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-DUP-PICKING",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 2,
+      "active_nodes": 3,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-DUP-PICKING\nExact repeated Picking_Wave records retained"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Clarify transaction granularity before any deletion."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Legitimate repeated lines \n·  One-unit picking expansion \n·  Extract duplication"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "One pick-event identifier and explanation of one-unit record expansion."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nRow equality is confirmed; duplicate transaction identity and deletion eligibility remain unknown."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "1 sources · 2 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-EXP-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 6,
+      "active_nodes": 7,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-EXP-001\nUnequal SKU inventory across published storage policies"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Defer a causal policy ranking until common SKU quantities and eligible work are approved."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Different SKU composition \n·  Published allocation construction \n·  Unequal coordinate exclusions"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "An approved common SKU-quantity ledger and eligibility definition for one controlled comparison."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nEncoded cells are assumed stock units; L1 differences are not observed losses or relocation counts."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "5 sources · 5 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-ID-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 2,
+      "active_nodes": 3,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-ID-001\nOrder numbers reused across waves; business identity unresolved"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Agree customer service identity and throughput denominator."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Legitimate split waves \n·  Order-number scope convention"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "WMS business key and completion rule for one order spanning two waves."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nBusiness completeness across waves is undefined."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "1 sources · 1 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-LAYOUT-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 5,
+      "active_nodes": 6,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-LAYOUT-001\nPhysical scale and floor connectivity unresolved"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Obtain surveyed scale, origins and floor connectivity before route/capacity claims."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Coordinate-scale convention \n·  Separate physical floors \n·  Unrecorded transfer/access rules"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "One surveyed aisle segment and documented Z-to-floor/transfer mapping."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nSource units remain source units; no floor transfer, path or physical metric is repaired."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "4 sources · 4 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-LOC-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 3,
+      "active_nodes": 4,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-LOC-001\nPicking locations lack matched coordinates"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Establish spatial coverage before a route or travel claim."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Non-storage process locations \n·  Different extract coverage \n·  Incomplete location master"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "Location-master record and process meaning for the largest unmatched location pseudonym."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nUnmatched coordinates do not prove invalid locations, lost units or inaccessible physical stock."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "2 sources · 2 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-LOC-002",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 5,
+      "active_nodes": 6,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-LOC-002\nAllocation cells excluded from geometry-dependent analysis"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Clarify location master coverage before comparing eligible placements."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Different location master version \n·  Locations outside coordinate scope"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "Coordinate-master version and one excluded allocation location mapping."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nNo invented location or actual physical inaccessibility claim."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "4 sources · 4 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-MASTER-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 3,
+      "active_nodes": 4,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-MASTER-001\nAllocation references absent from published product master"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Confirm active assortment/master coverage."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Different master scope \n·  Allocation construction or anonymization"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "Master-effective-date and mapping for one unmatched allocation reference."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nAbsence from master does not prove an invalid SKU."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "2 sources · 2 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-QTY-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 2,
+      "active_nodes": 3,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-QTY-001\nZero-quantity customer records retained"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Define eligible lines and group denominators."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Canceled line \n·  Placeholder \n·  Extract convention"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "Lifecycle meaning for one zero-quantity line."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nZero does not establish cancellation or error."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "1 sources · 1 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-RECON-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 3,
+      "active_nodes": 4,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-RECON-001\nDemand/picking quantity reconciliation gap"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Define eligible requested work before diagnosing fulfillment."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Cancellation or backlog \n·  Extract timing/scope \n·  Size encoding or missing master data"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "One wave with line statuses, cancellations and aligned extraction times."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nNo transaction status, cancellation history or timing alignment proves the gap is failed warehouse service."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "2 sources · 2 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-SIZE-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 3,
+      "active_nodes": 4,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-SIZE-001\nExisting inferred customer half-size mapping"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Seek source size dictionary before treating matching as authenticated."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Implied decimal in customer encoding \n·  Other size-system meaning"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "Authoritative size codebook with one 105/10.5 example."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nBetter matching supports an inference; it is not source confirmation."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "2 sources · 2 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-SIZE-002",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 2,
+      "active_nodes": 3,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-SIZE-002\nMissing customer sizes retained"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Clarify SKU identity for eligibility."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Omitted value \n·  Source-specific unspecified size"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "Size field for one missing-size source record or explanation of intentional absence."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nMissing size semantics and fulfillment eligibility are unknown."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "1 sources · 1 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    },
+    {
+      "focus_issue": "DQ-STOCK-001",
+      "edge_points": 1927,
+      "unique_edges": 47,
+      "nodes": 30,
+      "active_edges": 6,
+      "active_nodes": 7,
+      "panel_summary": {
+        "CT02 · Question": [
+          {
+            "Question heading": "DQ-STOCK-001\nStock payload units and snapshot alignment unresolved"
+          }
+        ],
+        "CT03 · Business Decision": [
+          {
+            "Business Decision": "Obtain quantity/UOM and stock-date definitions before availability or replenishment conclusions."
+          }
+        ],
+        "CT04 · Competing Explanations": [
+          {
+            "Alternatives text": "· Size-like allocation payload \n·  Unknown snapshot date \n·  Unknown carton/unit meaning"
+          }
+        ],
+        "CT05 · Next Evidence": [
+          {
+            "Next Evidence Request": "A decoded allocation cell with UOM and snapshot timestamp."
+          }
+        ],
+        "CT06 · Review & Limits": [
+          {
+            "Review text": "AI-assisted framing · Human review pending\nExisting one-cell-one-assumed-unit and token-as-size rules are retained, not confirmed."
+          }
+        ],
+        "CT07 · Evidence Summary": [
+          {
+            "Evidence Summary": "5 sources · 5 lineage records"
+          }
+        ]
+      },
+      "comparison_to_archived_csvs": "PASS: X/Y, identities, active/context styles; all 14 issue narratives match with documented bullet/review-prefix formatting"
+    }
+  ],
+  "all_state_difference": {
+    "CT03": "null, not the explanatory sentence in the authoring recipe",
+    "CT05": "null as expected",
+    "CT02": "Choose an investigation question",
+    "CT07": "33 evidence pairs · 35 lineage records"
+  },
+  "screenshots": {
+    "tableau-public-default.png": {
+      "focus_issue": "DQ-EXP-001",
+      "width": 1600,
+      "height": 1027,
+      "sha256": "424ecacff9c859bde36ff3354b8f41536e741fe2254162801bfeb16eae345895",
+      "source": "Actual published Tableau iframe screenshot, no retouching",
+      "visual_review": "Title, selected issue, evidence/decision geometry and panel checked; full-state wrapping remains QA"
+    },
+    "tableau-public-reconciliation.png": {
+      "focus_issue": "DQ-RECON-001",
+      "width": 1600,
+      "height": 1027,
+      "sha256": "e30e365d595bebaf227ed6a1e7b0876b65b0f36376b05e3c15197dde4c80c30c",
+      "source": "Actual published Tableau iframe screenshot, no retouching",
+      "visual_review": "Title, selected issue, evidence/decision geometry and panel checked; full-state wrapping remains QA"
+    }
+  },
+  "local_workbook_review": {
+    "filename": "Warehouse_Lab_Anatomy_of_a_Decision.twb",
+    "sha256": "c1286e18748dfc576dc9673f5138bd44e28266e554c73025f150b2483d3aba06",
+    "worksheet_count": 1,
+    "worksheet_names": [
+      "Sheet 1"
+    ],
+    "dashboard_count": 0,
+    "matches_final_publication": false,
+    "connections": [
+      "tableau_marks.csv textscan",
+      "temporary Hyper reference"
+    ],
+    "contains_machine_specific_paths": true,
+    "packaged_data_available": false,
+    "published_in_git": false,
+    "twbx_search_scope": [
+      "Documents",
+      "Downloads",
+      "Desktop"
+    ],
+    "twbx_found": false
+  },
+  "unverified": [
+    "Issue-click Parameter Actions and clearing/non-issue/multi-selection branches",
+    "Native tooltip completeness and hover parity",
+    "All-state visual text wrapping and mobile/keyboard accessibility",
+    "Final Desktop workbook save/reopen, hidden formulas and exact synchronization settings",
+    "Uploaded extract byte identity and final packaged workbook contents"
+  ],
+  "fresh_local_checks": [
+    {
+      "command": "python3 -B -m unittest tests/test_constellation.py",
+      "repositories": [
+        "development",
+        "public portfolio"
+      ],
+      "passed": 9
+    },
+    {
+      "command": "npx playwright test -c tests/constellation-browser/playwright.config.ts --grep 'registered network|directly from disk'",
+      "passed": 2,
+      "repositories": [
+        "development",
+        "public portfolio"
+      ]
+    },
+    {
+      "command": "npm test",
+      "repository": "public portfolio",
+      "passed": 9
+    },
+    {
+      "command": "npm run build",
+      "repository": "public portfolio",
+      "node": "22.22.3",
+      "result": "PASS",
+      "warning": "Existing Three.js chunk exceeds 500 kB; no runtime changes."
+    }
+  ]
+}

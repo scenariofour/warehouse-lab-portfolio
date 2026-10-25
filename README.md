@@ -25,8 +25,13 @@ Warehouse decisions depend on consistent definitions of orders, sizes, stock and
 | [Dashboard 02 · Normalization & Interpretation Lab](https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/Dashboard02NormalizationInterpretationLab2?:showVizHome=n) | How much does a size-token interpretation change reconciliation? |
 | [Dashboard 03 · Reconciliation Investigation](https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/Dashboard3?:showVizHome=n) | Which waves concentrate positive gaps, and what matching-key evidence explains them? |
 | [B04 · Gap Concentration](https://public.tableau.com/views/WarehouseLabOperationsDecisionStudio/B04GapConcentration?:showVizHome=n) | How much of the total gap lies within the visible Top 20? |
+| [The Anatomy of a Decision](https://public.tableau.com/app/profile/jiaxin.iris.li/viz/Warehouse_Lab_Anatomy_of_a_Decision/TheAnatomyofaDecision) | How do 11 sources, 14 issues and five proposed decision categories connect, and what evidence should come next? |
 
 Explore the [showcase](docs/tableau/README.md) for case studies, datasets, calculations and worksheet learning notes. The workbooks are hosted on Tableau Public; **no workbook archive is committed**.
+
+![Verified published Tableau dashboard: The Anatomy of a Decision, DQ-EXP-001](docs/control-tower/anatomy/review/tableau-public-default.png)
+
+The Anatomy of a Decision uses Sage Green evidence highlighting and orange decision associations in a warm editorial design. Its `pIssue` investigation panel follows **33 source–issue pairs** (35 role-bearing lineage records) and **14 proposed issue–category assignments**. Links are registered associations, not causal findings; decision framing is AI-assisted and human review remains pending. All 15 parameter-driven summary-data states were checked; issue-click Parameter Actions and full tooltip/mobile behavior remain unverified. [Methodology and provenance](docs/control-tower/anatomy/SCHEMA.md) · [Worksheet learning case study](docs/control-tower/anatomy/LEARN.md#worksheet-case-study-ct01ct07) · [Publication evidence and workbook status](docs/control-tower/anatomy/PUBLISHED.md).
 
 ## How the analysis works
 
@@ -80,7 +85,7 @@ Try **Start simulation → 20× → select AMR-01 → Follow robot**. Use **Expe
 - [Product opportunity assessment](docs/PRODUCT_OPPORTUNITY_ASSESSMENT.md) · [Project charter](docs/PROJECT_CHARTER.md)
 - [Portfolio handoff](docs/PORTFOLIO_SUMMARY.md) · [Release audit](docs/release/PUBLIC_RELEASE_AUDIT.md)
 
-The MVP is frozen. Historical proposals and the control-tower concept document possible next steps; they are not additional shipped product features.
+The MVP is frozen. Historical proposals and the earlier control-tower concept remain design history. The Anatomy of a Decision is a separately published creative Tableau project; its archive does not expand the simulator MVP.
 
 ## Data attribution & license
 

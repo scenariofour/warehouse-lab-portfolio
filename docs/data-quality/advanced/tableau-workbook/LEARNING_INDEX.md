@@ -40,3 +40,7 @@ Search this file by Tableau term, analytical question or worksheet ID. Use [calc
 | Documentation versus workbook version control | Notes/CSVs in Git do not imply a saved Tableau workbook exists there | [Notebook README](README.md), [maintenance](QA_AND_MAINTENANCE.md#maintain-the-next-dashboard) |
 
 To test whether I understand a view, I should be able to state: **one mark means ___; its numerator is ___; its denominator is ___; selecting it changes ___; the decision it cannot establish is ___.** If any blank is unclear, inspect the source grain and controls before changing the chart.
+
+## Creative project: The Anatomy of a Decision
+
+[CT01–CT07 worksheet case study](../../../control-tower/anatomy/LEARN.md#worksheet-case-study-ct01ct07): Line Marks; Edge ID versus ordered Path; numeric dimensions versus measures; dual axes and synchronized/reversed coordinates; `pIssue`, calculated focus filters and selection-state scaffolds; guarded Parameter Actions; node/edge tooltips; Desktop formatting and dashboard composition. The notes explain why each technique serves this project and distinguish recorded corrections from construction troubleshooting. [Published behavior and outstanding QA](../../../control-tower/anatomy/PUBLISHED.md).

@@ -1,0 +1,31 @@
+node_id,node_type,label,short_label,x,y,label_x,label_y,label_align,shape,issue_id,source_id,decision_category
+S:Class_Based_Storage.csv,SOURCE,Class_Based_Storage.csv,Class Based Storage,126.0,100,143.0,104,left,diamond,,Class_Based_Storage.csv,
+S:Customer_Order.csv,SOURCE,Customer_Order.csv,Customer Order,111.785218,155,128.785218,159,left,diamond,,Customer_Order.csv,
+S:Dedicated_Storage.csv,SOURCE,Dedicated_Storage.csv,Dedicated Storage,98.961878,210,115.961878,214,left,diamond,,Dedicated_Storage.csv,
+S:Hybrid_Storage.csv,SOURCE,Hybrid_Storage.csv,Hybrid Storage,88.785218,265,105.785218,269,left,diamond,,Hybrid_Storage.csv,
+S:Order_Picking_dataset.ipynb,SOURCE,Order_Picking_dataset.ipynb,Order Picking dataset,82.2514,320,99.2514,324,left,diamond,,Order_Picking_dataset.ipynb,
+S:Picking_Wave.csv,SOURCE,Picking_Wave.csv,Picking Wave,80.0,375,97.0,379,left,diamond,,Picking_Wave.csv,
+S:Product.csv,SOURCE,Product.csv,Product,82.2514,430,99.2514,434,left,diamond,,Product.csv,
+S:README.txt,SOURCE,README.txt,README,88.785218,485,105.785218,489,left,diamond,,README.txt,
+S:Random_Storage.csv,SOURCE,Random_Storage.csv,Random Storage,98.961878,540,115.961878,544,left,diamond,,Random_Storage.csv,
+S:Storage_Location.csv,SOURCE,Storage_Location.csv,Storage Location,111.785218,595,128.785218,599,left,diamond,,Storage_Location.csv,
+S:Support_Points_Navigation.csv,SOURCE,Support_Points_Navigation.csv,Support Points Navigation,126.0,650,143.0,654,left,diamond,,Support_Points_Navigation.csv,
+DQ-RECON-001,ISSUE,Demand/picking quantity reconciliation gap,Quantity gap,514.0,135.0,531.0,139.0,left,circle,DQ-RECON-001,,MEASUREMENT_BASELINE
+DQ-LOC-001,ISSUE,Picking locations lack matched coordinates,Unmapped picks,589.061887,159.46069,606.061887,163.46069,left,circle,DQ-LOC-001,,SPATIAL_FEASIBILITY
+DQ-ABC-001,ISSUE,Published versus extract-volume ABC disagreement,ABC disagreement,649.256846,227.998019,666.256846,231.998019,left,circle,DQ-ABC-001,,SLOTTING_HYPOTHESIS
+DQ-EXP-001,ISSUE,Unequal SKU inventory across published storage policies,Unequal inventory,682.662529,327.037329,699.662529,331.037329,left,circle,DQ-EXP-001,,EXPERIMENT_DESIGN
+DQ-STOCK-001,ISSUE,Stock payload units and snapshot alignment unresolved,Stock meaning,682.662529,436.962671,699.662529,440.962671,left,circle,DQ-STOCK-001,,SOURCE_DEFINITION
+DQ-LAYOUT-001,ISSUE,Physical scale and floor connectivity unresolved,Floor connectivity,649.256846,536.001981,666.256846,540.001981,left,circle,DQ-LAYOUT-001,,SPATIAL_FEASIBILITY
+DQ-DUP-CUSTOMER,ISSUE,Exact repeated Customer_Order records retained,Repeated orders,589.061887,604.53931,606.061887,608.53931,left,circle,DQ-DUP-CUSTOMER,,MEASUREMENT_BASELINE
+DQ-DUP-PICKING,ISSUE,Exact repeated Picking_Wave records retained,Repeated picks,514.0,629.0,497.0,633.0,right,circle,DQ-DUP-PICKING,,MEASUREMENT_BASELINE
+DQ-SIZE-001,ISSUE,Existing inferred customer half-size mapping,Size encoding,438.938113,604.53931,421.938113,608.53931,right,circle,DQ-SIZE-001,,SOURCE_DEFINITION
+DQ-SIZE-002,ISSUE,Missing customer sizes retained,Missing sizes,378.743154,536.001981,361.743154,540.001981,right,circle,DQ-SIZE-002,,SOURCE_DEFINITION
+DQ-QTY-001,ISSUE,Zero-quantity customer records retained,Zero quantities,345.337471,436.962671,328.337471,440.962671,right,circle,DQ-QTY-001,,MEASUREMENT_BASELINE
+DQ-LOC-002,ISSUE,Allocation cells excluded from geometry-dependent analysis,Excluded cells,345.337471,327.037329,328.337471,331.037329,right,circle,DQ-LOC-002,,EXPERIMENT_DESIGN
+DQ-MASTER-001,ISSUE,Allocation references absent from published product master,Master coverage,378.743154,227.998019,361.743154,231.998019,right,circle,DQ-MASTER-001,,SOURCE_DEFINITION
+DQ-ID-001,ISSUE,Order numbers reused across waves; business identity unresolved,Order identity,438.938113,159.46069,421.938113,163.46069,right,circle,DQ-ID-001,,MEASUREMENT_BASELINE
+D:MEASUREMENT_BASELINE,DECISION,Measurement Baseline,Measurement Baseline,846.0,150,863.0,154,left,square,,,MEASUREMENT_BASELINE
+D:SOURCE_DEFINITION,DECISION,Source Definition,Source Definition,858.727922,266,875.727922,270,left,square,,,SOURCE_DEFINITION
+D:SPATIAL_FEASIBILITY,DECISION,Spatial Feasibility,Spatial Feasibility,864.0,382,881.0,386,left,square,,,SPATIAL_FEASIBILITY
+D:EXPERIMENT_DESIGN,DECISION,Experiment Design,Experiment Design,858.727922,498,875.727922,502,left,square,,,EXPERIMENT_DESIGN
+D:SLOTTING_HYPOTHESIS,DECISION,Slotting Hypothesis,Slotting Hypothesis,846.0,614,863.0,618,left,square,,,SLOTTING_HYPOTHESIS

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the registered evidence behind 14 warehouse investigation questions. An original, source-backed Tableau prototype.">
+  <title>The Anatomy of a Decision · Warehouse Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#investigation">Skip to investigation</a>
+  <header class="masthead">
+    <div class="brand"><span class="brand-symbol" aria-hidden="true">⌘</span> WAREHOUSE LAB <span class="edition">FIELD NOTES / 05</span></div>
+    <a href="AUTHORING.md">Build this in Tableau <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <div class="intro">
+      <div><p class="eyebrow">THE EVIDENCE CONSTELLATION</p><h1>The Anatomy of <em>a Decision</em></h1></div>
+      <p class="intro-note">A decision begins with a question.<br>Follow the evidence. Keep the uncertainty.</p>
+    </div>
+    <div class="workbench">
+      <section class="constellation" aria-labelledby="chart-heading">
+        <div class="chart-top"><h2 id="chart-heading">Explore the connections</h2><button id="reset" type="button">View all <span aria-hidden="true">↗</span></button></div>
+        <div class="chart-wrap">
+          <svg id="network" viewBox="0 0 1000 760" aria-labelledby="network-title network-desc">
+            <title id="network-title">Interactive evidence constellation</title>
+            <desc id="network-desc">Eleven evidence sources, fourteen investigation questions and five associated decision categories. Select a circular issue node or use the question selector. Curves are registered associations; positions and lengths have no analytical meaning.</desc>
+            <defs>
+              <radialGradient id="field"><stop stop-color="#15363b" stop-opacity=".4"/><stop offset="1" stop-color="#091720" stop-opacity="0"/></radialGradient>
+            </defs>
+            <ellipse cx="520" cy="380" rx="330" ry="350" fill="url(#field)"/>
+            <g class="orbital" aria-hidden="true"><ellipse cx="514" cy="382" rx="173" ry="247"/><ellipse cx="514" cy="382" rx="196" ry="273"/>
+              <path d="M514 75v22 M514 669v22 M292 382h18 M718 382h18"/></g>
+            <g class="column-labels" aria-hidden="true"><text x="67" y="46">01 / EVIDENCE</text><text x="448" y="46">02 / QUESTIONS</text><text x="816" y="46">03 / DECISIONS</text></g>
+            <g id="edges"></g>
+            <g class="center-note" aria-hidden="true"><text x="514" y="366">Evidence is only</text><text x="514" y="401" class="italic">the beginning.</text><text x="514" y="437" class="center-caption">SELECT A QUESTION TO EXPLORE</text></g>
+            <g id="nodes"></g>
+            <text class="geometry-note" x="67" y="725">REGISTERED ASSOCIATIONS / EDITORIAL GEOMETRY</text>
+          </svg>
+          <div id="tooltip" role="tooltip" hidden></div>
+        </div>
+        <div class="chart-bottom"><div class="legend"><span><i class="diamond"></i>Source</span><span><i class="circle"></i>Question</span><span><i class="square"></i>Decision category</span></div><p>Connections ≠ causes</p></div>
+      </section>
+      <aside class="investigation" id="investigation" aria-labelledby="panel-heading">
+        <div class="panel-heading"><h2 id="panel-heading">THE INVESTIGATION</h2><span class="small-orbit" aria-hidden="true">◎</span></div>
+        <label class="selector-label" for="issue-select">Choose a question</label>
+        <select id="issue-select"></select>
+        <div id="context" aria-live="polite" aria-atomic="true"></div>
+      </aside>
+    </div>
+    <footer>
+      <div class="register"><span><b>14</b> questions</span><span><b>11</b> sources</span><span><b>35</b> lineage records</span><span><b>33</b> source–issue pairs</span><span>All reviews <strong>pending</strong></span></div>
+      <p>Prototype · AI-proposed decision framing requires human review. Source associations are registered; distances, lengths and positions are presentation only.</p>
+      <nav aria-label="Resources"><a href="LEARN.md">How it works</a><a href="SCHEMA.md">Data & provenance</a><a href="INTERACTIONS.md">Interaction contract</a><a href="../index.html">Previous M5 concept</a><a href="LICENSE.md">Credits & license</a></nav>
+    </footer>
+  </main>
+</body>
+</html>

@@ -34,3 +34,9 @@ Warehouse Lab explores how warehouse data quality shapes operational decisions. 
 ## What I learned
 
 The worksheet notes taught me to define grain before combining measures, calculate reconciliation at key level before aggregation, and keep a fixed population denominator when displaying a Top 20 subset. Comparing literal and inferred sizes made the cost of an undocumented assumption tangible. I also learned to distinguish visible dashboard behavior, repository-verified calculations, authoring guidance and QA that remains pending. These lessons are grounded in the existing [learning index](data-quality/advanced/tableau-workbook/LEARNING_INDEX.md) and [evidence register](data-quality/advanced/tableau-workbook/EVIDENCE_REGISTER.md); they are a reusable reflection draft for the owner to personalize.
+
+## Creative Tableau project handoff
+
+[The Anatomy of a Decision — copy-ready description, verified preview image, Tableau/GitHub/simulator links and limitations](control-tower/anatomy/PORTFOLIO_HANDOFF.md).
+
+This separately published project adds an evidence constellation linking 11 sources, 14 issues and five proposed decision categories, with a `pIssue` investigation panel. The [worksheet case study](control-tower/anatomy/LEARN.md#worksheet-case-study-ct01ct07) explains Line/Path, dual axes, parameters, actions, tooltips and the corrections recorded during archiving. The separate personal website was not modified.
